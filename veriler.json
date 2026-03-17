@@ -1,176 +1,32 @@
 {
   "takimlar": {
-    "Napoli": {
-      "mac": 4,
-      "g": 1,
-      "b": 0,
-      "m": 3,
-      "ag": 4,
-      "yg": 12,
-      "puan": 3
-    },
-    "Milan": {
-      "mac": 4,
-      "g": 0,
-      "b": 1,
-      "m": 3,
-      "ag": 1,
-      "yg": 11,
-      "puan": 1
-    },
-    "Juventus": {
-      "mac": 4,
-      "g": 4,
-      "b": 0,
-      "m": 0,
-      "ag": 17,
-      "yg": 2,
-      "puan": 12
-    },
-    "Roma": {
-      "mac": 4,
-      "g": 0,
-      "b": 1,
-      "m": 3,
-      "ag": 2,
-      "yg": 11,
-      "puan": 1
-    },
-    "Lazio": {
-      "mac": 4,
-      "g": 3,
-      "b": 0,
-      "m": 1,
-      "ag": 6,
-      "yg": 2,
-      "puan": 9
-    },
-    "Atalanta": {
-      "mac": 4,
-      "g": 1,
-      "b": 1,
-      "m": 2,
-      "ag": 5,
-      "yg": 10,
-      "puan": 4
-    },
-    "İnter": {
-      "mac": 4,
-      "g": 4,
-      "b": 0,
-      "m": 0,
-      "ag": 15,
-      "yg": 1,
-      "puan": 12
-    },
-    "Como": {
-      "mac": 4,
-      "g": 0,
-      "b": 3,
-      "m": 1,
-      "ag": 2,
-      "yg": 3,
-      "puan": 3
-    }
+    "İnter": { "mac": 0, "g": 0, "b": 0, "m": 0, "ag": 0, "yg": 0, "puan": 0, "logo": "https://upload.wikimedia.org/wikipedia/commons/0/05/FC_Internazionale_Milano_2021.svg" },
+    "Juventus": { "mac": 0, "g": 0, "b": 0, "m": 0, "ag": 0, "yg": 0, "puan": 0, "logo": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Juventus_FC_2017_icon_%28black%29.svg" },
+    "Napoli": { "mac": 0, "g": 0, "b": 0, "m": 0, "ag": 0, "yg": 0, "puan": 0, "logo": "https://upload.wikimedia.org/wikipedia/commons/b/ba/SSC_Napoli_logo.png" },
+    "Lazio": { "mac": 0, "g": 0, "b": 0, "m": 0, "ag": 0, "yg": 0, "puan": 0, "logo": "https://upload.wikimedia.org/wikipedia/tr/b/b3/SS_Lazio.png" }
   },
-  "maclar": [
-    {
-      "ev": "İnter",
-      "dep": "Milan",
-      "skor": "5-1",
-      "tarih": "15.03.2026 08:21:33"
-    },
-    {
-      "ev": "Napoli",
-      "dep": "Juventus",
-      "skor": "1-7",
-      "tarih": "15.03.2026 08:22:00"
-    },
-    {
-      "ev": "Lazio",
-      "dep": "Como",
-      "skor": "1-0",
-      "tarih": "15.03.2026 08:22:02"
-    },
-    {
-      "ev": "Roma",
-      "dep": "Atalanta",
-      "skor": "1-4",
-      "tarih": "15.03.2026 08:22:05"
-    },
-    {
-      "ev": "İnter",
-      "dep": "Napoli",
-      "skor": "4-0",
-      "tarih": "15.03.2026 08:31:49"
-    },
-    {
-      "ev": "Juventus",
-      "dep": "Atalanta",
-      "skor": "5-0",
-      "tarih": "15.03.2026 08:32:01"
-    },
-    {
-      "ev": "Lazio",
-      "dep": "Milan",
-      "skor": "3-0",
-      "tarih": "15.03.2026 08:32:12"
-    },
-    {
-      "ev": "Como",
-      "dep": "Roma",
-      "skor": "1-1",
-      "tarih": "15.03.2026 08:32:22"
-    },
-    {
-      "ev": "Como",
-      "dep": "Milan",
-      "skor": "0-0",
-      "tarih": "15.03.2026 08:34:45"
-    },
-    {
-      "ev": "Lazio",
-      "dep": "Napoli",
-      "skor": "1-0",
-      "tarih": "15.03.2026 08:35:50"
-    },
-    {
-      "ev": "Roma",
-      "dep": "Juventus",
-      "skor": "0-3",
-      "tarih": "15.03.2026 08:36:00"
-    },
-    {
-      "ev": "İnter",
-      "dep": "Atalanta",
-      "skor": "3-0",
-      "tarih": "15.03.2026 08:36:09"
-    },
-    {
-      "ev": "Roma",
-      "dep": "İnter",
-      "skor": "0-3",
-      "tarih": "15.03.2026 08:37:24"
-    },
-    {
-      "ev": "Milan",
-      "dep": "Napoli",
-      "skor": "0-3",
-      "tarih": "15.03.2026 08:37:38"
-    },
-    {
-      "ev": "Juventus",
-      "dep": "Lazio",
-      "skor": "2-1",
-      "tarih": "15.03.2026 08:37:47"
-    },
-    {
-      "ev": "Como",
-      "dep": "Atalanta",
-      "skor": "1-1",
-      "tarih": "15.03.2026 08:37:59"
-    }
+  "golKralligi": [
+    {"oyuncu": "Osimhen", "takim": "Napoli", "gol": 7},
+    {"oyuncu": "Gyokeres", "takim": "Juventus", "gol": 7},
+    {"oyuncu": "Haaland", "takim": "İnter", "gol": 6},
+    {"oyuncu": "Vinicius", "takim": "İnter", "gol": 5},
+    {"oyuncu": "Cherki", "takim": "Lazio", "gol": 4},
+    {"oyuncu": "Adeyemi", "takim": "Juventus", "gol": 2},
+    {"oyuncu": "Duran", "takim": "Lazio", "gol": 2},
+    {"oyuncu": "Bellingham", "takim": "Napoli", "gol": 2},
+    {"oyuncu": "Neymar", "takim": "Lazio", "gol": 1},
+    {"oyuncu": "Talisca", "takim": "Lazio", "gol": 1}
   ],
-  "goller": [],
-  "asistler": []
+  "asistKralligi": [
+    {"oyuncu": "Pedri", "takim": "Juventus", "asist": 9},
+    {"oyuncu": "Haaland", "takim": "İnter", "asist": 5},
+    {"oyuncu": "Gyokeres", "takim": "Juventus", "asist": 4},
+    {"oyuncu": "Vinicius", "takim": "İnter", "asist": 4},
+    {"oyuncu": "Adeyemi", "takim": "Juventus", "asist": 4},
+    {"oyuncu": "Cherki", "takim": "Lazio", "asist": 3},
+    {"oyuncu": "Talisca", "takim": "Lazio", "asist": 2},
+    {"oyuncu": "Neymar", "takim": "Lazio", "asist": 1},
+    {"oyuncu": "Caicedo", "takim": "İnter", "asist": 1},
+    {"oyuncu": "Lang", "takim": "Lazio", "asist": 1}
+  ]
 }
