@@ -1,0 +1,176 @@
+{
+  "takimlar": {
+    "Napoli": {
+      "mac": 4,
+      "g": 1,
+      "b": 0,
+      "m": 3,
+      "ag": 4,
+      "yg": 12,
+      "puan": 3
+    },
+    "Milan": {
+      "mac": 4,
+      "g": 0,
+      "b": 1,
+      "m": 3,
+      "ag": 1,
+      "yg": 11,
+      "puan": 1
+    },
+    "Juventus": {
+      "mac": 4,
+      "g": 4,
+      "b": 0,
+      "m": 0,
+      "ag": 17,
+      "yg": 2,
+      "puan": 12
+    },
+    "Roma": {
+      "mac": 4,
+      "g": 0,
+      "b": 1,
+      "m": 3,
+      "ag": 2,
+      "yg": 11,
+      "puan": 1
+    },
+    "Lazio": {
+      "mac": 4,
+      "g": 3,
+      "b": 0,
+      "m": 1,
+      "ag": 6,
+      "yg": 2,
+      "puan": 9
+    },
+    "Atalanta": {
+      "mac": 4,
+      "g": 1,
+      "b": 1,
+      "m": 2,
+      "ag": 5,
+      "yg": 10,
+      "puan": 4
+    },
+    "İnter": {
+      "mac": 4,
+      "g": 4,
+      "b": 0,
+      "m": 0,
+      "ag": 15,
+      "yg": 1,
+      "puan": 12
+    },
+    "Como": {
+      "mac": 4,
+      "g": 0,
+      "b": 3,
+      "m": 1,
+      "ag": 2,
+      "yg": 3,
+      "puan": 3
+    }
+  },
+  "maclar": [
+    {
+      "ev": "İnter",
+      "dep": "Milan",
+      "skor": "5-1",
+      "tarih": "15.03.2026 08:21:33"
+    },
+    {
+      "ev": "Napoli",
+      "dep": "Juventus",
+      "skor": "1-7",
+      "tarih": "15.03.2026 08:22:00"
+    },
+    {
+      "ev": "Lazio",
+      "dep": "Como",
+      "skor": "1-0",
+      "tarih": "15.03.2026 08:22:02"
+    },
+    {
+      "ev": "Roma",
+      "dep": "Atalanta",
+      "skor": "1-4",
+      "tarih": "15.03.2026 08:22:05"
+    },
+    {
+      "ev": "İnter",
+      "dep": "Napoli",
+      "skor": "4-0",
+      "tarih": "15.03.2026 08:31:49"
+    },
+    {
+      "ev": "Juventus",
+      "dep": "Atalanta",
+      "skor": "5-0",
+      "tarih": "15.03.2026 08:32:01"
+    },
+    {
+      "ev": "Lazio",
+      "dep": "Milan",
+      "skor": "3-0",
+      "tarih": "15.03.2026 08:32:12"
+    },
+    {
+      "ev": "Como",
+      "dep": "Roma",
+      "skor": "1-1",
+      "tarih": "15.03.2026 08:32:22"
+    },
+    {
+      "ev": "Como",
+      "dep": "Milan",
+      "skor": "0-0",
+      "tarih": "15.03.2026 08:34:45"
+    },
+    {
+      "ev": "Lazio",
+      "dep": "Napoli",
+      "skor": "1-0",
+      "tarih": "15.03.2026 08:35:50"
+    },
+    {
+      "ev": "Roma",
+      "dep": "Juventus",
+      "skor": "0-3",
+      "tarih": "15.03.2026 08:36:00"
+    },
+    {
+      "ev": "İnter",
+      "dep": "Atalanta",
+      "skor": "3-0",
+      "tarih": "15.03.2026 08:36:09"
+    },
+    {
+      "ev": "Roma",
+      "dep": "İnter",
+      "skor": "0-3",
+      "tarih": "15.03.2026 08:37:24"
+    },
+    {
+      "ev": "Milan",
+      "dep": "Napoli",
+      "skor": "0-3",
+      "tarih": "15.03.2026 08:37:38"
+    },
+    {
+      "ev": "Juventus",
+      "dep": "Lazio",
+      "skor": "2-1",
+      "tarih": "15.03.2026 08:37:47"
+    },
+    {
+      "ev": "Como",
+      "dep": "Atalanta",
+      "skor": "1-1",
+      "tarih": "15.03.2026 08:37:59"
+    }
+  ],
+  "goller": [],
+  "asistler": []
+}
