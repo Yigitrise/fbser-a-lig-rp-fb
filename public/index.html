@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serie A League RP</title>
+    <style>
+        :root { --accent: #00ff85; --bg: #05010a; --panel: #111; --purple: #3d195d; }
+        body { background: var(--bg); color: white; font-family: 'Segoe UI', sans-serif; margin: 0; padding: 0; }
+        
+        .tabs { display: flex; background: var(--purple); border-bottom: 3px solid var(--accent); position: sticky; top: 0; z-index: 100; }
+        .tab-btn { flex: 1; padding: 15px; border: none; background: none; color: white; cursor: pointer; font-weight: bold; font-size: 14px; transition: 0.3s; }
+        .tab-btn.active { background: var(--accent); color: black; }
+
+        .container { padding: 20px; max-width: 800px; margin: auto; padding-bottom: 100px; }
+        .section { display: none; }
+        .section.active { display: block; }
+
+        /* Fikstür Özel Stilleri */
+        .fixture-nav { display: flex; justify-content: space-between; align-items: center; background: #222; padding: 10px; border-radius: 8px; margin-bottom: 20px; border: 1px solid var(--accent); }
+        .week-title { font-size: 20px; font-weight: bold; color: var(--accent); }
+        .nav-arrow { background: var(--accent); color: black; border: none; padding: 5px 15px; border-radius: 5px; cursor: pointer; font-weight: bold; }
+        
+        .fix-card { background: var(--panel); padding: 15px; margin-bottom: 10px; border-radius: 8px; display: grid; grid-template-columns: 1fr 60px 1fr; align-items: center; text-align: center; border: 1px solid #222; }
+        .fix-card b { font-size: 18px; color: var(--accent); }
+
+        /* İstatistik Butonları */
+        .sub-nav { display: flex; gap: 10px; margin-bottom: 20px; }
+        .sub-btn { background: #222; border: 1px solid var(--accent); color: white; padding: 10px 20px; border-radius: 5px; cursor: pointer; flex: 1; }
+        .sub-btn.active { background: var(--accent); color: black; }
+
+        table { width: 100%; border-collapse: collapse; background: var(--panel); border-radius: 10px; overflow: hidden; }
+        th { background: #222; color: var(--accent); padding: 12px; }
+        td { padding: 12px; text-align: center; border-bottom: 1px solid #222; }
+        .title { border-left: 4px solid var(--accent); padding-left: 10px; color: var(--accent); margin: 20px 0; }
+    </style>
+</head>
+<body>
+
+<div class="tabs">
+    <button class="tab-btn active" onclick="changeTab('puan-sec')">PUAN DURUMU</button>
+    <button class="tab-btn" onclick="changeTab('fikstur-sec')">FİKSTÜR</button>
+    <button class="tab-btn" onclick="changeTab('istatistik-sec')">İSTATİSTİKLER</button>
+</div>
+
+<div class="container">
+    <div id="puan-sec" class="section active">
+        <h2 class="title">Lig Tablosu</h2>
+        <table>
+            <thead><tr><th>#</th><th style="text-align:left">Takım</th><th>O</th><th>AV</th><th>P</th></tr></thead>
+            <tbody id="puan-body"></tbody>
+        </table>
+    </div>
+
+    <div id="fikstur-sec" class="section">
+        <div class="fixture-nav">
+            <button class="nav-arrow" onclick="changeWeek(-1)">◀</button>
+            <div class="week-title" id="week-display">1. HAFTA</div>
+            <button class="nav-arrow" onclick="changeWeek(1)">▶</button>
+        </div>
+        <div id="fixture-list"></div>
+    </div>
+
+    <div id="istatistik-sec" class="section">
+        <div class="sub-nav">
+            <button class="sub-btn active" id="gol-btn" onclick="showStat('gol')">⚽ GOL</button>
+            <button class="sub-btn" id="asist-btn" onclick="showStat('asist')">🅰️ ASİST</button>
+        </div>
+        <table>
+            <thead><tr><th>Oyuncu</th><th>Takım</th><th>Sayı</th></tr></thead>
+            <tbody id="stat-body"></tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    let currentWeek = 1;
+    let globalData = { takımlar: {}, maclar: [], goller: [], asistler: [] };
+
+    // Tüm Como1907'ler Como yapıldı
+    const fiksturData = {
+        1: [["Roma","Atalanta","1-4"],["Lazio","Como","1-0"],["Napoli","Juventus","1-7"],["Inter","Milan","5-1"]],
+        2: [["Como","Roma","1-1"],["Juventus","Atalanta","4-0"],["Milan","Lazio","0-3"],["Inter","Napoli","4-0"]],
+        3: [["Roma","Juventus","0-3"],["Como","Milan","0-0"],["Atalanta","Inter","0-3"],["Lazio","Napoli","1-0"]],
+        4: [["Roma","Inter","0-3"],["Milan","Napoli","0-3"],["Juventus","Lazio","2-0"],["Como","Atalanta","2-2"]],
+        5: [["Napoli","Roma"],["Atalanta","Milan"],["Como","Juventus"],["Lazio","Inter"]],
+        6: [["Milan","Roma"],["Inter","Juventus"],["Napoli","Como"],["Lazio","Atalanta"]],
+        7: [["Roma","Lazio"],["Napoli","Atalanta"],["Inter","Como"],["Milan","Juventus"]],
+        8: [["Atalanta","Roma"],["Como","Lazio"],["Juventus","Napoli"],["Milan","Inter"]],
+        9: [["Roma","Como"],["Atalanta","Juventus"],["Lazio","Milan"],["Napoli","Inter"]],
+        10: [["Juventus","Roma"],["Milan","Como"],["Inter","Atalanta"],["Napoli","Lazio"]],
+        11: [["Roma","Milan"],["Juventus","Inter"],["Atalanta","Lazio"],["Como","Napoli"]],
+        12: [["Inter","Roma"],["Napoli","Milan"],["Lazio","Juventus"],["Atalanta","Como"]],
+        13: [["Roma","Napoli"],["Inter","Lazio"],["Milan","Atalanta"],["Juventus","Como"]],
+        14: [["Lazio","Roma"],["Atalanta","Napoli"],["Como","Inter"],["Juventus","Milan"]]
+    };
+
+    async function verileriGetir() {
+        try {
+            const res = await fetch('/api/veriler');
+            globalData = await res.json();
+            renderPuanDurumu();
+            renderFikstur();
+        } catch(e) { console.log("Veri çekilemedi"); }
+    }
+
+    function renderPuanDurumu() {
+        if(!globalData.takimlar) return;
+        const sirali = Object.entries(globalData.takimlar).sort((a,b) => b[1].puan - a[1].puan || (b[1].ag-b[1].yg) - (a[1].ag-a[1].yg));
+        document.getElementById('puan-body').innerHTML = sirali.map(([isim, s], i) => `
+            <tr><td>${i+1}</td><td style="text-align:left"><b>${isim}</b></td><td>${s.mac}</td><td>${s.ag-s.yg}</td><td style="color:var(--accent)">${s.puan}</td></tr>
+        `).join('');
+    }
+
+    function renderFikstur() {
+        document.getElementById('week-display').innerText = currentWeek + ". HAFTA";
+        const maclar = fiksturData[currentWeek];
+        document.getElementById('fixture-list').innerHTML = maclar.map(m => `
+            <div class="fix-card">
+                <span>${m[0]}</span>
+                <b>${m[2] || 'vs'}</b>
+                <span>${m[1]}</span>
+            </div>
+        `).join('');
+    }
+
+    function changeWeek(dir) {
+        currentWeek += dir;
+        if(currentWeek < 1) currentWeek = 14;
+        if(currentWeek > 14) currentWeek = 1;
+        renderFikstur();
+    }
+
+    function showStat(tip) {
+        const liste = tip === 'gol' ? (globalData.goller || []) : (globalData.asistler || []);
+        const sirali = [...liste].sort((a,b) => b.sayi - a.sayi);
+        document.getElementById('gol-btn').classList.toggle('active', tip === 'gol');
+        document.getElementById('asist-btn').classList.toggle('active', tip === 'asist');
+        document.getElementById('stat-body').innerHTML = sirali.map(x => `
+            <tr><td>${x.isim}</td><td>${x.takim}</td><td style="color:var(--accent)">${x.sayi}</td></tr>
+        `).join('');
+    }
+
+    function changeTab(id) {
+        document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+        event.currentTarget.classList.add('active');
+        if(id === 'istatistik-sec') showStat('gol');
+    }
+
+    setInterval(verileriGetir, 5000);
+    verileriGetir();
+</script>
+</body>
+</html>
+
