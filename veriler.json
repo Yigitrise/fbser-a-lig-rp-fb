@@ -9,34 +9,51 @@
     "Milan": { "mac": 4, "g": 0, "b": 1, "m": 3, "ag": 1, "yg": 11, "puan": 1, "logo": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Logo_AC_Milan.svg" },
     "Roma": { "mac": 4, "g": 0, "b": 1, "m": 3, "ag": 2, "yg": 11, "puan": 1, "logo": "https://upload.wikimedia.org/wikipedia/tr/b/bb/AS_Roma_Logo.png" }
   },
-  "maclar": [
-    { "ev": "Roma", "dep": "Atalanta", "skor": "1-4" },
-    { "ev": "Lazio", "dep": "Como", "skor": "1-0" },
-    { "ev": "Napoli", "dep": "Juventus", "skor": "1-7" },
-    { "ev": "İnter", "dep": "Milan", "skor": "5-1" },
-    { "ev": "Como", "dep": "Roma", "skor": "1-1" },
-    { "ev": "Juventus", "dep": "Atalanta", "skor": "4-0" },
-    { "ev": "Milan", "dep": "Lazio", "skor": "0-3" },
-    { "ev": "İnter", "dep": "Napoli", "skor": "4-0" },
-    { "ev": "Roma", "dep": "Juventus", "skor": "0-3" },
-    { "ev": "Como", "dep": "Milan", "skor": "0-0" },
-    { "ev": "Atalanta", "dep": "İnter", "skor": "0-3" },
-    { "ev": "Lazio", "dep": "Napoli", "skor": "1-0" },
-    { "ev": "Roma", "dep": "İnter", "skor": "0-3" },
-    { "ev": "Milan", "dep": "Napoli", "skor": "0-3" },
-    { "ev": "Juventus", "dep": "Lazio", "skor": "2-0" },
-    { "ev": "Como", "dep": "Atalanta", "skor": "2-2" }
+  "fikstur": [
+    { "hafta": 1, "maclar": [ {"ev": "Roma", "dep": "Atalanta", "skor": "1-4"}, {"ev": "Lazio", "dep": "Como", "skor": "1-0"}, {"ev": "Napoli", "dep": "Juventus", "skor": "1-7"}, {"ev": "İnter", "dep": "Milan", "skor": "5-1"} ] },
+    { "hafta": 2, "maclar": [ {"ev": "Como", "dep": "Roma", "skor": "1-1"}, {"ev": "Juventus", "dep": "Atalanta", "skor": "4-0"}, {"ev": "Milan", "dep": "Lazio", "skor": "0-3"}, {"ev": "İnter", "dep": "Napoli", "skor": "4-0"} ] },
+    { "hafta": 3, "maclar": [ {"ev": "Roma", "dep": "Juventus", "skor": "0-3"}, {"ev": "Como", "dep": "Milan", "skor": "0-0"}, {"ev": "Atalanta", "dep": "İnter", "skor": "0-3"}, {"ev": "Lazio", "dep": "Napoli", "skor": "1-0"} ] },
+    { "hafta": 4, "maclar": [ {"ev": "Roma", "dep": "İnter", "skor": "0-3"}, {"ev": "Milan", "dep": "Napoli", "skor": "0-3"}, {"ev": "Juventus", "dep": "Lazio", "skor": "2-0"}, {"ev": "Como", "dep": "Atalanta", "skor": "2-2"} ] },
+    { "hafta": 5, "maclar": [ {"ev": "Napoli", "dep": "Roma", "skor": "-"}, {"ev": "Atalanta", "dep": "Milan", "skor": "-"}, {"ev": "Como", "dep": "Juventus", "skor": "-"}, {"ev": "Lazio", "dep": "İnter", "skor": "-"} ] },
+    { "hafta": 6, "maclar": [ {"ev": "Milan", "dep": "Roma", "skor": "-"}, {"ev": "İnter", "dep": "Juventus", "skor": "-"}, {"ev": "Napoli", "dep": "Como", "skor": "-"}, {"ev": "Lazio", "dep": "Atalanta", "skor": "-"} ] },
+    { "hafta": 7, "maclar": [ {"ev": "Roma", "dep": "Lazio", "skor": "-"}, {"ev": "Napoli", "dep": "Atalanta", "skor": "-"}, {"ev": "İnter", "dep": "Como", "skor": "-"}, {"ev": "Milan", "dep": "Juventus", "skor": "-"} ] },
+    { "hafta": 8, "maclar": [ {"ev": "Atalanta", "dep": "Roma", "skor": "-"}, {"ev": "Como", "dep": "Lazio", "skor": "-"}, {"ev": "Juventus", "dep": "Napoli", "skor": "-"}, {"ev": "Milan", "dep": "İnter", "skor": "-"} ] },
+    { "hafta": 9, "maclar": [ {"ev": "Roma", "dep": "Como", "skor": "-"}, {"ev": "Atalanta", "dep": "Juventus", "skor": "-"}, {"ev": "Lazio", "dep": "Milan", "skor": "-"}, {"ev": "Napoli", "dep": "İnter", "skor": "-"} ] },
+    { "hafta": 10, "maclar": [ {"ev": "Juventus", "dep": "Roma", "skor": "-"}, {"ev": "Milan", "dep": "Como", "skor": "-"}, {"ev": "İnter", "dep": "Atalanta", "skor": "-"}, {"ev": "Napoli", "dep": "Lazio", "skor": "-"} ] },
+    { "hafta": 11, "maclar": [ {"ev": "Roma", "dep": "Milan", "skor": "-"}, {"ev": "Juventus", "dep": "İnter", "skor": "-"}, {"ev": "Atalanta", "dep": "Lazio", "skor": "-"}, {"ev": "Como", "dep": "Napoli", "skor": "-"} ] },
+    { "hafta": 12, "maclar": [ {"ev": "İnter", "dep": "Roma", "skor": "-"}, {"ev": "Napoli", "dep": "Milan", "skor": "-"}, {"ev": "Lazio", "dep": "Juventus", "skor": "-"}, {"ev": "Atalanta", "dep": "Como", "skor": "-"} ] },
+    { "hafta": 13, "maclar": [ {"ev": "Roma", "dep": "Napoli", "skor": "-"}, {"ev": "İnter", "dep": "Lazio", "skor": "-"}, {"ev": "Milan", "dep": "Atalanta", "skor": "-"}, {"ev": "Juventus", "dep": "Como", "skor": "-"} ] },
+    { "hafta": 14, "maclar": [ {"ev": "Lazio", "dep": "Roma", "skor": "-"}, {"ev": "Atalanta", "dep": "Napoli", "skor": "-"}, {"ev": "Como", "dep": "İnter", "skor": "-"}, {"ev": "Juventus", "dep": "Milan", "skor": "-"} ] }
   ],
   "golKralligi": [
     {"oyuncu": "Osimhen", "takim": "Napoli", "gol": 7},
     {"oyuncu": "Gyokeres", "takim": "Juventus", "gol": 7},
     {"oyuncu": "Haaland", "takim": "İnter", "gol": 6},
     {"oyuncu": "Vinicius", "takim": "İnter", "gol": 5},
-    {"oyuncu": "Cherki", "takim": "Lazio", "gol": 4}
+    {"oyuncu": "Cherki", "takim": "Lazio", "gol": 4},
+    {"oyuncu": "Adeyemi", "takim": "Juventus", "gol": 2},
+    {"oyuncu": "Duran", "takim": "Lazio", "gol": 2},
+    {"oyuncu": "Bellingham", "takim": "Napoli", "gol": 2},
+    {"oyuncu": "Neymar", "takim": "Lazio", "gol": 1},
+    {"oyuncu": "Talisca", "takim": "Lazio", "gol": 1},
+    {"oyuncu": "Onauchu", "takim": "Napoli", "gol": 1},
+    {"oyuncu": "Vitinha", "takim": "İnter", "gol": 1},
+    {"oyuncu": "Asensio", "takim": "İnter", "gol": 1}
   ],
   "asistKralligi": [
     {"oyuncu": "Pedri", "takim": "Juventus", "asist": 9},
     {"oyuncu": "Haaland", "takim": "İnter", "asist": 5},
-    {"oyuncu": "Gyokeres", "takim": "Juventus", "asist": 4}
+    {"oyuncu": "Gyokeres", "takim": "Juventus", "asist": 4},
+    {"oyuncu": "Vinicius", "takim": "İnter", "asist": 4},
+    {"oyuncu": "Adeyemi", "takim": "Juventus", "asist": 4},
+    {"oyuncu": "Cherki", "takim": "Lazio", "asist": 3},
+    {"oyuncu": "Talisca", "takim": "Lazio", "asist": 2},
+    {"oyuncu": "Neymar", "takim": "Lazio", "asist": 1},
+    {"oyuncu": "Caicedo", "takim": "İnter", "asist": 1},
+    {"oyuncu": "Lang", "takim": "Lazio", "asist": 1},
+    {"oyuncu": "Asensio", "takim": "İnter", "asist": 1},
+    {"oyuncu": "Vitinha", "takim": "İnter", "asist": 1},
+    {"oyuncu": "Martinelli", "takim": "Serbest", "asist": 1},
+    {"oyuncu": "Onauchu", "takim": "Napoli", "asist": 1}
   ]
 }
