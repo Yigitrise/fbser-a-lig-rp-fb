@@ -1,36 +1,42 @@
 {
   "takimlar": {
-    "İnter": { "mac": 5, "g": 5, "b": 0, "m": 0, "ag": 18, "yg": 0, "puan": 15, "logo": "https://upload.wikimedia.org/wikipedia/commons/0/05/FC_Internazionale_Milano_2021.svg" },
-    "Juventus": { "mac": 5, "g": 5, "b": 0, "m": 0, "ag": 17, "yg": 0, "puan": 15, "logo": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Juventus_FC_2017_icon_%28black%29.svg" },
-    "Lazio": { "mac": 5, "g": 3, "b": 0, "m": 2, "ag": 10, "yg": 10, "puan": 9, "logo": "https://upload.wikimedia.org/wikipedia/tr/b/b3/SS_Lazio.png" },
-    "Napoli": { "mac": 5, "g": 2, "b": 0, "m": 3, "ag": 8, "yg": 15, "puan": 6, "logo": "https://upload.wikimedia.org/wikipedia/commons/b/ba/SSC_Napoli_logo.png" },
-    "Atalanta": { "mac": 5, "g": 1, "b": 1, "m": 3, "ag": 5, "yg": 12, "puan": 4, "logo": "https://upload.wikimedia.org/wikipedia/tr/2/28/Atalanta_BC.png" },
-    "Milan": { "mac": 5, "g": 1, "b": 1, "m": 3, "ag": 5, "yg": 12, "puan": 4, "logo": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Logo_AC_Milan.svg" },
-    "Como": { "mac": 5, "g": 1, "b": 0, "m": 4, "ag": 7, "yg": 10, "puan": 3, "logo": "https://upload.wikimedia.org/wikipedia/tr/b/b3/Como_1907_logo.png" },
-    "Roma": { "mac": 5, "g": 0, "b": 1, "m": 4, "ag": 3, "yg": 15, "puan": 1, "logo": "https://upload.wikimedia.org/wikipedia/tr/b/bb/AS_Roma_Logo.png" }
+    "İnter": { "mac": 4, "g": 4, "b": 0, "m": 0, "ag": 15, "yg": 1, "puan": 12, "logo": "https://upload.wikimedia.org/wikipedia/commons/0/05/FC_Internazionale_Milano_2021.svg" },
+    "Juventus": { "mac": 4, "g": 4, "b": 0, "m": 0, "ag": 16, "yg": 1, "puan": 12, "logo": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Juventus_FC_2017_icon_%28black%29.svg" },
+    "Lazio": { "mac": 4, "g": 3, "b": 0, "m": 1, "ag": 5, "yg": 2, "puan": 9, "logo": "https://upload.wikimedia.org/wikipedia/tr/b/b3/SS_Lazio.png" },
+    "Atalanta": { "mac": 4, "g": 1, "b": 1, "m": 2, "ag": 6, "yg": 10, "puan": 4, "logo": "https://upload.wikimedia.org/wikipedia/tr/2/28/Atalanta_BC.png" },
+    "Napoli": { "mac": 4, "g": 1, "b": 0, "m": 3, "ag": 4, "yg": 12, "puan": 3, "logo": "https://upload.wikimedia.org/wikipedia/commons/b/ba/SSC_Napoli_logo.png" },
+    "Como": { "mac": 4, "g": 0, "b": 3, "m": 1, "ag": 3, "yg": 4, "puan": 3, "logo": "https://upload.wikimedia.org/wikipedia/tr/b/b3/Como_1907_logo.png" },
+    "Milan": { "mac": 4, "g": 0, "b": 1, "m": 3, "ag": 1, "yg": 11, "puan": 1, "logo": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Logo_AC_Milan.svg" },
+    "Roma": { "mac": 4, "g": 0, "b": 1, "m": 3, "ag": 2, "yg": 11, "puan": 1, "logo": "https://upload.wikimedia.org/wikipedia/tr/b/bb/AS_Roma_Logo.png" }
   },
+  "maclar": [
+    { "ev": "Roma", "dep": "Atalanta", "skor": "1-4" },
+    { "ev": "Lazio", "dep": "Como", "skor": "1-0" },
+    { "ev": "Napoli", "dep": "Juventus", "skor": "1-7" },
+    { "ev": "İnter", "dep": "Milan", "skor": "5-1" },
+    { "ev": "Como", "dep": "Roma", "skor": "1-1" },
+    { "ev": "Juventus", "dep": "Atalanta", "skor": "4-0" },
+    { "ev": "Milan", "dep": "Lazio", "skor": "0-3" },
+    { "ev": "İnter", "dep": "Napoli", "skor": "4-0" },
+    { "ev": "Roma", "dep": "Juventus", "skor": "0-3" },
+    { "ev": "Como", "dep": "Milan", "skor": "0-0" },
+    { "ev": "Atalanta", "dep": "İnter", "skor": "0-3" },
+    { "ev": "Lazio", "dep": "Napoli", "skor": "1-0" },
+    { "ev": "Roma", "dep": "İnter", "skor": "0-3" },
+    { "ev": "Milan", "dep": "Napoli", "skor": "0-3" },
+    { "ev": "Juventus", "dep": "Lazio", "skor": "2-0" },
+    { "ev": "Como", "dep": "Atalanta", "skor": "2-2" }
+  ],
   "golKralligi": [
     {"oyuncu": "Osimhen", "takim": "Napoli", "gol": 7},
     {"oyuncu": "Gyokeres", "takim": "Juventus", "gol": 7},
     {"oyuncu": "Haaland", "takim": "İnter", "gol": 6},
     {"oyuncu": "Vinicius", "takim": "İnter", "gol": 5},
-    {"oyuncu": "Cherki", "takim": "Lazio", "gol": 4},
-    {"oyuncu": "Adeyemi", "takim": "Juventus", "gol": 2},
-    {"oyuncu": "Duran", "takim": "Lazio", "gol": 2},
-    {"oyuncu": "Bellingham", "takim": "Napoli", "gol": 2},
-    {"oyuncu": "Neymar", "takim": "Lazio", "gol": 1},
-    {"oyuncu": "Talisca", "takim": "Lazio", "gol": 1}
+    {"oyuncu": "Cherki", "takim": "Lazio", "gol": 4}
   ],
   "asistKralligi": [
     {"oyuncu": "Pedri", "takim": "Juventus", "asist": 9},
     {"oyuncu": "Haaland", "takim": "İnter", "asist": 5},
-    {"oyuncu": "Gyokeres", "takim": "Juventus", "asist": 4},
-    {"oyuncu": "Vinicius", "takim": "İnter", "asist": 4},
-    {"oyuncu": "Adeyemi", "takim": "Juventus", "asist": 4},
-    {"oyuncu": "Cherki", "takim": "Lazio", "asist": 3},
-    {"oyuncu": "Talisca", "takim": "Lazio", "asist": 2},
-    {"oyuncu": "Neymar", "takim": "Lazio", "asist": 1},
-    {"oyuncu": "Caicedo", "takim": "İnter", "asist": 1},
-    {"oyuncu": "Lang", "takim": "Lazio", "asist": 1}
+    {"oyuncu": "Gyokeres", "takim": "Juventus", "asist": 4}
   ]
 }
