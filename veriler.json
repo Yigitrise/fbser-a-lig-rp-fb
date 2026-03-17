@@ -1,20 +1,20 @@
 {
   "takimlar": {
-    "İnter": { "mac": 4, "g": 4, "b": 0, "m": 0, "ag": 15, "yg": 1, "puan": 12, "logo": "https://upload.wikimedia.org/wikipedia/commons/0/05/FC_Internazionale_Milano_2021.svg" },
-    "Juventus": { "mac": 4, "g": 4, "b": 0, "m": 0, "ag": 16, "yg": 1, "puan": 12, "logo": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Juventus_FC_2017_icon_%28black%29.svg" },
-    "Lazio": { "mac": 4, "g": 3, "b": 0, "m": 1, "ag": 5, "yg": 2, "puan": 9, "logo": "https://upload.wikimedia.org/wikipedia/tr/b/b3/SS_Lazio.png" },
-    "Atalanta": { "mac": 4, "g": 1, "b": 1, "m": 2, "ag": 6, "yg": 10, "puan": 4, "logo": "https://upload.wikimedia.org/wikipedia/tr/2/28/Atalanta_BC.png" },
-    "Napoli": { "mac": 4, "g": 1, "b": 0, "m": 3, "ag": 4, "yg": 12, "puan": 3, "logo": "https://upload.wikimedia.org/wikipedia/commons/b/ba/SSC_Napoli_logo.png" },
-    "Como": { "mac": 4, "g": 0, "b": 3, "m": 1, "ag": 3, "yg": 4, "puan": 3, "logo": "https://upload.wikimedia.org/wikipedia/tr/b/b3/Como_1907_logo.png" },
-    "Milan": { "mac": 4, "g": 0, "b": 1, "m": 3, "ag": 1, "yg": 11, "puan": 1, "logo": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Logo_AC_Milan.svg" },
-    "Roma": { "mac": 4, "g": 0, "b": 1, "m": 3, "ag": 2, "yg": 11, "puan": 1, "logo": "https://upload.wikimedia.org/wikipedia/tr/b/bb/AS_Roma_Logo.png" }
+    "İnter": { "mac": 5, "g": 5, "b": 0, "m": 0, "ag": 20, "yg": 2, "puan": 15, "logo": "https://upload.wikimedia.org/wikipedia/commons/0/05/FC_Internazionale_Milano_2021.svg" },
+    "Juventus": { "mac": 5, "g": 5, "b": 0, "m": 0, "ag": 18, "yg": 1, "puan": 15, "logo": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Juventus_FC_2017_icon_%28black%29.svg" },
+    "Lazio": { "mac": 5, "g": 3, "b": 0, "m": 2, "ag": 6, "yg": 7, "puan": 9, "logo": "https://upload.wikimedia.org/wikipedia/tr/b/b3/SS_Lazio.png" },
+    "Napoli": { "mac": 5, "g": 2, "b": 0, "m": 3, "ag": 5, "yg": 12, "puan": 6, "logo": "https://upload.wikimedia.org/wikipedia/commons/b/ba/SSC_Napoli_logo.png" },
+    "Atalanta": { "mac": 5, "g": 1, "b": 1, "m": 3, "ag": 6, "yg": 13, "puan": 4, "logo": "https://upload.wikimedia.org/wikipedia/tr/2/28/Atalanta_BC.png" },
+    "Milan": { "mac": 5, "g": 1, "b": 1, "m": 3, "ag": 4, "yg": 11, "puan": 4, "logo": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Logo_AC_Milan.svg" },
+    "Como": { "mac": 5, "g": 0, "b": 3, "m": 2, "ag": 3, "yg": 6, "puan": 3, "logo": "https://upload.wikimedia.org/wikipedia/tr/b/b3/Como_1907_logo.png" },
+    "Roma": { "mac": 5, "g": 0, "b": 1, "m": 4, "ag": 2, "yg": 12, "puan": 1, "logo": "https://upload.wikimedia.org/wikipedia/tr/b/bb/AS_Roma_Logo.png" }
   },
   "fikstur": [
     { "hafta": 1, "maclar": [ {"ev": "Roma", "dep": "Atalanta", "skor": "1-4"}, {"ev": "Lazio", "dep": "Como", "skor": "1-0"}, {"ev": "Napoli", "dep": "Juventus", "skor": "1-7"}, {"ev": "İnter", "dep": "Milan", "skor": "5-1"} ] },
     { "hafta": 2, "maclar": [ {"ev": "Como", "dep": "Roma", "skor": "1-1"}, {"ev": "Juventus", "dep": "Atalanta", "skor": "4-0"}, {"ev": "Milan", "dep": "Lazio", "skor": "0-3"}, {"ev": "İnter", "dep": "Napoli", "skor": "4-0"} ] },
     { "hafta": 3, "maclar": [ {"ev": "Roma", "dep": "Juventus", "skor": "0-3"}, {"ev": "Como", "dep": "Milan", "skor": "0-0"}, {"ev": "Atalanta", "dep": "İnter", "skor": "0-3"}, {"ev": "Lazio", "dep": "Napoli", "skor": "1-0"} ] },
     { "hafta": 4, "maclar": [ {"ev": "Roma", "dep": "İnter", "skor": "0-3"}, {"ev": "Milan", "dep": "Napoli", "skor": "0-3"}, {"ev": "Juventus", "dep": "Lazio", "skor": "2-0"}, {"ev": "Como", "dep": "Atalanta", "skor": "2-2"} ] },
-    { "hafta": 5, "maclar": [ {"ev": "Napoli", "dep": "Roma", "skor": "-"}, {"ev": "Atalanta", "dep": "Milan", "skor": "-"}, {"ev": "Como", "dep": "Juventus", "skor": "-"}, {"ev": "Lazio", "dep": "İnter", "skor": "-"} ] },
+    { "hafta": 5, "maclar": [ {"ev": "Napoli", "dep": "Roma", "skor": "1-0"}, {"ev": "Atalanta", "dep": "Milan", "skor": "0-3"}, {"ev": "Como", "dep": "Juventus", "skor": "0-2"}, {"ev": "Lazio", "dep": "İnter", "skor": "1-5"} ] },
     { "hafta": 6, "maclar": [ {"ev": "Milan", "dep": "Roma", "skor": "-"}, {"ev": "İnter", "dep": "Juventus", "skor": "-"}, {"ev": "Napoli", "dep": "Como", "skor": "-"}, {"ev": "Lazio", "dep": "Atalanta", "skor": "-"} ] },
     { "hafta": 7, "maclar": [ {"ev": "Roma", "dep": "Lazio", "skor": "-"}, {"ev": "Napoli", "dep": "Atalanta", "skor": "-"}, {"ev": "İnter", "dep": "Como", "skor": "-"}, {"ev": "Milan", "dep": "Juventus", "skor": "-"} ] },
     { "hafta": 8, "maclar": [ {"ev": "Atalanta", "dep": "Roma", "skor": "-"}, {"ev": "Como", "dep": "Lazio", "skor": "-"}, {"ev": "Juventus", "dep": "Napoli", "skor": "-"}, {"ev": "Milan", "dep": "İnter", "skor": "-"} ] },
