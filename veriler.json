@@ -2,12 +2,12 @@
   "takimlar": {
     "İnter": { "mac": 5, "g": 5, "b": 0, "m": 0, "ag": 20, "yg": 2, "puan": 15, "logo": "https://upload.wikimedia.org/wikipedia/commons/0/05/FC_Internazionale_Milano_2021.svg" },
     "Juventus": { "mac": 5, "g": 5, "b": 0, "m": 0, "ag": 18, "yg": 1, "puan": 15, "logo": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Juventus_FC_2017_icon_%28black%29.svg" },
-    "Lazio": { "mac": 5, "g": 3, "b": 0, "m": 2, "ag": 6, "yg": 7, "puan": 9, "logo": "https://upload.wikimedia.org/wikipedia/tr/b/b3/SS_Lazio.png" },
+    "Lazio": { "mac": 5, "g": 3, "b": 0, "m": 2, "ag": 6, "yg": 7, "puan": 9, "logo": "https://upload.wikimedia.org/wikipedia/en/c/ce/S.S._Lazio_badge.svg" },
     "Napoli": { "mac": 5, "g": 2, "b": 0, "m": 3, "ag": 5, "yg": 12, "puan": 6, "logo": "https://upload.wikimedia.org/wikipedia/commons/b/ba/SSC_Napoli_logo.png" },
-    "Atalanta": { "mac": 5, "g": 1, "b": 1, "m": 3, "ag": 6, "yg": 13, "puan": 4, "logo": "https://upload.wikimedia.org/wikipedia/tr/2/28/Atalanta_BC.png" },
+    "Atalanta": { "mac": 5, "g": 1, "b": 1, "m": 3, "ag": 6, "yg": 13, "puan": 4, "logo": "https://upload.wikimedia.org/wikipedia/en/6/66/Atalanta_BC_logo.svg" },
     "Milan": { "mac": 5, "g": 1, "b": 1, "m": 3, "ag": 4, "yg": 11, "puan": 4, "logo": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Logo_AC_Milan.svg" },
-    "Como": { "mac": 5, "g": 0, "b": 3, "m": 2, "ag": 3, "yg": 6, "puan": 3, "logo": "https://upload.wikimedia.org/wikipedia/tr/b/b3/Como_1907_logo.png" },
-    "Roma": { "mac": 5, "g": 0, "b": 1, "m": 4, "ag": 2, "yg": 12, "puan": 1, "logo": "https://upload.wikimedia.org/wikipedia/tr/b/bb/AS_Roma_Logo.png" }
+    "Como": { "mac": 5, "g": 0, "b": 3, "m": 2, "ag": 3, "yg": 6, "puan": 3, "logo": "https://upload.wikimedia.org/wikipedia/en/1/11/Como_1907_logo.svg" },
+    "Roma": { "mac": 5, "g": 0, "b": 1, "m": 4, "ag": 2, "yg": 12, "puan": 1, "logo": "https://upload.wikimedia.org/wikipedia/en/f/f7/AS_Roma_logo_%282017%29.svg" }
   },
   "fikstur": [
     { "hafta": 1, "maclar": [ {"ev": "Roma", "dep": "Atalanta", "skor": "1-4"}, {"ev": "Lazio", "dep": "Como", "skor": "1-0"}, {"ev": "Napoli", "dep": "Juventus", "skor": "1-7"}, {"ev": "İnter", "dep": "Milan", "skor": "5-1"} ] },
