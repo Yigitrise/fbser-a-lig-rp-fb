@@ -1,13 +1,13 @@
 {
   "takimlar": {
-    "Juventus": { "mac": 6, "g": 6, "b": 0, "m": 0, "ag": 21, "yg": 2, "puan": 18, "form": ["G", "G", "G", "G", "G"], "logo": "https://tmssl.akamaized.net/images/wappen/head/506.png" },
-    "İnter": { "mac": 6, "g": 5, "b": 0, "m": 1, "ag": 21, "yg": 5, "puan": 15, "form": ["G", "G", "G", "G", "M"], "logo": "https://tmssl.akamaized.net/images/wappen/head/46.png" },
-    "Lazio": { "mac": 6, "g": 4, "b": 0, "m": 2, "ag": 7, "yg": 7, "puan": 12, "form": ["G", "G", "M", "M", "G"], "logo": "https://tmssl.akamaized.net/images/wappen/head/398.png" },
-    "Napoli": { "mac": 6, "g": 3, "b": 0, "m": 3, "ag": 10, "yg": 12, "puan": 9, "form": ["M", "M", "G", "G", "G"], "logo": "https://tmssl.akamaized.net/images/wappen/head/6195.png" },
-    "Milan": { "mac": 6, "g": 2, "b": 1, "m": 3, "ag": 6, "yg": 11, "puan": 7, "form": ["B", "M", "M", "G", "G"], "logo": "https://tmssl.akamaized.net/images/wappen/head/5.png" },
-    "Atalanta": { "mac": 6, "g": 1, "b": 1, "m": 4, "ag": 6, "yg": 14, "puan": 4, "form": ["M", "M", "B", "M", "M"], "logo": "https://tmssl.akamaized.net/images/wappen/head/800.png" },
-    "Como": { "mac": 6, "g": 0, "b": 3, "m": 3, "ag": 3, "yg": 11, "puan": 3, "form": ["B", "B", "B", "M", "M"], "logo": "https://tmssl.akamaized.net/images/wappen/head/1047.png" },
-    "Roma": { "mac": 6, "g": 0, "b": 1, "m": 5, "ag": 2, "yg": 14, "puan": 1, "form": ["B", "M", "M", "M", "M"], "logo": "https://tmssl.akamaized.net/images/wappen/head/12.png" }
+    "Juventus": { "mac": 6, "g": 6, "b": 0, "m": 0, "ag": 21, "yg": 2, "puan": 18, "logo": "https://tmssl.akamaized.net/images/wappen/head/506.png", "kadro": ["Gyokeres", "Dembele", "Adeyemi", "Pedri", "Orkun Kökçü", "Szoboszlai", "Van Dijk", "Konate", "Masuaku", "Kochalski", "TD: Sergen Yalçın"] },
+    "İnter": { "mac": 6, "g": 5, "b": 0, "m": 1, "ag": 21, "yg": 5, "puan": 15, "logo": "https://tmssl.akamaized.net/images/wappen/head/46.png", "kadro": ["Haaland", "Vinicius Jr.", "Asensio", "Cherki", "Caicedo", "Zeki Yavru", "Donnarumma", "Bastoni", "Marquinhos", "Ferdi Kadıoğlu", "TD: Fatih Terim"] },
+    "Lazio": { "mac": 6, "g": 4, "b": 0, "m": 2, "ag": 7, "yg": 7, "puan": 12, "logo": "https://tmssl.akamaized.net/images/wappen/head/398.png", "kadro": ["Ahmet Can Kaplan", "Cristiano Ronaldo", "Camavinga", "Jhon Duran", "Talisca", "Neymar", "Kyle Walker", "Murillo", "TD: Xabi Alonso"] },
+    "Napoli": { "mac": 6, "g": 3, "b": 0, "m": 3, "ag": 10, "yg": 12, "puan": 9, "logo": "https://tmssl.akamaized.net/images/wappen/head/6195.png", "kadro": ["Mbappe", "Osimhen", "Yamal", "Arda Güler", "Bellingham", "Barella", "Kimmich", "Barcola", "Arnold", "Hakimi", "Araujo", "Neuer", "Onauchu", "Skriniar", "TD: Arda Turan"] },
+    "Milan": { "mac": 6, "g": 2, "b": 1, "m": 3, "ag": 6, "yg": 11, "puan": 7, "logo": "https://tmssl.akamaized.net/images/wappen/head/5.png", "kadro": ["Palmer", "Lewandowski", "Yunus Akgün"] },
+    "Atalanta": { "mac": 6, "g": 1, "b": 1, "m": 4, "ag": 6, "yg": 14, "puan": 4, "logo": "https://tmssl.akamaized.net/images/wappen/head/800.png", "kadro": ["Henüz Belirlenmedi"] },
+    "Como": { "mac": 6, "g": 0, "b": 3, "m": 3, "ag": 3, "yg": 11, "puan": 3, "logo": "https://tmssl.akamaized.net/images/wappen/head/1047.png", "kadro": ["Henüz Belirlenmedi"] },
+    "Roma": { "mac": 6, "g": 0, "b": 1, "m": 5, "ag": 2, "yg": 14, "puan": 1, "logo": "https://tmssl.akamaized.net/images/wappen/head/12.png", "kadro": ["Henüz Belirlenmedi"] }
   },
   "fikstur": [
     { "hafta": 1, "maclar": [ {"ev": "Roma", "dep": "Atalanta", "skor": "1-4"}, {"ev": "Lazio", "dep": "Como", "skor": "1-0"}, {"ev": "Napoli", "dep": "Juventus", "skor": "1-7"}, {"ev": "İnter", "dep": "Milan", "skor": "5-1"} ] },
@@ -29,14 +29,14 @@
     {"oyuncu": "Osimhen", "takim": "Napoli", "gol": 11},
     {"oyuncu": "Gyokeres", "takim": "Juventus", "gol": 9},
     {"oyuncu": "Haaland", "takim": "İnter", "gol": 7},
-    {"oyuncu": "Vinicius", "takim": "İnter", "gol": 5},
-    {"oyuncu": "Cherki", "takim": "Lazio", "gol": 4},
+    {"oyuncu": "Vinicius Jr.", "takim": "İnter", "gol": 5},
+    {"oyuncu": "Cherki", "takim": "İnter", "gol": 4},
     {"oyuncu": "Adeyemi", "takim": "Juventus", "gol": 3},
     {"oyuncu": "Duran", "takim": "Lazio", "gol": 3},
     {"oyuncu": "Bellingham", "takim": "Napoli", "gol": 2},
+    {"oyuncu": "Onauchu", "takim": "Napoli", "gol": 2},
     {"oyuncu": "Palmer", "takim": "Milan", "gol": 1},
     {"oyuncu": "Lewandowski", "takim": "Milan", "gol": 1},
-    {"oyuncu": "Onauchu", "takim": "Napoli", "gol": 2},
     {"oyuncu": "Neymar", "takim": "Lazio", "gol": 1},
     {"oyuncu": "Talisca", "takim": "Lazio", "gol": 1},
     {"oyuncu": "Vitinha", "takim": "İnter", "gol": 1},
@@ -45,19 +45,16 @@
   "asistKralligi": [
     {"oyuncu": "Pedri", "takim": "Juventus", "asist": 11},
     {"oyuncu": "Haaland", "takim": "İnter", "asist": 5},
-    {"oyuncu": "Vinicius", "takim": "İnter", "asist": 5},
+    {"oyuncu": "Vinicius Jr.", "takim": "İnter", "asist": 5},
     {"oyuncu": "Adeyemi", "takim": "Juventus", "asist": 5},
     {"oyuncu": "Gyokeres", "takim": "Juventus", "asist": 4},
-    {"oyuncu": "Cherki", "takim": "Lazio", "asist": 3},
     {"oyuncu": "Onauchu", "takim": "Napoli", "asist": 3},
-    {"oyuncu": "Talisca", "takim": "Lazio", "asist": 2},
-    {"oyuncu": "Osimhen", "takim": "Napoli", "asist": 1},
-    {"oyuncu": "Bellingham", "takim": "Napoli", "asist": 1},
-    {"oyuncu": "Yunus Akgün", "takim": "Milan", "asist": 1},
     {"oyuncu": "Neymar", "takim": "Lazio", "asist": 2},
+    {"oyuncu": "Talisca", "takim": "Lazio", "asist": 2},
+    {"oyuncu": "Yunus Akgün", "takim": "Milan", "asist": 1},
+    {"oyuncu": "Bellingham", "takim": "Napoli", "asist": 1},
+    {"oyuncu": "Osimhen", "takim": "Napoli", "asist": 1},
     {"oyuncu": "Caicedo", "takim": "İnter", "asist": 1},
-    {"oyuncu": "Lang", "takim": "Lazio", "asist": 1},
-    {"oyuncu": "Asensio", "takim": "İnter", "asist": 1},
-    {"oyuncu": "Vitinha", "takim": "İnter", "asist": 1}
+    {"oyuncu": "Asensio", "takim": "İnter", "asist": 1}
   ]
 }
