@@ -9,11 +9,9 @@
         :root { --tm-dark: #1a3151; --tm-blue: #002d62; --bg: #f0f2f5; --white: #ffffff; --grey-box: #eef2f7; }
         body { font-family: 'Poppins', sans-serif; background: var(--bg); margin: 0; padding: 0; color: #333; }
         
-        /* Navbar */
-        .navbar { background: var(--tm-dark); padding: 12px 60px; display: flex; justify-content: space-between; align-items: center; color: white; }
+        /* Navbar - Profil kaldırıldı, sadece logo kaldı */
+        .navbar { background: var(--tm-dark); padding: 15px 60px; display: flex; justify-content: flex-start; align-items: center; color: white; }
         .logo { font-size: 22px; font-weight: 800; letter-spacing: -1px; text-decoration: none; color: white; }
-        .user-profile { display: flex; align-items: center; gap: 12px; font-size: 14px; font-weight: 600; }
-        .user-avatar { width: 32px; height: 32px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.3); object-fit: cover; }
 
         /* Başlık Alanı */
         .page-header { background: var(--white); padding: 35px 60px; border-bottom: 1px solid #dee2e6; display: flex; align-items: center; gap: 20px; }
@@ -29,7 +27,7 @@
         
         .main-menu { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; padding: 25px; }
         .menu-btn { background: var(--grey-box); border-radius: 12px; padding: 40px 20px; text-align: center; cursor: pointer; transition: 0.3s; border: 1px solid #dee2e6; }
-        .menu-btn:hover { background: #fff; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.06); border-color: var(--tm-blue); }
+        .menu-btn:hover { background: #white; transform: translateY(-3px); box-shadow: 0 8px 20px rgba(0,0,0,0.06); border-color: var(--tm-blue); }
         .menu-btn h2 { margin: 10px 0 5px 0; font-size: 22px; font-weight: 800; color: var(--tm-blue); }
         .menu-btn p { font-size: 13px; color: #888; margin: 0; }
         .icon { font-size: 26px; }
@@ -52,10 +50,6 @@
 
 <div class="navbar">
     <a href="index.html" class="logo">Transfermarkt</a>
-    <div class="user-profile">
-        <span>Yigitrise</span>
-        <img src="https://tmssl.akamaized.net/images/portrait/header/1138-1698226992.jpg" class="user-avatar">
-    </div>
 </div>
 
 <div class="page-header">
@@ -97,7 +91,6 @@
 </div>
 
 <script>
-    // İstediğin tüm takımları buraya ekledim
     const myClubs = [
         { name: "Juventus", id: "506" },
         { name: "İnter", id: "46" },
@@ -133,4 +126,3 @@
 </script>
 </body>
 </html>
-
