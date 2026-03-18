@@ -9,29 +9,20 @@
         :root { --tm-dark: #002d62; --bg: #f0f2f5; --white: #ffffff; }
         body { font-family: 'Poppins', sans-serif; background: var(--bg); margin: 0; padding: 20px; color: #333; }
         .container { max-width: 1100px; margin: auto; }
-        
-        /* Geri Butonu */
         .back-btn { background: var(--tm-dark); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 13px; display: inline-block; margin-bottom: 20px; transition: 0.2s; }
         .back-btn:hover { background: #001a3a; transform: translateX(-5px); }
-
-        /* Üst Kart (Header) */
         .header-card { background: var(--white); border-radius: 12px; padding: 25px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .team-brand { display: flex; align-items: center; gap: 30px; }
         .team-logo { width: 80px; height: 80px; object-fit: contain; }
         .team-info h1 { margin: 0; font-size: 32px; color: var(--tm-dark); font-weight: 800; }
         .team-meta { display: flex; gap: 40px; margin-top: 10px; font-size: 13px; color: #666; }
         .meta-item b { display: block; color: #333; font-weight: 700; }
-        
         .value-badge { background: var(--tm-dark); color: white; padding: 20px 40px; border-radius: 8px; text-align: right; }
         .value-badge span { font-size: 12px; text-transform: uppercase; opacity: 0.8; }
         .value-badge div { font-size: 28px; font-weight: 800; }
-
-        /* Ana Grid Layout */
         .main-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
         .card { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .card-header { padding: 15px 20px; font-weight: 800; color: var(--tm-dark); border-bottom: 1px solid #eee; font-size: 14px; background: #fafafa; }
-
-        /* Tablo Stilleri */
         table { width: 100%; border-collapse: collapse; }
         th { text-align: left; padding: 15px; background: #fafafa; font-size: 11px; color: #999; text-transform: uppercase; }
         td { padding: 12px 15px; border-bottom: 1px solid #f2f2f2; font-size: 14px; }
@@ -40,23 +31,17 @@
         .p-name { font-weight: 700; color: var(--tm-dark); }
         .p-sub { font-size: 11px; color: #999; display: block; }
         .p-val { font-weight: 800; color: var(--tm-dark); text-align: right; }
-
-        /* Teknik Direktör Bölümü */
         .manager-box { text-align: center; padding: 30px; }
         .manager-img { width: 130px; height: 130px; border-radius: 15px; object-fit: cover; background: #eee; margin-bottom: 15px; border: 4px solid #f0f2f5; }
-        
-        /* Lig İstatistikleri */
         .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 20px; }
         .stat-card { padding: 15px; border-radius: 10px; text-align: center; color: white; }
         .blue-card { background: var(--tm-dark); }
         .green-card { background: #27ae60; }
         .stat-val { font-size: 22px; font-weight: 800; display: block; }
         .stat-label { font-size: 10px; font-weight: 700; opacity: 0.8; }
-        
         .mini-stats { display: flex; justify-content: space-between; padding: 15px 20px; background: #fcfcfc; border-top: 1px solid #eee; }
         .mini-item { text-align: center; flex: 1; }
         .mini-item label { display: block; color: #999; font-size: 10px; font-weight: 700; }
-        
         .empty-msg { text-align: center; padding: 60px 20px; color: #999; font-weight: 700; font-size: 16px; }
     </style>
 </head>
@@ -94,8 +79,7 @@
                             <th style="text-align:right">PİYASA DEĞERİ</th>
                         </tr>
                     </thead>
-                    <tbody id="squadBody">
-                        </tbody>
+                    <tbody id="squadBody"></tbody>
                 </table>
             </div>
 
@@ -120,8 +104,7 @@
                             <span id="puanVal" class="stat-val">-</span>
                         </div>
                     </div>
-                    <div class="mini-stats" id="matchStats">
-                        </div>
+                    <div class="mini-stats" id="matchStats"></div>
                     <div style="padding: 15px; text-align:center; font-size: 12px; color: #666; border-top: 1px solid #eee;">
                         Attığı Gol: <b id="goalA" style="color:var(--tm-dark)">-</b> | 
                         Yediği Gol: <b id="goalY" style="color:red">-</b>
@@ -139,26 +122,31 @@
             const data = await res.json();
             const portraitDefault = 'https://www.transfermarkt.com.tr/assets/6504b2e1/images/portrait/medium/default.jpg';
 
-            // URL'den takımı çek (?team=İnter gibi)
             const urlParams = new URLSearchParams(window.location.search);
             let teamName = urlParams.get('team');
 
-            // Hata kontrolü: Takım yoksa Juve'yi aç
             if(!teamName || !data.takimlar[teamName]) {
                 teamName = "Juventus";
             }
 
             const team = data.takimlar[teamName];
 
-            // Header Bilgilerini Doldur
+            // Header ve Logo
             document.getElementById('tLogo').src = team.logo || "https://tmssl.akamaized.net/images/wappen/head/default.png";
             document.getElementById('tName').innerText = teamName;
             document.getElementById('tStadium').innerText = team.stadyum || "Bilinmiyor";
             document.getElementById('tAgeAvg').innerText = team.yas_ort || "-";
             
-            // TD Bilgileri
-            document.getElementById('mName').innerText = team.hoca ? team.hoca.isim : "Atanmadı";
-            document.getElementById('mImg').src = team.hoca ? team.hoca.foto : portraitDefault;
+            // Teknik Direktör Fotoğraf Ayarı
+            if(team.hoca) {
+                document.getElementById('mName').innerText = team.hoca.isim;
+                let hocaFoto = team.hoca.foto;
+                // Eğer internet linki değilse başına ./ ekle (Yerel dosyayı bulması için)
+                if (hocaFoto && !hocaFoto.startsWith('http')) {
+                    hocaFoto = "./" + hocaFoto;
+                }
+                document.getElementById('mImg').src = hocaFoto || portraitDefault;
+            }
 
             // İstatistikler
             document.getElementById('rankVal').innerText = team.lig_sirasi || "-";
@@ -175,19 +163,25 @@
                 `;
             }
 
-            // KADRO DOLDURMA MANTIĞI
+            // Kadro ve Oyuncu Fotoğrafları
             const tbody = document.getElementById('squadBody');
-            
             if (team.kadro && team.kadro.length > 0) {
                 let totalValue = 0;
                 tbody.innerHTML = team.kadro.map((p, i) => {
                     totalValue += parseFloat(p.deger);
+                    
+                    let pFoto = p.foto;
+                    // Eğer internet linki değilse yerel yolu düzenle
+                    if (pFoto && !pFoto.startsWith('http')) {
+                        pFoto = "./" + pFoto;
+                    }
+
                     return `
                         <tr>
                             <td>
                                 <div class="player-cell">
                                     <span style="color:#ccc; font-size:10px; width:15px;">${i+1}</span>
-                                    <img src="${p.foto || portraitDefault}" class="player-img" onerror="this.src='${portraitDefault}'">
+                                    <img src="${pFoto || portraitDefault}" class="player-img" onerror="this.src='${portraitDefault}'">
                                     <div>
                                         <span class="p-name">${p.isim}</span>
                                         <span class="p-sub">Oyuncu</span>
@@ -201,19 +195,15 @@
                 }).join('');
                 document.getElementById('tTotalVal').innerText = `€ ${totalValue.toFixed(2)} mil.`;
             } else {
-                // KANKA: Roma, Atalanta, Como gibi boş takımlar buraya düşer
                 tbody.innerHTML = `<tr><td colspan="3" class="empty-msg">TAKIMDA OYUNCU YOK</td></tr>`;
                 document.getElementById('tTotalVal').innerText = `€ 0.00 mil.`;
             }
 
         } catch (err) {
-            console.error("Veri yükleme hatası:", err);
-            document.body.innerHTML = "<h2 style='text-align:center; margin-top:50px;'>Veri dosyası yüklenemedi!</h2>";
+            console.error("Hata:", err);
         }
     }
-
     init();
 </script>
-
 </body>
 </html>
