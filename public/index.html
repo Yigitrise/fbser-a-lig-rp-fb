@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         body { font-family: 'Poppins', sans-serif; background: #0a0a0a; color: white; margin: 0; padding: 20px; }
-        .container { max-width: 1000px; margin: auto; }
+        .container { max-width: 900px; margin: auto; }
         h1 { text-align: center; color: #008CFF; font-weight: 800; text-transform: uppercase; margin-bottom: 30px; letter-spacing: 2px; }
         
         /* Sekme Menüsü */
@@ -17,35 +17,25 @@
         .tab-btn.active { background: #008CFF; color: white; border-color: #008CFF; box-shadow: 0 0 15px rgba(0, 140, 255, 0.4); }
         
         .tab-content { display: none; background: #151515; padding: 20px; border-radius: 15px; border: 1px solid #222; }
-        .tab-content.active { display: block; animation: fadeIn 0.5s; }
+        .tab-content.active { display: block; }
         
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
         /* Tablo Tasarımı */
         table { width: 100%; border-collapse: collapse; margin-top: 10px; }
         th, td { padding: 15px; text-align: left; border-bottom: 1px solid #222; }
-        th { color: #008CFF; font-size: 12px; text-transform: uppercase; letter-spacing: 1px; }
-        tr:hover { background: rgba(255, 255, 255, 0.02); }
+        th { color: #008CFF; font-size: 12px; text-transform: uppercase; }
         
-        .team-logo { width: 30px; height: 30px; object-fit: contain; vertical-align: middle; margin-right: 12px; }
+        .team-logo { width: 28px; height: 28px; object-fit: contain; vertical-align: middle; margin-right: 12px; }
         .puan-bold { font-weight: 800; color: #fff; font-size: 16px; }
-        
-        /* Form Noktaları */
-        .form-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 4px; }
-        .form-G { background: #2ecc71; box-shadow: 0 0 5px #2ecc71; } /* Galibiyet */
-        .form-M { background: #e74c3c; box-shadow: 0 0 5px #e74c3c; } /* Mağlubiyet */
-        .form-B { background: #f1c40f; box-shadow: 0 0 5px #f1c40f; } /* Beraberlik */
 
         /* Fikstür Tasarımı */
-        .hafta-baslik { background: linear-gradient(90deg, #008CFF, transparent); padding: 10px 20px; margin-top: 30px; border-radius: 5px; color: white; font-weight: 800; font-size: 14px; }
-        .fixture-item { display: flex; justify-content: space-between; align-items: center; padding: 15px; border-bottom: 1px solid #1a1a1a; transition: 0.3s; }
-        .fixture-item:hover { background: #1a1a1a; }
-        .fixture-team { flex: 1; font-weight: 600; font-size: 15px; }
-        .score { background: #222; padding: 6px 15px; border-radius: 6px; font-weight: 800; color: #008CFF; min-width: 45px; text-align: center; margin: 0 20px; border: 1px solid #333; }
+        .hafta-baslik { background: #222; padding: 8px 15px; margin-top: 25px; border-radius: 5px; color: #008CFF; font-weight: 800; font-size: 13px; border-left: 4px solid #008CFF; }
+        .fixture-item { display: flex; justify-content: space-between; align-items: center; padding: 12px; border-bottom: 1px solid #1a1a1a; }
+        .fixture-team { flex: 1; font-weight: 600; font-size: 14px; }
+        .score { background: #1a1a1a; padding: 5px 12px; border-radius: 4px; font-weight: 800; color: #fff; min-width: 40px; text-align: center; margin: 0 15px; border: 1px solid #333; }
 
         @media (max-width: 600px) {
             th, td { padding: 10px 5px; font-size: 13px; }
-            .score { margin: 0 10px; padding: 4px 10px; }
+            .score { margin: 0 10px; }
         }
     </style>
 </head>
@@ -55,7 +45,7 @@
     
     <div class="tabs">
         <button class="tab-btn active" onclick="openTab('puan-durumu')">Puan Durumu</button>
-        <button class="tab-btn" onclick="openTab('fikstur')">Fikstür / Sonuçlar</button>
+        <button class="tab-btn" onclick="openTab('fikstur')">Fikstür</button>
         <button class="tab-btn" onclick="openTab('gol-kralligi')">Gol Krallığı</button>
         <button class="tab-btn" onclick="openTab('asist-kralligi')">Asist Krallığı</button>
     </div>
@@ -69,7 +59,6 @@
                     <th>OM</th>
                     <th>AV</th>
                     <th>Puan</th>
-                    <th>Form (Son 5)</th>
                 </tr>
             </thead>
             <tbody id="puan-table"></tbody>
@@ -108,23 +97,19 @@
             const res = await fetch('/api/veriler');
             const data = await res.json();
 
-            // Puan Durumu Listeleme
+            // Puan Durumu
             const siraliTakimlar = Object.entries(data.takimlar).sort((a,b) => b[1].puan - a[1].puan || (b[1].ag-b[1].yg) - (a[1].ag-a[1].yg));
-            
             document.getElementById('puan-table').innerHTML = siraliTakimlar.map(([isim, t], i) => `
                 <tr>
                     <td>${i+1}</td>
-                    <td><img src="${t.logo}" class="team-logo"><strong>${isim}</strong></td>
+                    <td><img src="${t.logo}" class="team-logo">${isim}</td>
                     <td>${t.mac}</td>
                     <td>${t.ag - t.yg}</td>
                     <td class="puan-bold">${t.puan}</td>
-                    <td>
-                        ${t.form.map(f => `<span class="form-dot form-${f}" title="${f}"></span>`).join('')}
-                    </td>
                 </tr>
             `).join('');
 
-            // Fikstür Listeleme
+            // Fikstür (1'den 14'e Sıralı)
             document.getElementById('fixture-list').innerHTML = data.fikstur.map(h => `
                 <div class="hafta-baslik">${h.hafta}. HAFTA</div>
                 ${h.maclar.map(m => `
@@ -134,7 +119,7 @@
                         <div class="fixture-team" style="text-align:left;">${m.dep}</div>
                     </div>
                 `).join('')}
-            `).reverse().join(''); // En güncel hafta en üstte görünsün diye reverse ekledim
+            `).join(''); // .reverse() kaldırıldı, eski düzene döndü
 
             // Gol Krallığı
             const siraliGol = [...data.golKralligi].sort((a,b) => b.gol - a.gol);
@@ -149,12 +134,10 @@
             `).join('');
 
         } catch (err) {
-            console.error("Veri yüklenemedi:", err);
+            console.error("Hata:", err);
         }
     }
-
     verileriGetir();
 </script>
 </body>
 </html>
-
