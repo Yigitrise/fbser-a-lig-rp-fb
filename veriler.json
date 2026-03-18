@@ -1,73 +1,13 @@
 {
   "takimlar": {
-    "Juventus": { 
-      "mac": 6, "g": 6, "b": 0, "m": 0, "ag": 21, "yg": 2, "puan": 18, 
-      "logo": "https://tmssl.akamaized.net/images/wappen/head/506.png", 
-      "kadro": [
-        {"isim": "Gyokeres", "foto": "https://tmssl.akamaized.net/images/portrait/header/451276-1698226992.jpg", "yas": 27, "uyruk": "🇸🇪", "deger": "100 mil. €"},
-        {"isim": "Dembele", "foto": "https://tmssl.akamaized.net/images/portrait/header/350976-1698226992.jpg", "yas": 28, "uyruk": "🇫🇷", "deger": "60 mil. €"},
-        {"isim": "Adeyemi", "foto": "https://tmssl.akamaized.net/images/portrait/header/608269-1698226992.jpg", "yas": 24, "uyruk": "🇩🇪", "deger": "35 mil. €"},
-        {"isim": "Pedri", "foto": "https://tmssl.akamaized.net/images/portrait/header/683840-1698226992.jpg", "yas": 23, "uyruk": "🇪🇸", "deger": "120 mil. €"},
-        {"isim": "Orkun Kökçü", "foto": "https://tmssl.akamaized.net/images/portrait/header/451276-1698226992.jpg", "yas": 25, "uyruk": "🇹🇷", "deger": "35 mil. €"},
-        {"isim": "Szoboszlai", "foto": "https://tmssl.akamaized.net/images/portrait/header/451276-1698226992.jpg", "yas": 25, "uyruk": "🇭🇺", "deger": "75 mil. €"},
-        {"isim": "Van Dijk", "foto": "https://tmssl.akamaized.net/images/portrait/header/31096-1698226992.jpg", "yas": 34, "uyruk": "🇳🇱", "deger": "30 mil. €"},
-        {"isim": "Konate", "foto": "https://tmssl.akamaized.net/images/portrait/header/357143-1698226992.jpg", "yas": 26, "uyruk": "🇫🇷", "deger": "45 mil. €"},
-        {"isim": "Masuaku", "foto": "https://tmssl.akamaized.net/images/portrait/header/181414-1698226992.jpg", "yas": 32, "uyruk": "🇨🇩", "deger": "5 mil. €"},
-        {"isim": "Kochalski", "foto": "https://tmssl.akamaized.net/images/portrait/header/545041-1681734994.jpg", "yas": 25, "uyruk": "🇵🇱", "deger": "1 mil. €"},
-        {"isim": "Sergen Yalçın (TD)", "foto": "https://tmssl.akamaized.net/images/portrait/header/default.jpg", "yas": 53, "uyruk": "🇹🇷", "deger": "Hoca"}
-      ] 
-    },
-    "İnter": { 
-      "mac": 6, "g": 5, "b": 0, "m": 1, "ag": 21, "yg": 5, "puan": 15, 
-      "logo": "https://tmssl.akamaized.net/images/wappen/head/46.png", 
-      "kadro": [
-        {"isim": "Haaland", "foto": "https://tmssl.akamaized.net/images/portrait/header/418560-1698226992.jpg", "yas": 25, "uyruk": "🇳🇴", "deger": "180 mil. €"},
-        {"isim": "Vinicius Jr.", "foto": "https://tmssl.akamaized.net/images/portrait/header/371998-1698226992.jpg", "yas": 25, "uyruk": "🇧🇷", "deger": "150 mil. €"},
-        {"isim": "Asensio", "foto": "https://tmssl.akamaized.net/images/portrait/header/296622-1698226992.jpg", "yas": 30, "uyruk": "🇪🇸", "deger": "20 mil. €"},
-        {"isim": "Cherki", "foto": "https://tmssl.akamaized.net/images/portrait/header/607224-1698226992.jpg", "yas": 22, "uyruk": "🇫🇷", "deger": "25 mil. €"},
-        {"isim": "Caicedo", "foto": "https://tmssl.akamaized.net/images/portrait/header/648320-1698226992.jpg", "yas": 24, "uyruk": "🇪🇨", "deger": "75 mil. €"},
-        {"isim": "Zeki Yavru", "foto": "https://tmssl.akamaized.net/images/portrait/header/186259-1698226992.jpg", "yas": 34, "uyruk": "🇹🇷", "deger": "1 mil. €"},
-        {"isim": "Donnarumma", "foto": "https://tmssl.akamaized.net/images/portrait/header/315858-1698226992.jpg", "yas": 26, "uyruk": "🇮🇹", "deger": "40 mil. €"},
-        {"isim": "Bastoni", "foto": "https://tmssl.akamaized.net/images/portrait/header/315868-1698226992.jpg", "yas": 26, "uyruk": "🇮🇹", "deger": "70 mil. €"},
-        {"isim": "Marquinhos", "foto": "https://tmssl.akamaized.net/images/portrait/header/117622-1698226992.jpg", "yas": 31, "uyruk": "🇧🇷", "deger": "50 mil. €"},
-        {"isim": "Ferdi Kadıoğlu", "foto": "https://tmssl.akamaized.net/images/portrait/header/369316-1698226992.jpg", "yas": 26, "uyruk": "🇹🇷", "deger": "30 mil. €"},
-        {"isim": "Fatih Terim (TD)", "foto": "https://tmssl.akamaized.net/images/portrait/header/default.jpg", "yas": 72, "uyruk": "🇹🇷", "deger": "İmparator"}
-      ]
-    },
-    "Lazio": { 
-      "mac": 6, "g": 4, "b": 0, "m": 2, "ag": 7, "yg": 7, "puan": 12, 
-      "logo": "https://tmssl.akamaized.net/images/wappen/head/398.png", 
-      "kadro": [
-        {"isim": "Cristiano Ronaldo", "foto": "https://tmssl.akamaized.net/images/portrait/header/8198-1698226992.jpg", "yas": 41, "uyruk": "🇵🇹", "deger": "15 mil. €"},
-        {"isim": "Neymar Jr.", "foto": "https://tmssl.akamaized.net/images/portrait/header/68290-1698226992.jpg", "yas": 34, "uyruk": "🇧🇷", "deger": "50 mil. €"},
-        {"isim": "Talisca", "foto": "https://tmssl.akamaized.net/images/portrait/header/258623-1698226992.jpg", "yas": 32, "uyruk": "🇧🇷", "deger": "18 mil. €"},
-        {"isim": "Ahmet Can Kaplan", "foto": "https://tmssl.akamaized.net/images/portrait/header/848411-1698226992.jpg", "yas": 23, "uyruk": "🇹🇷", "deger": "10 mil. €"},
-        {"isim": "Camavinga", "foto": "https://tmssl.akamaized.net/images/portrait/header/640428-1698226992.jpg", "yas": 23, "uyruk": "🇫🇷", "deger": "90 mil. €"},
-        {"isim": "Jhon Duran", "foto": "https://tmssl.akamaized.net/images/portrait/header/744045-1698226992.jpg", "yas": 22, "uyruk": "🇨🇴", "deger": "30 mil. €"},
-        {"isim": "Kyle Walker", "foto": "https://tmssl.akamaized.net/images/portrait/header/95424-1698226992.jpg", "yas": 35, "uyruk": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "deger": "13 mil. €"},
-        {"isim": "Murillo", "foto": "https://tmssl.akamaized.net/images/portrait/header/default.jpg", "yas": 23, "uyruk": "🇧🇷", "deger": "20 mil. €"},
-        {"isim": "Xabi Alonso (TD)", "foto": "https://tmssl.akamaized.net/images/portrait/header/default.jpg", "yas": 44, "uyruk": "🇪🇸", "deger": "Hoca"}
-      ]
-    },
-    "Napoli": { 
-      "mac": 6, "g": 3, "b": 0, "m": 3, "ag": 10, "yg": 12, "puan": 9, 
-      "logo": "https://tmssl.akamaized.net/images/wappen/head/6195.png", 
-      "kadro": [
-        {"isim": "Mbappe", "foto": "https://tmssl.akamaized.net/images/portrait/header/342229-1698226992.jpg", "yas": 27, "uyruk": "🇫🇷", "deger": "180 mil. €"},
-        {"isim": "Osimhen", "foto": "https://tmssl.akamaized.net/images/portrait/header/366110-1698226992.jpg", "yas": 27, "uyruk": "🇳🇬", "deger": "110 mil. €"},
-        {"isim": "Yamal", "foto": "https://tmssl.akamaized.net/images/portrait/header/1012522-1698226992.jpg", "yas": 18, "uyruk": "🇪🇸", "deger": "120 mil. €"},
-        {"isim": "Arda Güler", "foto": "https://tmssl.akamaized.net/images/portrait/header/986828-1698226992.jpg", "yas": 21, "uyruk": "🇹🇷", "deger": "45 mil. €"},
-        {"isim": "Bellingham", "foto": "https://tmssl.akamaized.net/images/portrait/header/581678-1698226992.jpg", "yas": 22, "uyruk": "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "deger": "180 mil. €"},
-        {"isim": "Barella", "foto": "https://tmssl.akamaized.net/images/portrait/header/255942-1698226992.jpg", "yas": 29, "uyruk": "🇮🇹", "deger": "80 mil. €"},
-        {"isim": "Kimmich", "foto": "https://tmssl.akamaized.net/images/portrait/header/161056-1698226992.jpg", "yas": 31, "uyruk": "🇩🇪", "deger": "50 mil. €"},
-        {"isim": "Neuer", "foto": "https://tmssl.akamaized.net/images/portrait/header/17259-1698226992.jpg", "yas": 39, "uyruk": "🇩🇪", "deger": "5 mil. €"},
-        {"isim": "Arda Turan (TD)", "foto": "https://tmssl.akamaized.net/images/portrait/header/default.jpg", "yas": 39, "uyruk": "🇹🇷", "deger": "Hoca"}
-      ]
-    },
-    "Milan": { "mac": 6, "g": 2, "b": 1, "m": 3, "ag": 6, "yg": 11, "puan": 7, "logo": "https://tmssl.akamaized.net/images/wappen/head/5.png", "kadro": [] },
-    "Atalanta": { "mac": 6, "g": 1, "b": 1, "m": 4, "ag": 6, "yg": 14, "puan": 4, "logo": "https://tmssl.akamaized.net/images/wappen/head/800.png", "kadro": [] },
-    "Como": { "mac": 6, "g": 0, "b": 3, "m": 3, "ag": 3, "yg": 11, "puan": 3, "logo": "https://tmssl.akamaized.net/images/wappen/head/1047.png", "kadro": [] },
-    "Roma": { "mac": 6, "g": 0, "b": 1, "m": 5, "ag": 2, "yg": 14, "puan": 1, "logo": "https://tmssl.akamaized.net/images/wappen/head/12.png", "kadro": [] }
+    "Juventus": { "mac": 6, "g": 6, "b": 0, "m": 0, "ag": 21, "yg": 2, "puan": 18, "logo": "https://tmssl.akamaized.net/images/wappen/head/506.png" },
+    "İnter": { "mac": 6, "g": 5, "b": 0, "m": 1, "ag": 21, "yg": 5, "puan": 15, "logo": "https://tmssl.akamaized.net/images/wappen/head/46.png" },
+    "Lazio": { "mac": 6, "g": 4, "b": 0, "m": 2, "ag": 7, "yg": 7, "puan": 12, "logo": "https://tmssl.akamaized.net/images/wappen/head/398.png" },
+    "Napoli": { "mac": 6, "g": 3, "b": 0, "m": 3, "ag": 10, "yg": 12, "puan": 9, "logo": "https://tmssl.akamaized.net/images/wappen/head/6195.png" },
+    "Milan": { "mac": 6, "g": 2, "b": 1, "m": 3, "ag": 6, "yg": 11, "puan": 7, "logo": "https://tmssl.akamaized.net/images/wappen/head/5.png" },
+    "Atalanta": { "mac": 6, "g": 1, "b": 1, "m": 4, "ag": 6, "yg": 14, "puan": 4, "logo": "https://tmssl.akamaized.net/images/wappen/head/800.png" },
+    "Como": { "mac": 6, "g": 0, "b": 3, "m": 3, "ag": 3, "yg": 11, "puan": 3, "logo": "https://tmssl.akamaized.net/images/wappen/head/1047.png" },
+    "Roma": { "mac": 6, "g": 0, "b": 1, "m": 5, "ag": 2, "yg": 14, "puan": 1, "logo": "https://tmssl.akamaized.net/images/wappen/head/12.png" }
   },
   "fikstur": [
     { "hafta": 1, "maclar": [ {"ev": "Roma", "dep": "Atalanta", "skor": "1-4"}, {"ev": "Lazio", "dep": "Como", "skor": "1-0"}, {"ev": "Napoli", "dep": "Juventus", "skor": "1-7"}, {"ev": "İnter", "dep": "Milan", "skor": "5-1"} ] },
