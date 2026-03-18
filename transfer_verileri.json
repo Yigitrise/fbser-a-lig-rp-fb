@@ -2,66 +2,107 @@
   "takimlar": {
     "Juventus": {
       "logo": "https://tmssl.akamaized.net/images/wappen/head/506.png",
-      "hoca": { "isim": "Sergen Yalçın", "foto": "https://tmssl.akamaized.net/images/portrait/header/1138-1698226992.jpg" },
+      "stadyum": "Juventus Stadium",
+      "yas_ort": "26.9",
+      "lig_sirasi": "1.",
+      "puan": "18",
+      "istatistik": { "mac": 6, "g": 6, "b": 0, "m": 0, "atilan": 21, "yenilen": 2 },
+      "hoca": { "isim": "Sergen Yalçın", "foto": " fotolar/sergen.jpg" },
       "kadro": [
-        {"isim": "Gyokeres", "yas": 27, "deger": "105.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/451276-1698226992.jpg"},
-        {"isim": "Pedri", "yas": 23, "deger": "135.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/683840-1698226992.jpg"},
-        {"isim": "Adeyemi", "yas": 24, "deger": "45.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/608269-1698226992.jpg"},
-        {"isim": "Szoboszlai", "yas": 25, "deger": "75.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/451276-1698226992.jpg"},
-        {"isim": "Van Dijk", "yas": 34, "deger": "30.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/31096-1698226992.jpg"},
-        {"isim": "Dembele", "yas": 28, "deger": "60.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/350976-1698226992.jpg"},
-        {"isim": "Orkun Kökçü", "yas": 25, "deger": "35.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/451276-1698226992.jpg"},
-        {"isim": "Konate", "yas": 26, "deger": "45.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/357143-1698226992.jpg"},
-        {"isim": "Masuaku", "yas": 32, "deger": "5.50", "foto": "https://tmssl.akamaized.net/images/portrait/header/181414-1698226992.jpg"},
-        {"isim": "Kochalski", "yas": 25, "deger": "1.20", "foto": "https://tmssl.akamaized.net/images/portrait/header/545041-1681734994.jpg"}
+        {"isim": "Gyokeres", "yas": 26, "deger": "100.00", "foto": ""},
+        {"isim": "Dembele", "yas": 27, "deger": "60.00", "foto": ""},
+        {"isim": "Adeyemi", "yas": 23, "deger": "35.00", "foto": ""},
+        {"isim": "Pedri", "yas": 22, "deger": "120.00", "foto": ""},
+        {"isim": "Orkun Kökçü", "yas": 24, "deger": "35.00", "foto": ""},
+        {"isim": "Szoboszlai", "yas": 24, "deger": "75.00", "foto": ""},
+        {"isim": "Van Dijk", "yas": 33, "deger": "30.00", "foto": ""},
+        {"isim": "Konate", "yas": 25, "deger": "45.00", "foto": ""},
+        {"isim": "Masuaku", "yas": 31, "deger": "5.00", "foto": ""},
+        {"isim": "Kochalski", "yas": 24, "deger": "1.50", "foto": ""}
       ]
     },
     "İnter": {
       "logo": "https://tmssl.akamaized.net/images/wappen/head/46.png",
-      "hoca": { "isim": "Fatih Terim", "foto": "https://tmssl.akamaized.net/images/portrait/header/1066-1698226992.jpg" },
+      "stadyum": "Giuseppe Meazza",
+      "yas_ort": "26.2",
+      "lig_sirasi": "2.",
+      "puan": "15",
+      "istatistik": { "mac": 6, "g": 5, "b": 0, "m": 1, "atilan": 18, "yenilen": 5 },
+      "hoca": { "isim": "Fatih Terim", "foto": " fotolar/terim.png" },
       "kadro": [
-        {"isim": "Haaland", "yas": 25, "deger": "150.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/418560-1698226992.jpg"},
-        {"isim": "Vinicius Jr.", "yas": 25, "deger": "110.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/371998-1698226992.jpg"},
-        {"isim": "Caicedo", "yas": 24, "deger": "75.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/648320-1698226992.jpg"},
-        {"isim": "Bastoni", "yas": 26, "deger": "70.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/315868-1698226992.jpg"},
-        {"isim": "Marquinhos", "yas": 31, "deger": "50.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/117622-1698226992.jpg"},
-        {"isim": "Ferdi Kadıoğlu", "yas": 26, "deger": "35.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/369316-1698226992.jpg"},
-        {"isim": "Cherki", "yas": 22, "deger": "30.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/607224-1698226992.jpg"},
-        {"isim": "Donnarumma", "yas": 26, "deger": "40.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/315858-1698226992.jpg"},
-        {"isim": "Asensio", "yas": 30, "deger": "20.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/296622-1698226992.jpg"},
-        {"isim": "Zeki Yavru", "yas": 34, "deger": "1.50", "foto": "https://tmssl.akamaized.net/images/portrait/header/186259-1698226992.jpg"}
+        {"isim": "Haaland", "yas": 24, "deger": "150.00", "foto": " fotolar/haaland.png"},
+        {"isim": "Vinicius Jr.", "yas": 24, "deger": "120.00", "foto": "https://img.a.transfermarkt.technology/portrait/medium/371998-1664869583.jpg"},
+        {"isim": "Asensio", "yas": 29, "deger": "20.00", "foto": ""},
+        {"isim": "Cherki", "yas": 21, "deger": "25.00", "foto": ""},
+        {"isim": "Caicedo", "yas": 23, "deger": "75.00", "foto": ""},
+        {"isim": "Zeki Yavru", "yas": 33, "deger": "1.50", "foto": ""},
+        {"isim": "Donnarumma", "yas": 26, "deger": "40.00", "foto": ""},
+        {"isim": "Bastoni", "yas": 25, "deger": "70.00", "foto": ""},
+        {"isim": "Marquinhos", "yas": 30, "deger": "50.00", "foto": ""},
+        {"isim": "Ferdi Kadıoğlu", "yas": 25, "deger": "35.00", "foto": ""}
       ]
     },
     "Lazio": {
       "logo": "https://tmssl.akamaized.net/images/wappen/head/398.png",
-      "hoca": { "isim": "Xabi Alonso", "foto": "https://tmssl.akamaized.net/images/portrait/header/3314-1698226992.jpg" },
+      "stadyum": "Stadio Olimpico",
+      "yas_ort": "29.4",
+      "lig_sirasi": "3.",
+      "puan": "12",
+      "istatistik": { "mac": 6, "g": 4, "b": 0, "m": 2, "atilan": 14, "yenilen": 8 },
+      "hoca": { "isim": "Xabi Alonso", "foto": "https://pngdownload.io/png-image/xabi-alonso-next-real-madrid-coach-spanish-football-legend-transparent-png-image/" },
       "kadro": [
-        {"isim": "Camavinga", "yas": 23, "deger": "80.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/640428-1698226992.jpg"},
-        {"isim": "Neymar Jr.", "yas": 34, "deger": "45.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/68290-1698226992.jpg"},
-        {"isim": "Jhon Duran", "yas": 22, "deger": "50.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/744045-1698226992.jpg"},
-        {"isim": "Talisca", "yas": 32, "deger": "20.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/258623-1698226992.jpg"},
-        {"isim": "Cristiano Ronaldo", "yas": 41, "deger": "15.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/8198-1698226992.jpg"},
-        {"isim": "Ahmet Can Kaplan", "yas": 23, "deger": "12.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/848411-1698226992.jpg"},
-        {"isim": "Kyle Walker", "yas": 35, "deger": "10.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/95424-1698226992.jpg"},
-        {"isim": "Murillo", "yas": 23, "deger": "22.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/default.jpg"}
+        {"isim": "Ahmet Can Kaplan", "yas": 22, "deger": "35.00", "foto": ""},
+        {"isim": "Cristiano Ronaldo", "yas": 40, "deger": "15.00", "foto": "https://img.a.transfermarkt.technology/portrait/medium/8198-1694609670.jpg"},
+        {"isim": "Camavinga", "yas": 22, "deger": "60.00", "foto": ""},
+        {"isim": "Jhon Duran", "yas": 21, "deger": "45.00", "foto": ""},
+        {"isim": "Talisca", "yas": 31, "deger": "15.00", "foto": ""},
+        {"isim": "Neymar Jr.", "yas": 33, "deger": "50.00", "foto": "https://img.a.transfermarkt.technology/portrait/medium/8198-1694609670.jpg"},
+        {"isim": "Kyle Walker", "yas": 34, "deger": "13.00", "foto": ""},
+        {"isim": "Murillo", "yas": 22, "deger": "22.00", "foto": ""}
       ]
     },
     "Napoli": {
       "logo": "https://tmssl.akamaized.net/images/wappen/head/6195.png",
+      "stadyum": "Diego Maradona",
+      "yas_ort": "25.1",
+      "lig_sirasi": "4.",
+      "puan": "10",
+      "istatistik": { "mac": 6, "g": 3, "b": 1, "m": 2, "atilan": 16, "yenilen": 9 },
       "hoca": { "isim": "Arda Turan", "foto": "https://tmssl.akamaized.net/images/portrait/header/3932-1698226992.jpg" },
       "kadro": [
-        {"isim": "Mbappe", "yas": 27, "deger": "60.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/342229-1698226992.jpg"},
-        {"isim": "Bellingham", "yas": 22, "deger": "80.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/581678-1698226992.jpg"},
-        {"isim": "Osimhen", "yas": 27, "deger": "125.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/366110-1698226992.jpg"},
-        {"isim": "Yamal", "yas": 18, "deger": "40.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/1012522-1698226992.jpg"},
-        {"isim": "Barella", "yas": 29, "deger": "80.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/255942-1698226992.jpg"},
-        {"isim": "Arda Güler", "yas": 21, "deger": "50.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/986828-1698226992.jpg"},
-        {"isim": "Kimmich", "yas": 31, "deger": "50.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/161056-1698226992.jpg"},
-        {"isim": "Araujo", "yas": 26, "deger": "60.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/483696-1698226992.jpg"},
-        {"isim": "Hakimi", "yas": 27, "deger": "60.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/342229-1698226992.jpg"},
-        {"isim": "Onauchu", "yas": 30, "deger": "15.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/274439-1698226992.jpg"},
-        {"isim": "Neuer", "yas": 39, "deger": "4.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/17259-1698226992.jpg"}
+        {"isim": "Barcola", "yas": 22, "deger": "35.00", "foto": ""},
+        {"isim": "Alexander-Arnold", "yas": 26, "deger": "40.00", "foto": ""},
+        {"isim": "Hakimi", "yas": 26, "deger": "60.00", "foto": ""},
+        {"isim": "Araujo", "yas": 25, "deger": "70.00", "foto": ""},
+        {"isim": "Arda Güler", "yas": 20, "deger": "45.00", "foto": ""},
+        {"isim": "Barella", "yas": 28, "deger": "60.00", "foto": ""},
+        {"isim": "Bellingham", "yas": 21, "deger": "70.00", "foto": "https://img.a.transfermarkt.technology/portrait/medium/581678-1693987944.jpg"},
+        {"isim": "Mbappe", "yas": 26, "deger": "30.00", "foto": "https://img.a.transfermarkt.technology/portrait/medium/342229-1682683695.jpg"},
+        {"isim": "Kimmich", "yas": 30, "deger": "50.00", "foto": ""},
+        {"isim": "Neuer", "yas": 39, "deger": "4.00", "foto": ""},
+        {"isim": "Osimhen", "yas": 26, "deger": "115.00", "foto": ""},
+        {"isim": "Onuachu", "yas": 30, "deger": "13.00", "foto": ""},
+        {"isim": "Skriniar", "yas": 30, "deger": "30.00", "foto": ""},
+        {"isim": "Yamal", "yas": 17, "deger": "50.00", "foto": ""}
       ]
-    }
+    },
+    "Milan": {
+      "logo": "https://tmssl.akamaized.net/images/wappen/head/5.png",
+      "stadyum": "San Siro",
+      "yas_ort": "24.5",
+      "lig_sirasi": "5.",
+      "puan": "9",
+      "istatistik": { "mac": 6, "g": 3, "b": 0, "m": 3, "atilan": 10, "yenilen": 8 },
+      "hoca": { "isim": "Carlo Ancelotti", "foto": "https://tmssl.akamaized.net/images/portrait/header/1066-1698226992.jpg" },
+      "kadro": [
+        {"isim": "Lautaro Martinez", "yas": 27, "deger": "70.00", "foto": ""},
+        {"isim": "Yunus Akgün", "yas": 24, "deger": "10.00", "foto": ""},
+        {"isim": "Jonathan Tah", "yas": 29, "deger": "30.00", "foto": ""},
+        {"isim": "Cole Palmer", "yas": 22, "deger": "60.00", "foto": ""}
+      ]
+    },
+    "Atalanta": { "kadro": [] },
+    "Roma": { "kadro": [] },
+    "Como": { "kadro": [] }
   }
-}
+    }
