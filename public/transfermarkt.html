@@ -3,157 +3,172 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Serie A | Transfermarkt Veritabanı</title>
+    <title>Serie A | Transfermarkt</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        :root { --tm-blue: #002d62; --tm-light: #f0f2f5; --tm-grey: #888; }
-        body { font-family: 'Poppins', sans-serif; background: var(--tm-light); margin: 0; padding: 10px; }
-        .container { max-width: 1000px; margin: auto; }
-        
-        .nav-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
-        .back-link { background: var(--tm-blue); color: white; padding: 8px 15px; border-radius: 4px; text-decoration: none; font-weight: 700; font-size: 11px; }
+        :root { --tm-dark: #002d62; --bg: #f0f2f5; --white: #ffffff; }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg); margin: 0; padding: 20px; color: #333; }
+        .container { max-width: 1100px; margin: auto; }
 
-        /* Takım Seçici */
-        .team-nav { background: white; padding: 15px; border-radius: 12px; display: flex; gap: 20px; overflow-x: auto; margin-bottom: 20px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); scrollbar-width: none; }
-        .team-nav::-webkit-scrollbar { display: none; }
-        .nav-item { cursor: pointer; opacity: 0.5; transition: 0.3s; min-width: 75px; text-align: center; border-bottom: 3px solid transparent; }
-        .nav-item.active { opacity: 1; transform: scale(1.05); border-bottom-color: var(--tm-blue); }
-        .nav-item img { width: 45px; height: 45px; object-fit: contain; display: block; margin: 0 auto; }
-        .nav-item span { font-size: 10px; font-weight: 800; color: var(--tm-blue); display: block; margin-top: 5px; text-transform: uppercase; }
+        /* Üst Header Kartı */
+        .header-card { background: var(--white); border-radius: 12px; padding: 25px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .team-brand { display: flex; align-items: center; gap: 30px; }
+        .team-logo { width: 80px; height: 80px; object-fit: contain; }
+        .team-info h1 { margin: 0; font-size: 32px; color: var(--tm-dark); font-weight: 800; }
+        .team-meta { display: flex; gap: 40px; margin-top: 10px; font-size: 13px; color: #666; }
+        .meta-item b { display: block; color: #333; font-weight: 700; }
 
-        /* Takım Kartı */
-        .profile-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 25px rgba(0,0,0,0.05); }
-        .profile-header { background: var(--tm-blue); color: white; padding: 30px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
-        .team-brand { display: flex; align-items: center; gap: 20px; }
-        .team-logo-big { width: 90px; height: 90px; object-fit: contain; background: white; border-radius: 8px; padding: 5px; }
-        .team-info h1 { font-size: 32px; font-weight: 800; margin: 0; letter-spacing: -1px; }
-        
-        .market-summary { background: rgba(255,255,255,0.1); padding: 15px 25px; border-radius: 8px; border-left: 4px solid #fff; text-align: right; }
-        .val-large { font-size: 28px; font-weight: 800; display: block; }
+        .value-badge { background: var(--tm-dark); color: white; padding: 20px 40px; border-radius: 8px; text-align: right; }
+        .value-badge span { font-size: 12px; text-transform: uppercase; opacity: 0.8; }
+        .value-badge div { font-size: 28px; font-weight: 800; }
 
-        /* Grid */
-        .content-grid { display: grid; grid-template-columns: 1.8fr 1fr; gap: 20px; padding: 20px; }
-        @media (max-width: 850px) { .content-grid { grid-template-columns: 1fr; } }
+        /* Ana İçerik */
+        .main-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
+        .card { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        .card-header { padding: 15px 20px; font-weight: 800; color: var(--tm-dark); border-bottom: 1px solid #eee; font-size: 14px; }
 
-        .data-box { background: white; border-radius: 12px; border: 1px solid #eee; overflow: hidden; }
-        .box-title { padding: 15px; font-weight: 800; color: var(--tm-blue); background: #f8f9fb; border-bottom: 1px solid #eee; font-size: 12px; }
-
-        /* Oyuncular */
+        /* Kadro Tablosu */
         table { width: 100%; border-collapse: collapse; }
-        th { text-align: left; padding: 12px 15px; color: var(--tm-grey); font-size: 11px; background: #f8f9fb; }
-        td { padding: 12px 15px; border-bottom: 1px solid #f5f5f5; font-size: 13px; }
-        .player-img { width: 38px; height: 38px; border-radius: 6px; object-fit: cover; vertical-align: middle; margin-right: 12px; background: #eee; }
-        .player-name { font-weight: 700; color: var(--tm-blue); }
+        th { text-align: left; padding: 15px; background: #fafafa; font-size: 11px; color: #999; text-transform: uppercase; }
+        td { padding: 12px 15px; border-bottom: 1px solid #f2f2f2; font-size: 14px; }
+        .player-cell { display: flex; align-items: center; gap: 15px; }
+        .player-img { width: 40px; height: 40px; border-radius: 6px; background: #eee; }
+        .p-name { font-weight: 700; color: var(--tm-dark); }
+        .p-sub { font-size: 11px; color: #999; display: block; }
+        .p-val { font-weight: 800; color: var(--tm-dark); text-align: right; }
 
-        .manager-img { width: 100%; height: 320px; object-fit: cover; background: #f2f2f2; }
-        .manager-name { padding: 15px; text-align: center; font-weight: 800; color: var(--tm-blue); font-size: 18px; }
+        /* Sağ Taraf - Hoca ve İstatistik */
+        .manager-box { text-align: center; padding: 30px; }
+        .manager-img { width: 120px; height: 120px; border-radius: 12px; object-fit: cover; background: #eee; margin-bottom: 15px; }
+        .manager-box h3 { margin: 0; font-size: 18px; color: var(--tm-dark); }
+        .manager-box span { font-size: 12px; color: #999; }
+
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 20px; }
+        .stat-card { padding: 15px; border-radius: 10px; text-align: center; color: white; }
+        .blue-card { background: var(--tm-dark); }
+        .green-card { background: #27ae60; }
+        .stat-label { font-size: 10px; font-weight: 700; opacity: 0.8; margin-bottom: 5px; }
+        .stat-val { font-size: 22px; font-weight: 800; }
+
+        .mini-stats { display: flex; justify-content: space-between; padding: 10px 20px; background: #fcfcfc; border-top: 1px solid #eee; font-size: 12px; }
+        .mini-item { text-align: center; flex: 1; }
+        .mini-item label { display: block; color: #999; font-size: 10px; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="nav-header">
-        <a href="index.html" class="back-link">← LİG MERKEZİ</a>
-        <div style="font-size: 10px; font-weight: 800; color: #999;">TRANSFERMARKT MODE</div>
-    </div>
-    
-    <div class="team-nav" id="teamNav"></div>
-
-    <div id="mainView" class="profile-card">
-        <div class="profile-header">
-            <div class="team-brand">
-                <img id="logoImg" src="" class="team-logo-big">
-                <div class="team-info">
-                    <h1 id="teamTitle">-</h1>
-                    <span style="font-size:12px; opacity:0.8;">Serie A Roleplay | 2026 Sezonu</span>
+    <div class="header-card">
+        <div class="team-brand">
+            <img id="tLogo" src="" class="team-logo">
+            <div class="team-info">
+                <h1 id="tName">-</h1>
+                <div class="team-meta">
+                    <div class="meta-item">Stadyum: <b id="tStadium">-</b></div>
+                    <div class="meta-item">Yaş Ortalaması: <b id="tAgeAvg">-</b></div>
                 </div>
             </div>
-            <div class="market-summary">
-                <span style="font-size:10px; font-weight:700; opacity:0.7;">TOPLAM DEĞER</span>
-                <span id="totalVal" class="val-large">€ 0.00m</span>
-            </div>
+        </div>
+        <div class="value-badge">
+            <span>KADRO DEĞERİ</span>
+            <div id="tTotalVal">€ 0.00 mil.</div>
+        </div>
+    </div>
+
+    <div class="main-grid">
+        <div class="card">
+            <div class="card-header">GÜNCEL KADRO</div>
+            <table id="squadTable">
+                <thead>
+                    <tr><th>OYUNCU</th><th style="text-align:center">YAŞ</th><th style="text-align:right">PİYASA DEĞERİ</th></tr>
+                </thead>
+                <tbody></tbody>
+            </table>
         </div>
 
-        <div class="content-grid">
-            <div class="data-box">
-                <div class="box-title">AKTİF OYUNCU KADROSU</div>
-                <table id="playerTable">
-                    <thead>
-                        <tr><th>OYUNCU</th><th style="text-align:center">YAŞ</th><th style="text-align:right">DEĞER</th></tr>
-                    </thead>
-                    <tbody></tbody>
-                </table>
+        <div class="side-content">
+            <div class="card" style="margin-bottom: 20px;">
+                <div class="card-header" style="text-align:center">TEKNİK DİREKTÖR</div>
+                <div class="manager-box">
+                    <img id="mImg" src="" class="manager-img" onerror="this.src='https://www.transfermarkt.com.tr/assets/6504b2e1/images/portrait/medium/default.jpg'">
+                    <h3 id="mName">-</h3>
+                    <span>TEKNİK DİREKTÖR</span>
+                </div>
             </div>
 
-            <div class="data-box" style="text-align:center;">
-                <div class="box-title">TEKNİK DİREKTÖR</div>
-                <img id="mImg" src="" class="manager-img" onerror="this.src='https://www.transfermarkt.com.tr/assets/6504b2e1/images/portrait/medium/default.jpg'">
-                <div id="mName" class="manager-name">-</div>
+            <div class="card">
+                <div class="stats-grid">
+                    <div class="stat-card blue-card">
+                        <div class="stat-label">LİG SIRASI</div>
+                        <div id="rankVal" class="stat-val">-</div>
+                    </div>
+                    <div class="stat-card green-card">
+                        <div class="stat-label">PUAN</div>
+                        <div id="puanVal" class="stat-val">-</div>
+                    </div>
+                </div>
+                <div class="mini-stats" id="matchStats">
+                    </div>
+                <div style="padding: 15px; text-align:center; font-size: 12px; color: #666; border-top: 1px solid #eee;">
+                    Attığı Gol: <b id="goalA">-</b> | Yediği Gol: <b id="goalY">-</b>
+                </div>
             </div>
         </div>
     </div>
 </div>
 
 <script>
-    let leagueData = {};
-    const fallbackPortrait = 'https://www.transfermarkt.com.tr/assets/6504b2e1/images/portrait/medium/default.jpg';
+    async function init() {
+        const res = await fetch('transfer_verileri.json');
+        const data = await res.json();
+        const team = data.takimlar["Juventus"]; // Şimdilik Juve üzerinden gösteriyoruz
 
-    async function load() {
-        try {
-            const res = await fetch('transfer_verileri.json');
-            if(!res.ok) throw new Error("Veri yüklenemedi!");
-            leagueData = await res.json();
-            
-            const nav = document.getElementById('teamNav');
-            nav.innerHTML = '';
-            
-            Object.keys(leagueData.takimlar).forEach((name, idx) => {
-                const team = leagueData.takimlar[name];
-                const item = document.createElement('div');
-                item.className = 'nav-item';
-                item.id = `nav-${idx}`;
-                item.innerHTML = `<img src="${team.logo}" onerror="this.src='https://via.placeholder.com/50'"><span style="text-transform:uppercase">${name}</span>`;
-                item.onclick = () => render(name, idx);
-                nav.appendChild(item);
-            });
-
-            render(Object.keys(leagueData.takimlar)[0], 0);
-        } catch (e) {
-            console.error(e);
-            document.getElementById('mainView').innerHTML = `<div style="padding:50px; text-align:center; color:red; font-weight:800;">HATA: Veriler çekilemedi!</div>`;
-        }
-    }
-
-    function render(name, idx) {
-        const team = leagueData.takimlar[name];
-        document.querySelectorAll('.nav-item').forEach(i => i.classList.remove('active'));
-        document.getElementById(`nav-${idx}`).classList.add('active');
-
-        document.getElementById('logoImg').src = team.logo;
-        document.getElementById('teamTitle').innerText = name;
+        // Header Dolum
+        document.getElementById('tLogo').src = team.logo;
+        document.getElementById('tName').innerText = "Juventus";
+        document.getElementById('tStadium').innerText = team.stadyum;
+        document.getElementById('tAgeAvg').innerText = team.yas_ort;
+        
+        // Hoca & Lig
         document.getElementById('mName').innerText = team.hoca.isim;
         document.getElementById('mImg').src = team.hoca.foto;
+        document.getElementById('rankVal').innerText = team.lig_sirasi;
+        document.getElementById('puanVal').innerText = team.puan;
+        document.getElementById('goalA').innerText = team.istatistik.atilan;
+        document.getElementById('goalY').innerText = team.istatistik.yenilen;
 
-        let sum = 0;
-        const tbody = document.querySelector('#playerTable tbody');
-        tbody.innerHTML = team.kadro.map(p => {
-            const v = parseFloat(p.deger) || 0;
-            sum += v;
+        // Maç Detayları
+        document.getElementById('matchStats').innerHTML = `
+            <div class="mini-item"><label>Maç</label><b>${team.istatistik.mac}</b></div>
+            <div class="mini-item"><label style="color:green">G</label><b>${team.istatistik.g}</b></div>
+            <div class="mini-item"><label style="color:orange">B</label><b>${team.istatistik.b}</b></div>
+            <div class="mini-item"><label style="color:red">M</label><b>${team.istatistik.m}</b></div>
+        `;
+
+        // Kadro Tablosu
+        let total = 0;
+        const tbody = document.querySelector('#squadTable tbody');
+        tbody.innerHTML = team.kadro.map((p, index) => {
+            total += parseFloat(p.deger);
             return `
                 <tr>
                     <td>
-                        <img src="${p.foto}" class="player-img" onerror="this.src='${fallbackPortrait}'">
-                        <span class="player-name">${p.isim}</span>
+                        <div class="player-cell">
+                            <span style="color:#ccc; font-size:10px;">${index + 1}</span>
+                            <img src="${p.foto}" class="player-img" onerror="this.src='https://www.transfermarkt.com.tr/assets/6504b2e1/images/portrait/medium/default.jpg'">
+                            <div><span class="p-name">${p.isim}</span><span class="p-sub">Oyuncu</span></div>
+                        </div>
                     </td>
                     <td style="text-align:center; font-weight:600;">${p.yas}</td>
-                    <td style="text-align:right; font-weight:800; color:var(--tm-blue);">€ ${p.deger}m</td>
-                </tr>`;
+                    <td class="p-val">${p.deger} mil. €</td>
+                </tr>
+            `;
         }).join('');
 
-        document.getElementById('totalVal').innerText = "€ " + sum.toFixed(2) + "m";
+        document.getElementById('tTotalVal').innerText = `€ ${total.toFixed(2)} mil.`;
     }
 
-    load();
+    init();
 </script>
 </body>
 </html>
