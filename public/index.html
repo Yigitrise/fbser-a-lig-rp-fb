@@ -4,144 +4,266 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serie A League - Official RP</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Poppins', sans-serif; background: #0a0a0a; color: white; margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; }
-        h1 { text-align: center; color: #008CFF; font-weight: 800; text-transform: uppercase; margin-bottom: 30px; letter-spacing: 2px; }
-        
-        .tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; }
-        .tab-btn { padding: 12px 20px; background: #1a1a1a; border: 2px solid #333; color: #aaa; cursor: pointer; border-radius: 8px; transition: 0.3s; font-weight: 600; }
-        .tab-btn:hover { border-color: #008CFF; }
-        .tab-btn.active { background: #008CFF; color: white; border-color: #008CFF; box-shadow: 0 0 15px rgba(0, 140, 255, 0.4); }
-        
-        .tab-content { display: none; background: #151515; padding: 20px; border-radius: 15px; border: 1px solid #222; }
+        body { font-family: 'Poppins', sans-serif; background: #f0f2f5; color: #333; margin: 0; padding: 10px; }
+        .container { max-width: 1000px; margin: auto; }
+        h1 { text-align: center; color: #002d62; font-weight: 800; }
+
+        /* Ana Sayfa Sekmeleri */
+        .tabs { display: flex; justify-content: center; gap: 5px; margin-bottom: 20px; }
+        .tab-btn { padding: 10px 15px; background: #e0e6ed; border: none; color: #002d62; cursor: pointer; border-radius: 4px; font-weight: 600; }
+        .tab-btn.active { background: #002d62; color: white; }
+        .tab-content { display: none; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
         .tab-content.active { display: block; }
+
+        /* Ana Puan Tablosu */
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #e0e6ed; }
+        th { background: #f8f9fb; color: #002d62; font-size: 12px; text-transform: uppercase; }
+        .team-logo { width: 30px; height: 30px; vertical-align: middle; margin-right: 10px; cursor: pointer; }
+
+        /* --- TAKIM PROFİLİ EKRANI (YENİ) --- */
+        #team-profile-view { display: none; background: #f0f2f5; }
+        .back-btn { background: #002d62; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-weight: 600; margin-bottom: 20px; display: inline-flex; align-items: center; gap: 5px; }
         
-        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #222; }
-        th { color: #008CFF; font-size: 12px; text-transform: uppercase; }
+        /* Üst Bilgi Kartı */
+        .tm-top-header { background: white; padding: 20px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 5px rgba(0,0,0,0.05); margin-bottom: 20px; flex-wrap: wrap; gap: 20px; }
+        .tm-top-left { display: flex; align-items: center; gap: 20px; }
+        .tm-big-logo { width: 80px; height: 80px; object-fit: contain; }
+        .tm-team-name { font-size: 28px; font-weight: 800; color: #002d62; margin: 0; }
+        .tm-sub-info { display: flex; gap: 20px; font-size: 12px; color: #666; margin-top: 5px; }
+        .tm-sub-info strong { color: #333; display: block; font-size: 14px; }
+        .tm-value-box { background: #002d62; color: white; padding: 15px 30px; border-radius: 4px; text-align: right; }
+        .tm-value-title { font-size: 12px; opacity: 0.8; text-transform: uppercase; margin-bottom: 5px; }
+        .tm-value-amount { font-size: 28px; font-weight: 800; }
+
+        /* Alt İçerik İkiye Bölünüyor */
+        .tm-content-grid { display: flex; gap: 20px; align-items: flex-start; flex-wrap: wrap; }
         
-        .team-logo { width: 28px; height: 28px; object-fit: contain; vertical-align: middle; margin-right: 12px; cursor: pointer; transition: 0.2s; }
-        .team-logo:hover { transform: scale(1.2); filter: drop-shadow(0 0 5px #008CFF); }
-        .puan-bold { font-weight: 800; color: #fff; font-size: 16px; }
-
-        .hafta-baslik { background: #222; padding: 8px 15px; margin-top: 25px; border-radius: 5px; color: #008CFF; font-weight: 800; font-size: 13px; border-left: 4px solid #008CFF; }
-        .fixture-item { display: flex; justify-content: space-between; align-items: center; padding: 12px; border-bottom: 1px solid #1a1a1a; }
-        .fixture-team { flex: 1; font-weight: 600; font-size: 14px; }
-        .score { background: #1a1a1a; padding: 5px 12px; border-radius: 4px; font-weight: 800; color: #fff; min-width: 40px; text-align: center; margin: 0 15px; border: 1px solid #333; }
-
-        /* MODAL (Pencere) Tasarımı */
-        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(5px); }
-        .modal-content { background: #1a1a1a; margin: 15% auto; padding: 25px; border: 2px solid #008CFF; width: 300px; border-radius: 20px; text-align: center; box-shadow: 0 0 30px rgba(0,140,255,0.3); }
-        .modal-header { font-weight: 800; color: #008CFF; font-size: 20px; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 10px; }
-        .kadro-listesi { list-style: none; padding: 0; text-align: left; }
-        .kadro-listesi li { padding: 8px 15px; border-bottom: 1px solid #222; color: #eee; font-size: 14px; }
-        .kadro-listesi li::before { content: "⚽"; margin-right: 10px; }
-        .close-btn { margin-top: 20px; padding: 8px 20px; background: #008CFF; border: none; color: white; border-radius: 5px; cursor: pointer; font-weight: 600; }
-
-        @media (max-width: 600px) { th, td { padding: 10px 5px; font-size: 13px; } .score { margin: 0 10px; } }
+        /* Sol Taraf (Kadro Listesi) */
+        .tm-squad-section { flex: 2; background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); overflow: hidden; min-width: 300px; }
+        .tm-section-title { background: #f8f9fb; padding: 15px 20px; font-weight: 800; color: #002d62; border-bottom: 1px solid #e0e6ed; font-size: 14px; text-transform: uppercase; }
+        .tm-squad-table th { font-size: 11px; background: white; color: #888; border-bottom: 2px solid #eee; }
+        .tm-squad-table td { padding: 10px 15px; font-size: 13px; }
+        .tm-player-info { display: flex; align-items: center; gap: 12px; }
+        .tm-player-img { width: 40px; height: 40px; border-radius: 5px; object-fit: cover; }
+        .tm-player-name { font-weight: 700; color: #002d62; display: block; }
+        .tm-player-pos { font-size: 11px; color: #888; }
+        
+        /* Sağ Taraf (Teknik Direktör & İstatistikler) */
+        .tm-sidebar { flex: 1; display: flex; flex-direction: column; gap: 20px; min-width: 250px; }
+        .tm-manager-card { background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); overflow: hidden; text-align: center; }
+        .tm-manager-title { background: #002d62; color: white; padding: 10px; font-size: 12px; font-weight: 700; text-transform: uppercase; }
+        .tm-manager-body { padding: 20px; }
+        .tm-manager-img { width: 100px; height: 100px; border-radius: 8px; object-fit: cover; margin-bottom: 10px; }
+        .tm-manager-name { font-weight: 800; color: #002d62; font-size: 16px; }
+        
+        .tm-stats-card { background: white; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.05); padding: 20px; }
+        .tm-stats-grid { display: flex; gap: 10px; margin-bottom: 15px; text-align: center; }
+        .tm-stat-box { flex: 1; padding: 10px; border-radius: 4px; font-weight: 800; color: white; }
+        .tm-rank-box { background: #002d62; }
+        .tm-points-box { background: #28a745; }
+        .tm-wdl-grid { display: flex; gap: 5px; text-align: center; font-size: 12px; margin-bottom: 15px; }
+        .tm-wdl-box { flex: 1; background: #f4f7f6; padding: 8px; border-radius: 4px; border: 1px solid #eee; }
+        .tm-wdl-box strong { display: block; font-size: 16px; color: #002d62; }
     </style>
 </head>
 <body>
 
-<div id="kadroModal" class="modal">
-    <div class="modal-content">
-        <div id="modalTeamName" class="modal-header">Takım Kadrosu</div>
-        <ul id="kadroListesi" class="kadro-listesi"></ul>
-        <button class="close-btn" onclick="closeModal()">Kapat</button>
-    </div>
-</div>
-
-<div class="container">
+<div class="container" id="main-dashboard">
     <h1>🇮🇹 SERIE A LEAGUE</h1>
     <div class="tabs">
         <button class="tab-btn active" onclick="openTab('puan-durumu')">Puan Durumu</button>
         <button class="tab-btn" onclick="openTab('fikstur')">Fikstür</button>
-        <button class="tab-btn" onclick="openTab('gol-kralligi')">Gol Krallığı</button>
-        <button class="tab-btn" onclick="openTab('asist-kralligi')">Asist Krallığı</button>
     </div>
 
     <div id="puan-durumu" class="tab-content active">
-        <table>
-            <thead><tr><th>#</th><th>Takım (Kadro için tıkla)</th><th>OM</th><th>AV</th><th>Puan</th></tr></thead>
-            <tbody id="puan-table"></tbody>
+        <table id="puan-table">
+            <thead><tr><th>#</th><th>Takım (Detay için tıkla)</th><th>OM</th><th>AV</th><th>P</th></tr></thead>
+            <tbody></tbody>
         </table>
     </div>
-    <div id="fikstur" class="tab-content"><div id="fixture-list"></div></div>
-    <div id="gol-kralligi" class="tab-content">
-        <table><thead><tr><th>#</th><th>Oyuncu</th><th>Takım</th><th>Gol</th></tr></thead><tbody id="gol-table"></tbody></table>
+</div>
+
+<div class="container" id="team-profile-view">
+    <button class="back-btn" onclick="anaSayfayaDon()">&#8592; Ana Sayfaya Dön</button>
+    
+    <div class="tm-top-header">
+        <div class="tm-top-left">
+            <img id="tp-logo" src="" class="tm-big-logo">
+            <div>
+                <h2 id="tp-name" class="tm-team-name">Takım Adı</h2>
+                <div class="tm-sub-info">
+                    <div>Stadyum:<br><strong id="tp-stadium">Resmi Stadyum</strong></div>
+                    <div>Yaş Ortalaması:<br><strong id="tp-avg-age">0.0</strong></div>
+                </div>
+            </div>
+        </div>
+        <div class="tm-value-box">
+            <div class="tm-value-title">Kadro Değeri</div>
+            <div class="tm-value-amount" id="tp-total-value">€ 0.00 mil.</div>
+        </div>
     </div>
-    <div id="asist-kralligi" class="tab-content">
-        <table><thead><tr><th>#</th><th>Oyuncu</th><th>Takım</th><th>Asist</th></tr></thead><tbody id="asist-table"></tbody></table>
+
+    <div class="tm-content-grid">
+        <div class="tm-squad-section">
+            <div class="tm-section-title">GÜNCEL KADRO</div>
+            <table class="tm-squad-table" style="width: 100%; border-collapse: collapse;">
+                <thead>
+                    <tr>
+                        <th style="padding-left:15px; text-align:left;">Oyuncu</th>
+                        <th style="text-align:center;">Yaş</th>
+                        <th style="text-align:right; padding-right:15px;">Piyasa Değeri</th>
+                    </tr>
+                </thead>
+                <tbody id="tp-squad-list"></tbody>
+            </table>
+        </div>
+
+        <div class="tm-sidebar">
+            <div class="tm-manager-card">
+                <div class="tm-manager-title">TEKNİK DİREKTÖR</div>
+                <div class="tm-manager-body">
+                    <img id="tp-manager-img" src="" onerror="this.src='https://tmssl.akamaized.net/images/portrait/header/default.jpg'" class="tm-manager-img">
+                    <div id="tp-manager-name" class="tm-manager-name">Hoca Adı</div>
+                    <div style="font-size: 11px; color: #888; margin-top: 5px;">TEKNİK DİREKTÖR</div>
+                </div>
+            </div>
+
+            <div class="tm-stats-card">
+                <div class="tm-stats-grid">
+                    <div class="tm-stat-box tm-rank-box">
+                        <div style="font-size: 10px; opacity: 0.8;">LİG SIRASI</div>
+                        <div id="tp-rank" style="font-size: 20px;">1.</div>
+                    </div>
+                    <div class="tm-stat-box tm-points-box">
+                        <div style="font-size: 10px; opacity: 0.8;">PUAN</div>
+                        <div id="tp-points" style="font-size: 20px;">0</div>
+                    </div>
+                </div>
+                <div class="tm-wdl-grid">
+                    <div class="tm-wdl-box">Maç<br><strong id="tp-match">0</strong></div>
+                    <div class="tm-wdl-box" style="color: green;">G<br><strong id="tp-win">0</strong></div>
+                    <div class="tm-wdl-box" style="color: gray;">B<br><strong id="tp-draw">0</strong></div>
+                    <div class="tm-wdl-box" style="color: red;">M<br><strong id="tp-loss">0</strong></div>
+                </div>
+                <div style="font-size: 12px; text-align: center; color: #666;">
+                    Attığı Gol: <strong id="tp-gf" style="color:#333;">0</strong> &nbsp;|&nbsp; Yediği Gol: <strong id="tp-ga" style="color:#333;">0</strong>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 
 <script>
-    let globalData = {};
+    let veriler = {};
+    let siraliTakimlar = [];
 
     function openTab(id) {
-        document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
         document.getElementById(id).classList.add('active');
         event.currentTarget.classList.add('active');
     }
 
-    function showKadro(teamName) {
-        const team = globalData.takimlar[teamName];
-        document.getElementById('modalTeamName').innerText = teamName + " Kadrosu";
-        document.getElementById('kadroListesi').innerHTML = team.kadro.map(p => `<li>${p}</li>`).join('');
-        document.getElementById('kadroModal').style.display = "block";
+    async function yukle() {
+        const res = await fetch('/api/veriler');
+        veriler = await res.json();
+        
+        // Puan durumunu hesapla ve sırala
+        siraliTakimlar = Object.entries(veriler.takimlar).sort((a,b) => b[1].puan - a[1].puan || (b[1].ag-b[1].yg) - (a[1].ag-a[1].yg));
+        
+        const tbody = document.querySelector('#puan-table tbody');
+        tbody.innerHTML = siraliTakimlar.map(([isim, t], i) => `
+            <tr>
+                <td>${i+1}</td>
+                <td>
+                    <img src="${t.logo}" class="team-logo" onclick="takimProfiliAc('${isim}', ${i+1})">
+                    <b onclick="takimProfiliAc('${isim}', ${i+1})" style="cursor:pointer; color:#002d62;">${isim}</b>
+                </td>
+                <td>${t.mac}</td>
+                <td>${t.ag - t.yg}</td>
+                <td style="font-weight:bold; font-size:15px; color:#002d62;">${t.puan}</td>
+            </tr>
+        `).join('');
     }
 
-    function closeModal() { document.getElementById('kadroModal').style.display = "none"; }
+    function takimProfiliAc(isim, sira) {
+        const takim = veriler.takimlar[isim];
+        if(!takim) return;
 
-    window.onclick = function(event) {
-        if (event.target == document.getElementById('kadroModal')) closeModal();
-    }
+        // Ana ekranı gizle, profili aç
+        document.getElementById('main-dashboard').style.display = 'none';
+        document.getElementById('team-profile-view').style.display = 'block';
 
-    async function verileriGetir() {
-        try {
-            const res = await fetch('/api/veriler');
-            globalData = await res.json();
+        // Üst Bilgiler
+        document.getElementById('tp-logo').src = takim.logo;
+        document.getElementById('tp-name').innerText = isim;
+        document.getElementById('tp-stadium').innerText = isim + " Stadium";
 
-            const siraliTakimlar = Object.entries(globalData.takimlar).sort((a,b) => b[1].puan - a[1].puan || (b[1].ag-b[1].yg) - (a[1].ag-a[1].yg));
-            document.getElementById('puan-table').innerHTML = siraliTakimlar.map(([isim, t], i) => `
-                <tr>
-                    <td>${i+1}</td>
-                    <td onclick="showKadro('${isim}')" style="cursor:pointer;">
-                        <img src="${t.logo}" class="team-logo"><strong>${isim}</strong>
-                    </td>
-                    <td>${t.mac}</td>
-                    <td>${t.ag - t.yg}</td>
-                    <td class="puan-bold">${t.puan}</td>
-                </tr>
-            `).join('');
+        // İstatistikler (Sağ Alt Kart)
+        document.getElementById('tp-rank').innerText = sira + ".";
+        document.getElementById('tp-points').innerText = takim.puan;
+        document.getElementById('tp-match').innerText = takim.mac;
+        document.getElementById('tp-win').innerText = takim.g;
+        document.getElementById('tp-draw').innerText = takim.b;
+        document.getElementById('tp-loss').innerText = takim.m;
+        document.getElementById('tp-gf').innerText = takim.ag;
+        document.getElementById('tp-ga').innerText = takim.yg;
 
-            document.getElementById('fixture-list').innerHTML = globalData.fikstur.map(h => `
-                <div class="hafta-baslik">${h.hafta}. HAFTA</div>
-                ${h.maclar.map(m => `
-                    <div class="fixture-item">
-                        <div class="fixture-team" style="text-align:right;">${m.ev}</div>
-                        <div class="score">${m.skor}</div>
-                        <div class="fixture-team" style="text-align:left;">${m.dep}</div>
+        // Kadro Ayrıştırma & Hesaplama
+        const hoca = takim.kadro.find(p => p.deger === "Hoca" || p.deger === "Imparator");
+        const oyuncular = takim.kadro.filter(p => p.deger !== "Hoca" && p.deger !== "Imparator");
+
+        // Hoca Bilgileri
+        if(hoca) {
+            document.getElementById('tp-manager-name').innerText = hoca.isim;
+            document.getElementById('tp-manager-img').src = hoca.foto;
+        } else {
+            document.getElementById('tp-manager-name').innerText = "Belirlenmedi";
+            document.getElementById('tp-manager-img').src = "https://tmssl.akamaized.net/images/portrait/header/default.jpg";
+        }
+
+        // Toplam Değer ve Yaş Ortalaması
+        let toplamDeger = 0;
+        let toplamYas = 0;
+        
+        oyuncular.forEach(p => {
+            const val = parseFloat(p.deger.split(' ')[0]) || 0;
+            toplamDeger += val;
+            toplamYas += parseInt(p.yas) || 0;
+        });
+
+        const yasOrt = oyuncular.length > 0 ? (toplamYas / oyuncular.length).toFixed(1) : 0;
+        document.getElementById('tp-avg-age').innerText = yasOrt;
+        document.getElementById('tp-total-value').innerText = "€ " + toplamDeger.toFixed(2) + " mil.";
+
+        // Kadro Listesini Çizdir (Tam senin attığın resimdeki gibi numaralı)
+        document.getElementById('tp-squad-list').innerHTML = oyuncular.map((p, index) => `
+            <tr style="border-bottom: 1px solid #eee;">
+                <td style="padding-left:15px;">
+                    <div class="tm-player-info">
+                        <span style="font-size: 12px; color: #888; width: 15px;">${index + 1}</span>
+                        <img src="${p.foto}" class="tm-player-img" onerror="this.src='https://tmssl.akamaized.net/images/portrait/header/default.jpg'">
+                        <div>
+                            <span class="tm-player-name">${p.isim}</span>
+                            <span class="tm-player-pos">Oyuncu</span>
+                        </div>
                     </div>
-                `).join('')}
-            `).join('');
-
-            const siraliGol = [...globalData.golKralligi].sort((a,b) => b.gol - a.gol);
-            document.getElementById('gol-table').innerHTML = siraliGol.map((o,i)=>`
-                <tr><td>${i+1}</td><td>${o.oyuncu}</td><td>${o.takim}</td><td style="font-weight:bold; color:#008CFF;">${o.gol}</td></tr>
-            `).join('');
-
-            const siraliAsist = [...globalData.asistKralligi].sort((a,b) => b.asist - a.asist);
-            document.getElementById('asist-table').innerHTML = siraliAsist.map((o,i)=>`
-                <tr><td>${i+1}</td><td>${o.oyuncu}</td><td>${o.takim}</td><td style="font-weight:bold; color:#008CFF;">${o.asist}</td></tr>
-            `).join('');
-
-        } catch (err) { console.error(err); }
+                </td>
+                <td style="text-align:center; font-weight: 600;">${p.yas}</td>
+                <td style="text-align:right; padding-right:15px; font-weight: 800; color: #002d62;">${p.deger}</td>
+            </tr>
+        `).join('');
     }
-    verileriGetir();
+
+    function anaSayfayaDon() {
+        document.getElementById('team-profile-view').style.display = 'none';
+        document.getElementById('main-dashboard').style.display = 'block';
+    }
+
+    yukle();
 </script>
 </body>
 </html>
