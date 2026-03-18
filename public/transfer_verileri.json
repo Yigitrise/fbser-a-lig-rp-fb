@@ -20,8 +20,8 @@
       "logo": "https://tmssl.akamaized.net/images/wappen/head/46.png",
       "hoca": { "isim": "Fatih Terim", "foto": "https://tmssl.akamaized.net/images/portrait/header/default.jpg" },
       "kadro": [
-        {"isim": "Haaland", "yas": 25, "deger": "200.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/418560-1698226992.jpg"},
-        {"isim": "Vinicius Jr.", "yas": 25, "deger": "180.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/371998-1698226992.jpg"},
+        {"isim": "Haaland", "yas": 25, "deger": "180.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/418560-1698226992.jpg"},
+        {"isim": "Vinicius Jr.", "yas": 25, "deger": "160.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/371998-1698226992.jpg"},
         {"isim": "Caicedo", "yas": 24, "deger": "75.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/648320-1698226992.jpg"},
         {"isim": "Bastoni", "yas": 26, "deger": "70.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/315868-1698226992.jpg"},
         {"isim": "Marquinhos", "yas": 31, "deger": "50.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/117622-1698226992.jpg"},
@@ -36,7 +36,7 @@
       "logo": "https://tmssl.akamaized.net/images/wappen/head/398.png",
       "hoca": { "isim": "Xabi Alonso", "foto": "https://tmssl.akamaized.net/images/portrait/header/default.jpg" },
       "kadro": [
-        {"isim": "Camavinga", "yas": 23, "deger": "100.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/640428-1698226992.jpg"},
+        {"isim": "Camavinga", "yas": 23, "deger": "60.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/640428-1698226992.jpg"},
         {"isim": "Neymar Jr.", "yas": 34, "deger": "45.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/68290-1698226992.jpg"},
         {"isim": "Jhon Duran", "yas": 22, "deger": "35.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/744045-1698226992.jpg"},
         {"isim": "Talisca", "yas": 32, "deger": "20.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/258623-1698226992.jpg"},
@@ -50,8 +50,8 @@
       "logo": "https://tmssl.akamaized.net/images/wappen/head/6195.png",
       "hoca": { "isim": "Arda Turan", "foto": "https://tmssl.akamaized.net/images/portrait/header/default.jpg" },
       "kadro": [
-        {"isim": "Mbappe", "yas": 27, "deger": "180.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/342229-1698226992.jpg"},
-        {"isim": "Bellingham", "yas": 22, "deger": "185.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/581678-1698226992.jpg"},
+        {"isim": "Mbappe", "yas": 27, "deger": "30.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/342229-1698226992.jpg"},
+        {"isim": "Bellingham", "yas": 22, "deger": "85.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/581678-1698226992.jpg"},
         {"isim": "Osimhen", "yas": 27, "deger": "125.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/366110-1698226992.jpg"},
         {"isim": "Yamal", "yas": 18, "deger": "150.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/1012522-1698226992.jpg"},
         {"isim": "Barella", "yas": 29, "deger": "80.00", "foto": "https://tmssl.akamaized.net/images/portrait/header/255942-1698226992.jpg"},
@@ -65,4 +65,3 @@
     }
   }
 }
-
