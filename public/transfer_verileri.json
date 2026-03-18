@@ -7,7 +7,7 @@
       "lig_sirasi": "1.",
       "puan": "18",
       "istatistik": { "mac": 6, "g": 6, "b": 0, "m": 0, "atilan": 21, "yenilen": 2 },
-      "hoca": { "isim": "Sergen Yalçın", "foto": "fotolar/sergen.jpg" },
+      "hoca": { "isim": "Sergen Yalçın", "foto": " fotolar/sergen.jpg" },
       "kadro": [
         {"isim": "Gyokeres", "yas": 26, "deger": "100.00", "foto": ""},
         {"isim": "Dembele", "yas": 27, "deger": "60.00", "foto": ""},
@@ -28,9 +28,9 @@
       "lig_sirasi": "2.",
       "puan": "15",
       "istatistik": { "mac": 6, "g": 5, "b": 0, "m": 1, "atilan": 18, "yenilen": 5 },
-      "hoca": { "isim": "Fatih Terim", "foto": "fotolar/terim.png" },
+      "hoca": { "isim": "Fatih Terim", "foto": " fotolar/terim.png" },
       "kadro": [
-        {"isim": "Haaland", "yas": 24, "deger": "150.00", "foto": ""},
+        {"isim": "Haaland", "yas": 24, "deger": "150.00", "foto": " fotolar/haaland.png"},
         {"isim": "Vinicius Jr.", "yas": 24, "deger": "120.00", "foto": "https://img.a.transfermarkt.technology/portrait/medium/371998-1664869583.jpg"},
         {"isim": "Asensio", "yas": 29, "deger": "20.00", "foto": ""},
         {"isim": "Cherki", "yas": 21, "deger": "25.00", "foto": ""},
