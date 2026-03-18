@@ -1,60 +1,124 @@
-{
-  "takimlar": {
-    "Juventus": { "mac": 6, "g": 6, "b": 0, "m": 0, "ag": 21, "yg": 2, "puan": 18, "logo": "https://tmssl.akamaized.net/images/wappen/head/506.png", "kadro": ["Gyokeres", "Dembele", "Adeyemi", "Pedri", "Orkun Kökçü", "Szoboszlai", "Van Dijk", "Konate", "Masuaku", "Kochalski", "TD: Sergen Yalçın"] },
-    "İnter": { "mac": 6, "g": 5, "b": 0, "m": 1, "ag": 21, "yg": 5, "puan": 15, "logo": "https://tmssl.akamaized.net/images/wappen/head/46.png", "kadro": ["Haaland", "Vinicius Jr.", "Asensio", "Cherki", "Caicedo", "Zeki Yavru", "Donnarumma", "Bastoni", "Marquinhos", "Ferdi Kadıoğlu", "TD: Fatih Terim"] },
-    "Lazio": { "mac": 6, "g": 4, "b": 0, "m": 2, "ag": 7, "yg": 7, "puan": 12, "logo": "https://tmssl.akamaized.net/images/wappen/head/398.png", "kadro": ["Ahmet Can Kaplan", "Cristiano Ronaldo", "Camavinga", "Jhon Duran", "Talisca", "Neymar", "Kyle Walker", "Murillo", "TD: Xabi Alonso"] },
-    "Napoli": { "mac": 6, "g": 3, "b": 0, "m": 3, "ag": 10, "yg": 12, "puan": 9, "logo": "https://tmssl.akamaized.net/images/wappen/head/6195.png", "kadro": ["Mbappe", "Osimhen", "Yamal", "Arda Güler", "Bellingham", "Barella", "Kimmich", "Barcola", "Arnold", "Hakimi", "Araujo", "Neuer", "Onauchu", "Skriniar", "TD: Arda Turan"] },
-    "Milan": { "mac": 6, "g": 2, "b": 1, "m": 3, "ag": 6, "yg": 11, "puan": 7, "logo": "https://tmssl.akamaized.net/images/wappen/head/5.png", "kadro": ["Palmer", "Lewandowski", "Yunus Akgün"] },
-    "Atalanta": { "mac": 6, "g": 1, "b": 1, "m": 4, "ag": 6, "yg": 14, "puan": 4, "logo": "https://tmssl.akamaized.net/images/wappen/head/800.png", "kadro": ["Henüz Belirlenmedi"] },
-    "Como": { "mac": 6, "g": 0, "b": 3, "m": 3, "ag": 3, "yg": 11, "puan": 3, "logo": "https://tmssl.akamaized.net/images/wappen/head/1047.png", "kadro": ["Henüz Belirlenmedi"] },
-    "Roma": { "mac": 6, "g": 0, "b": 1, "m": 5, "ag": 2, "yg": 14, "puan": 1, "logo": "https://tmssl.akamaized.net/images/wappen/head/12.png", "kadro": ["Henüz Belirlenmedi"] }
-  },
-  "fikstur": [
-    { "hafta": 1, "maclar": [ {"ev": "Roma", "dep": "Atalanta", "skor": "1-4"}, {"ev": "Lazio", "dep": "Como", "skor": "1-0"}, {"ev": "Napoli", "dep": "Juventus", "skor": "1-7"}, {"ev": "İnter", "dep": "Milan", "skor": "5-1"} ] },
-    { "hafta": 2, "maclar": [ {"ev": "Como", "dep": "Roma", "skor": "1-1"}, {"ev": "Juventus", "dep": "Atalanta", "skor": "4-0"}, {"ev": "Milan", "dep": "Lazio", "skor": "0-3"}, {"ev": "İnter", "dep": "Napoli", "skor": "4-0"} ] },
-    { "hafta": 3, "maclar": [ {"ev": "Roma", "dep": "Juventus", "skor": "0-3"}, {"ev": "Como", "dep": "Milan", "skor": "0-0"}, {"ev": "Atalanta", "dep": "İnter", "skor": "0-3"}, {"ev": "Lazio", "dep": "Napoli", "skor": "1-0"} ] },
-    { "hafta": 4, "maclar": [ {"ev": "Roma", "dep": "İnter", "skor": "0-3"}, {"ev": "Milan", "dep": "Napoli", "skor": "0-3"}, {"ev": "Juventus", "dep": "Lazio", "skor": "2-0"}, {"ev": "Como", "dep": "Atalanta", "skor": "2-2"} ] },
-    { "hafta": 5, "maclar": [ {"ev": "Napoli", "dep": "Roma", "skor": "1-0"}, {"ev": "Atalanta", "dep": "Milan", "skor": "0-3"}, {"ev": "Como", "dep": "Juventus", "skor": "0-2"}, {"ev": "Lazio", "dep": "İnter", "skor": "1-5"} ] },
-    { "hafta": 6, "maclar": [ {"ev": "Milan", "dep": "Roma", "skor": "2-0"}, {"ev": "İnter", "dep": "Juventus", "skor": "1-3"}, {"ev": "Napoli", "dep": "Como", "skor": "5-0"}, {"ev": "Lazio", "dep": "Atalanta", "skor": "1-0"} ] },
-    { "hafta": 7, "maclar": [ {"ev": "Roma", "dep": "Lazio", "skor": "-"}, {"ev": "Napoli", "dep": "Atalanta", "skor": "-"}, {"ev": "İnter", "dep": "Como", "skor": "-"}, {"ev": "Milan", "dep": "Juventus", "skor": "-"} ] },
-    { "hafta": 8, "maclar": [ {"ev": "Atalanta", "dep": "Roma", "skor": "-"}, {"ev": "Como", "dep": "Lazio", "skor": "-"}, {"ev": "Juventus", "dep": "Napoli", "skor": "-"}, {"ev": "Milan", "dep": "İnter", "skor": "-"} ] },
-    { "hafta": 9, "maclar": [ {"ev": "Roma", "dep": "Como", "skor": "-"}, {"ev": "Atalanta", "dep": "Juventus", "skor": "-"}, {"ev": "Lazio", "dep": "Milan", "skor": "-"}, {"ev": "Napoli", "dep": "İnter", "skor": "-"} ] },
-    { "hafta": 10, "maclar": [ {"ev": "Juventus", "dep": "Roma", "skor": "-"}, {"ev": "Milan", "dep": "Como", "skor": "-"}, {"ev": "İnter", "dep": "Atalanta", "skor": "-"}, {"ev": "Napoli", "dep": "Lazio", "skor": "-"} ] },
-    { "hafta": 11, "maclar": [ {"ev": "Roma", "dep": "Milan", "skor": "-"}, {"ev": "Juventus", "dep": "İnter", "skor": "-"}, {"ev": "Atalanta", "dep": "Lazio", "skor": "-"}, {"ev": "Como", "dep": "Napoli", "skor": "-"} ] },
-    { "hafta": 12, "maclar": [ {"ev": "İnter", "dep": "Roma", "skor": "-"}, {"ev": "Napoli", "dep": "Milan", "skor": "-"}, {"ev": "Lazio", "dep": "Juventus", "skor": "-"}, {"ev": "Atalanta", "dep": "Como", "skor": "-"} ] },
-    { "hafta": 13, "maclar": [ {"ev": "Roma", "dep": "Napoli", "skor": "-"}, {"ev": "İnter", "dep": "Lazio", "skor": "-"}, {"ev": "Milan", "dep": "Atalanta", "skor": "-"}, {"ev": "Juventus", "dep": "Como", "skor": "-"} ] },
-    { "hafta": 14, "maclar": [ {"ev": "Lazio", "dep": "Roma", "skor": "-"}, {"ev": "Atalanta", "dep": "Napoli", "skor": "-"}, {"ev": "Como", "dep": "İnter", "skor": "-"}, {"ev": "Juventus", "dep": "Milan", "skor": "-"} ] }
-  ],
-  "golKralligi": [
-    {"oyuncu": "Osimhen", "takim": "Napoli", "gol": 11},
-    {"oyuncu": "Gyokeres", "takim": "Juventus", "gol": 9},
-    {"oyuncu": "Haaland", "takim": "İnter", "gol": 7},
-    {"oyuncu": "Vinicius Jr.", "takim": "İnter", "gol": 5},
-    {"oyuncu": "Cherki", "takim": "İnter", "gol": 4},
-    {"oyuncu": "Adeyemi", "takim": "Juventus", "gol": 3},
-    {"oyuncu": "Duran", "takim": "Lazio", "gol": 3},
-    {"oyuncu": "Bellingham", "takim": "Napoli", "gol": 2},
-    {"oyuncu": "Onauchu", "takim": "Napoli", "gol": 2},
-    {"oyuncu": "Palmer", "takim": "Milan", "gol": 1},
-    {"oyuncu": "Lewandowski", "takim": "Milan", "gol": 1},
-    {"oyuncu": "Neymar", "takim": "Lazio", "gol": 1},
-    {"oyuncu": "Talisca", "takim": "Lazio", "gol": 1},
-    {"oyuncu": "Vitinha", "takim": "İnter", "gol": 1},
-    {"oyuncu": "Asensio", "takim": "İnter", "gol": 1}
-  ],
-  "asistKralligi": [
-    {"oyuncu": "Pedri", "takim": "Juventus", "asist": 11},
-    {"oyuncu": "Haaland", "takim": "İnter", "asist": 5},
-    {"oyuncu": "Vinicius Jr.", "takim": "İnter", "asist": 5},
-    {"oyuncu": "Adeyemi", "takim": "Juventus", "asist": 5},
-    {"oyuncu": "Gyokeres", "takim": "Juventus", "asist": 4},
-    {"oyuncu": "Onauchu", "takim": "Napoli", "asist": 3},
-    {"oyuncu": "Neymar", "takim": "Lazio", "asist": 2},
-    {"oyuncu": "Talisca", "takim": "Lazio", "asist": 2},
-    {"oyuncu": "Yunus Akgün", "takim": "Milan", "asist": 1},
-    {"oyuncu": "Bellingham", "takim": "Napoli", "asist": 1},
-    {"oyuncu": "Osimhen", "takim": "Napoli", "asist": 1},
-    {"oyuncu": "Caicedo", "takim": "İnter", "asist": 1},
-    {"oyuncu": "Asensio", "takim": "İnter", "asist": 1}
-  ]
-}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serie A League - Official RP</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* Tasarım senin istediğin o profesyonel Transfermarkt havasında kalsın */
+        body { font-family: 'Poppins', sans-serif; background: #f4f7f6; color: #333; margin: 0; padding: 10px; }
+        .container { max-width: 900px; margin: auto; }
+        h1 { text-align: center; color: #002d62; font-weight: 800; text-transform: uppercase; margin-bottom: 20px; }
+        .tabs { display: flex; justify-content: center; gap: 5px; margin-bottom: 20px; flex-wrap: wrap; }
+        .tab-btn { padding: 10px 15px; background: #e0e6ed; border: none; color: #002d62; cursor: pointer; border-radius: 4px; transition: 0.3s; font-weight: 600; }
+        .tab-btn.active { background: #002d62; color: white; }
+        .tab-content { display: none; background: white; padding: 15px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); border: 1px solid #e0e6ed; }
+        .tab-content.active { display: block; }
+        table { width: 100%; border-collapse: collapse; margin-top: 5px; font-size: 14px; }
+        th, td { padding: 12px 10px; text-align: left; border-bottom: 1px solid #e0e6ed; }
+        th { background: #f4f7f6; color: #002d62; font-size: 11px; text-transform: uppercase; }
+        .team-logo { width: 30px; height: 30px; object-fit: contain; vertical-align: middle; margin-right: 12px; cursor: pointer; }
+        .puan-bold { font-weight: 800; color: #002d62; font-size: 15px; }
+        .hafta-baslik { background: #f4f7f6; padding: 6px 15px; margin-top: 20px; border-radius: 4px; color: #002d62; font-weight: 800; font-size: 13px; border-bottom: 2px solid #002d62; }
+        .fixture-item { display: flex; justify-content: space-between; align-items: center; padding: 10px; border-bottom: 1px solid #e0e6ed; }
+        .fixture-team { flex: 1; font-weight: 600; font-size: 13px; color: #002d62; }
+        .score { background: #f4f7f6; padding: 4px 10px; border-radius: 4px; font-weight: 800; color: #333; min-width: 35px; text-align: center; margin: 0 10px; border: 1px solid #e0e6ed; }
+        
+        /* Modal Tasarımı Aynı Kalsın */
+        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); backdrop-filter: blur(2px); }
+        .modal-content { background: white; margin: 5% auto; padding: 0; border: none; width: 650px; border-radius: 6px; text-align: left; box-shadow: 0 4px 20px rgba(0,0,0,0.3); overflow: hidden; }
+        .modal-tm-header { background: #002d62; color: white; padding: 15px 20px; font-weight: 800; font-size: 18px; display: flex; justify-content: space-between; align-items: center; }
+        .modal-close { cursor: pointer; font-size: 24px; color: white; }
+        .tm-table { width: 100%; font-size: 12px; }
+        .tm-table th { font-size: 10px; padding: 10px; color: #002d62; background: #e0e6ed; }
+        .tm-table td { padding: 8px 10px; border-bottom: 1px solid #e0e6ed; }
+        .tm-player-cell { display: flex; align-items: center; }
+        .tm-player-foto { width: 35px; height: 35px; border-radius: 50%; object-fit: cover; margin-right: 12px; border: 1px solid #e0e6ed; }
+        .tm-player-isim { font-weight: 700; color: #002d62; }
+    </style>
+</head>
+<body>
+
+<div id="kadroModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-tm-header"><span id="modalTeamName">Takım Kadrosu</span><span class="modal-close" onclick="closeModal()">&times;</span></div>
+        <table class="tm-table">
+            <thead><tr><th style="width: 50%;">Oyuncu</th><th style="text-align: center;">Yaş</th><th style="text-align: center;">Uyruk</th><th style="text-align: right;">Piyasa Değeri</th></tr></thead>
+            <tbody id="kadroListesi"></tbody>
+        </table>
+    </div>
+</div>
+
+<div class="container">
+    <h1>🇮🇹 SERIE A LEAGUE</h1>
+    <div class="tabs">
+        <button class="tab-btn active" onclick="openTab('puan-durumu')">Puan Durumu</button>
+        <button class="tab-btn" onclick="openTab('fikstur')">Fikstür</button>
+        <button class="tab-btn" onclick="openTab('gol-kralligi')">Gol Krallığı</button>
+        <button class="tab-btn" onclick="openTab('asist-kralligi')">Asist Krallığı</button>
+    </div>
+
+    <div id="puan-durumu" class="tab-content active">
+        <table><thead><tr><th>#</th><th>Takım (Kadro için tıkla)</th><th>OM</th><th>AV</th><th>Puan</th></tr></thead><tbody id="puan-table"></tbody></table>
+    </div>
+    <div id="fikstur" class="tab-content"><div id="fixture-list"></div></div>
+    <div id="gol-kralligi" class="tab-content"><table><thead><tr><th>#</th><th>Oyuncu</th><th>Takım</th><th>Gol</th></tr></thead><tbody id="gol-table"></tbody></table></div>
+    <div id="asist-kralligi" class="tab-content"><table><thead><tr><th>#</th><th>Oyuncu</th><th>Takım</th><th>Asist</th></tr></thead><tbody id="asist-table"></tbody></table></div>
+</div>
+
+<script>
+    let globalData = {};
+    function openTab(id) {
+        document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.getElementById(id).classList.add('active');
+        event.currentTarget.classList.add('active');
+    }
+
+    function showKadro(teamName) {
+        const team = globalData.takimlar[teamName];
+        if (!team || !team.kadro) return;
+        document.getElementById('modalTeamName').innerText = teamName + " Kadrosu";
+        document.getElementById('kadroListesi').innerHTML = team.kadro.map(p => `
+            <tr>
+                <td class="tm-player-cell"><img src="${p.foto}" class="tm-player-foto" onerror="this.src='https://tmssl.akamaized.net/images/portrait/header/default.jpg'"><span class="tm-player-isim">${p.isim}</span></td>
+                <td style="text-align: center;">${p.yas}</td>
+                <td style="text-align: center;">${p.uyruk}</td>
+                <td style="text-align: right;">${p.deger}</td>
+            </tr>
+        `).join('');
+        document.getElementById('kadroModal').style.display = "block";
+    }
+
+    function closeModal() { document.getElementById('kadroModal').style.display = "none"; }
+    window.onclick = function(event) { if (event.target == document.getElementById('kadroModal')) closeModal(); }
+
+    async function verileriGetir() {
+        try {
+            const res = await fetch('/api/veriler');
+            globalData = await res.json();
+
+            // Puan Durumu
+            const siraliTakimlar = Object.entries(globalData.takimlar).sort((a,b) => b[1].puan - a[1].puan || (b[1].ag-b[1].yg) - (a[1].ag-a[1].yg));
+            document.getElementById('puan-table').innerHTML = siraliTakimlar.map(([isim, t], i) => `
+                <tr><td>${i+1}</td><td onclick="showKadro('${isim}')" style="cursor:pointer;"><img src="${t.logo}" class="team-logo"><strong>${isim}</strong></td><td>${t.mac}</td><td>${t.ag-t.yg}</td><td class="puan-bold">${t.puan}</td></tr>
+            `).join('');
+
+            // Fikstür - İşte Burası Düzeltildi!
+            document.getElementById('fixture-list').innerHTML = globalData.fikstur.map(h => `
+                <div class="hafta-baslik">${h.hafta}. HAFTA</div>
+                ${h.maclar.map(m => `
+                    <div class="fixture-item"><div class="fixture-team" style="text-align:right;">${m.ev}</div><div class="score">${m.skor}</div><div class="fixture-team" style="text-align:left;">${m.dep}</div></div>
+                `).join('')}
+            `).join(''); // Kesinlikle .reverse() yok, 1'den 14'e akacak.
+
+            // Krallıklar
+            document.getElementById('gol-table').innerHTML = [...globalData.golKralligi].sort((a,b)=>b.gol-a.gol).map((o,i)=>`<tr><td>${i+1}</td><td>${o.oyuncu}</td><td>${o.takim}</td><td style="font-weight:bold; color:#002d62;">${o.gol}</td></tr>`).join('');
+            document.getElementById('asist-table').innerHTML = [...globalData.asistKralligi].sort((a,b)=>b.asist-a.asist).map((o,i)=>`<tr><td>${i+1}</td><td>${o.oyuncu}</td><td>${o.takim}</td><td style="font-weight:bold; color:#002d62;">${o.asist}</td></tr>`).join('');
+        } catch (err) { console.error(err); }
+    }
+    verileriGetir();
+</script>
+</body>
+</html>
