@@ -9,109 +9,74 @@
         :root { --tm-dark: #002d62; --bg: #f0f2f5; --white: #ffffff; }
         body { font-family: 'Poppins', sans-serif; background: var(--bg); margin: 0; padding: 20px; color: #333; }
         .container { max-width: 1100px; margin: auto; }
-
-        /* Üst Header Kartı */
+        .back-btn { background: var(--tm-dark); color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 700; font-size: 13px; display: inline-block; margin-bottom: 20px; }
         .header-card { background: var(--white); border-radius: 12px; padding: 25px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
         .team-brand { display: flex; align-items: center; gap: 30px; }
         .team-logo { width: 80px; height: 80px; object-fit: contain; }
         .team-info h1 { margin: 0; font-size: 32px; color: var(--tm-dark); font-weight: 800; }
         .team-meta { display: flex; gap: 40px; margin-top: 10px; font-size: 13px; color: #666; }
         .meta-item b { display: block; color: #333; font-weight: 700; }
-
         .value-badge { background: var(--tm-dark); color: white; padding: 20px 40px; border-radius: 8px; text-align: right; }
         .value-badge span { font-size: 12px; text-transform: uppercase; opacity: 0.8; }
         .value-badge div { font-size: 28px; font-weight: 800; }
-
-        /* Ana İçerik */
         .main-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; }
         .card { background: var(--white); border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
-        .card-header { padding: 15px 20px; font-weight: 800; color: var(--tm-dark); border-bottom: 1px solid #eee; font-size: 14px; }
-
-        /* Kadro Tablosu */
+        .card-header { padding: 15px 20px; font-weight: 800; color: var(--tm-dark); border-bottom: 1px solid #eee; font-size: 14px; background: #fafafa; }
         table { width: 100%; border-collapse: collapse; }
         th { text-align: left; padding: 15px; background: #fafafa; font-size: 11px; color: #999; text-transform: uppercase; }
         td { padding: 12px 15px; border-bottom: 1px solid #f2f2f2; font-size: 14px; }
         .player-cell { display: flex; align-items: center; gap: 15px; }
-        .player-img { width: 40px; height: 40px; border-radius: 6px; background: #eee; }
+        .player-img { width: 40px; height: 40px; border-radius: 6px; background: #eee; object-fit: cover; }
         .p-name { font-weight: 700; color: var(--tm-dark); }
         .p-sub { font-size: 11px; color: #999; display: block; }
         .p-val { font-weight: 800; color: var(--tm-dark); text-align: right; }
-
-        /* Sağ Taraf - Hoca ve İstatistik */
         .manager-box { text-align: center; padding: 30px; }
-        .manager-img { width: 120px; height: 120px; border-radius: 12px; object-fit: cover; background: #eee; margin-bottom: 15px; }
-        .manager-box h3 { margin: 0; font-size: 18px; color: var(--tm-dark); }
-        .manager-box span { font-size: 12px; color: #999; }
-
+        .manager-img { width: 130px; height: 130px; border-radius: 15px; object-fit: cover; background: #eee; margin-bottom: 15px; border: 4px solid #f0f2f5; }
         .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 20px; }
         .stat-card { padding: 15px; border-radius: 10px; text-align: center; color: white; }
         .blue-card { background: var(--tm-dark); }
         .green-card { background: #27ae60; }
-        .stat-label { font-size: 10px; font-weight: 700; opacity: 0.8; margin-bottom: 5px; }
-        .stat-val { font-size: 22px; font-weight: 800; }
-
-        .mini-stats { display: flex; justify-content: space-between; padding: 10px 20px; background: #fcfcfc; border-top: 1px solid #eee; font-size: 12px; }
+        .stat-val { font-size: 22px; font-weight: 800; display: block; }
+        .stat-label { font-size: 10px; font-weight: 700; opacity: 0.8; }
+        .mini-stats { display: flex; justify-content: space-between; padding: 15px 20px; background: #fcfcfc; border-top: 1px solid #eee; }
         .mini-item { text-align: center; flex: 1; }
-        .mini-item label { display: block; color: #999; font-size: 10px; }
+        .mini-item label { display: block; color: #999; font-size: 10px; font-weight: 700; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <div class="header-card">
-        <div class="team-brand">
-            <img id="tLogo" src="" class="team-logo">
-            <div class="team-info">
-                <h1 id="tName">-</h1>
-                <div class="team-meta">
-                    <div class="meta-item">Stadyum: <b id="tStadium">-</b></div>
-                    <div class="meta-item">Yaş Ortalaması: <b id="tAgeAvg">-</b></div>
+    <a href="transfer_menu.html" class="back-btn">← LİG MENÜSÜ</a>
+    
+    <div id="dashboard">
+        <div class="header-card">
+            <div class="team-brand">
+                <img id="tLogo" src="" class="team-logo">
+                <div class="team-info">
+                    <h1 id="tName">-</h1>
+                    <div class="team-meta">
+                        <div class="meta-item">Stadyum: <b id="tStadium">-</b></div>
+                        <div class="meta-item">Yaş Ortalaması: <b id="tAgeAvg">-</b></div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="value-badge">
-            <span>KADRO DEĞERİ</span>
-            <div id="tTotalVal">€ 0.00 mil.</div>
-        </div>
-    </div>
-
-    <div class="main-grid">
-        <div class="card">
-            <div class="card-header">GÜNCEL KADRO</div>
-            <table id="squadTable">
-                <thead>
-                    <tr><th>OYUNCU</th><th style="text-align:center">YAŞ</th><th style="text-align:right">PİYASA DEĞERİ</th></tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </div>
-
-        <div class="side-content">
-            <div class="card" style="margin-bottom: 20px;">
-                <div class="card-header" style="text-align:center">TEKNİK DİREKTÖR</div>
-                <div class="manager-box">
-                    <img id="mImg" src="" class="manager-img" onerror="this.src='https://www.transfermarkt.com.tr/assets/6504b2e1/images/portrait/medium/default.jpg'">
-                    <h3 id="mName">-</h3>
-                    <span>TEKNİK DİREKTÖR</span>
-                </div>
+            <div class="value-badge">
+                <span>KADRO DEĞERİ</span>
+                <div id="tTotalVal">€ 0.00 mil.</div>
             </div>
+        </div>
 
+        <div class="main-grid">
             <div class="card">
-                <div class="stats-grid">
-                    <div class="stat-card blue-card">
-                        <div class="stat-label">LİG SIRASI</div>
-                        <div id="rankVal" class="stat-val">-</div>
-                    </div>
-                    <div class="stat-card green-card">
-                        <div class="stat-label">PUAN</div>
-                        <div id="puanVal" class="stat-val">-</div>
-                    </div>
-                </div>
-                <div class="mini-stats" id="matchStats">
-                    </div>
-                <div style="padding: 15px; text-align:center; font-size: 12px; color: #666; border-top: 1px solid #eee;">
-                    Attığı Gol: <b id="goalA">-</b> | Yediği Gol: <b id="goalY">-</b>
-                </div>
+                <div class="card-header">GÜNCEL KADRO</div>
+                <table id="squadTable">
+                    <thead><tr><th>OYUNCU</th><th style="text-align:center">YAŞ</th><th style="text-align:right">PİYASA DEĞERİ</th></tr></thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+            <div class="side-content">
+                <div class="card" style="margin-bottom: 20px;"><div class="card-header" style="text-align:center">TEKNİK DİREKTÖR</div><div class="manager-box"><img id="mImg" src="" class="manager-img" onerror="this.src='https://www.transfermarkt.com.tr/assets/6504b2e1/images/portrait/medium/default.jpg'"><h3 id="mName">-</h3><span style="font-size: 11px; color:#999; font-weight:700;">TEKNİK DİREKTÖR</span></div></div>
+                <div class="card"><div class="stats-grid"><div class="stat-card blue-card"><span class="stat-label">LİG SIRASI</span><span id="rankVal" class="stat-val">-</span></div><div class="stat-card green-card"><span class="stat-label">PUAN</span><span id="puanVal" class="stat-val">-</span></div></div><div class="mini-stats" id="matchStats"></div><div style="padding: 15px; text-align:center; font-size: 12px; color: #666; border-top: 1px solid #eee;">Attığı Gol: <b id="goalA" style="color:var(--tm-dark)">-</b> | Yediği Gol: <b id="goalY" style="color:red">-</b></div></div>
             </div>
         </div>
     </div>
@@ -121,15 +86,25 @@
     async function init() {
         const res = await fetch('transfer_verileri.json');
         const data = await res.json();
-        const team = data.takimlar["Juventus"]; // Şimdilik Juve üzerinden gösteriyoruz
+        const portraitDefault = 'https://www.transfermarkt.com.tr/assets/6504b2e1/images/portrait/medium/default.jpg';
 
-        // Header Dolum
+        // KANKA DİKKAT: URL'deki parametreyi okuyan yeni kısım
+        const urlParams = new URLSearchParams(window.location.search);
+        let teamName = urlParams.get('team'); // ?team=İnter kısmını okur
+
+        // Eğer parametre yoksa veya veri tabanında o takım yoksa Juve'yi yükle (Hata koruması)
+        if(!teamName || !data.takimlar[teamName]) {
+            console.warn("Takım URL parametresi bulunamadı veya hatalı, Juventus yükleniyor.");
+            teamName = "Juventus"; 
+        }
+
+        const team = data.takimlar[teamName]; // Artık dinamik!
+
+        // UI Güncelleme (Bu kısımlar aynı kalıyor ama artık dinamik team verisini kullanıyor)
         document.getElementById('tLogo').src = team.logo;
-        document.getElementById('tName').innerText = "Juventus";
+        document.getElementById('tName').innerText = teamName;
         document.getElementById('tStadium').innerText = team.stadyum;
         document.getElementById('tAgeAvg').innerText = team.yas_ort;
-        
-        // Hoca & Lig
         document.getElementById('mName').innerText = team.hoca.isim;
         document.getElementById('mImg').src = team.hoca.foto;
         document.getElementById('rankVal').innerText = team.lig_sirasi;
@@ -137,34 +112,19 @@
         document.getElementById('goalA').innerText = team.istatistik.atilan;
         document.getElementById('goalY').innerText = team.istatistik.yenilen;
 
-        // Maç Detayları
         document.getElementById('matchStats').innerHTML = `
             <div class="mini-item"><label>Maç</label><b>${team.istatistik.mac}</b></div>
-            <div class="mini-item"><label style="color:green">G</label><b>${team.istatistik.g}</b></div>
-            <div class="mini-item"><label style="color:orange">B</label><b>${team.istatistik.b}</b></div>
-            <div class="mini-item"><label style="color:red">M</label><b>${team.istatistik.m}</b></div>
+            <div class="mini-item"><label style="color:#27ae60">G</label><b>${team.istatistik.g}</b></div>
+            <div class="mini-item"><label style="color:#f39c12">B</label><b>${team.istatistik.b}</b></div>
+            <div class="mini-item"><label style="color:#e74c3c">M</label><b>${team.istatistik.m}</b></div>
         `;
 
-        // Kadro Tablosu
         let total = 0;
         const tbody = document.querySelector('#squadTable tbody');
-        tbody.innerHTML = team.kadro.map((p, index) => {
+        tbody.innerHTML = team.kadro.map((p, i) => {
             total += parseFloat(p.deger);
-            return `
-                <tr>
-                    <td>
-                        <div class="player-cell">
-                            <span style="color:#ccc; font-size:10px;">${index + 1}</span>
-                            <img src="${p.foto}" class="player-img" onerror="this.src='https://www.transfermarkt.com.tr/assets/6504b2e1/images/portrait/medium/default.jpg'">
-                            <div><span class="p-name">${p.isim}</span><span class="p-sub">Oyuncu</span></div>
-                        </div>
-                    </td>
-                    <td style="text-align:center; font-weight:600;">${p.yas}</td>
-                    <td class="p-val">${p.deger} mil. €</td>
-                </tr>
-            `;
+            return `<tr><td><div class="player-cell"><span style="color:#ccc; font-size:10px;">${i+1}</span><img src="${p.foto}" class="player-img" onerror="this.src='${portraitDefault}'"><div><span class="p-name">${p.isim}</span><span class="p-sub">Oyuncu</span></div></div></td><td style="text-align:center; font-weight:600;">${p.yas}</td><td class="p-val">${p.deger} mil. €</td></tr>`;
         }).join('');
-
         document.getElementById('tTotalVal').innerText = `€ ${total.toFixed(2)} mil.`;
     }
 
