@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serie A - Transfermarkt Mode</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root { --tm-blue: #002d62; --tm-light-blue: #0056b3; --tm-bg: #f0f2f5; }
+        body { font-family: 'Poppins', sans-serif; background: var(--tm-bg); margin: 0; padding: 20px; }
+        .container { max-width: 1100px; margin: auto; }
+        
+        .header-nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .back-btn { background: var(--tm-blue); color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; font-weight: 600; font-size: 14px; }
+
+        /* Takım Seçici Üst Bar */
+        .team-selector { background: white; padding: 15px; border-radius: 8px; margin-bottom: 20px; display: flex; gap: 10px; overflow-x: auto; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .team-opt { cursor: pointer; opacity: 0.6; transition: 0.3s; min-width: 50px; text-align: center; }
+        .team-opt:hover, .team-opt.active { opacity: 1; transform: scale(1.1); }
+        .team-opt img { width: 40px; height: 40px; object-fit: contain; }
+
+        /* Profil Kartı */
+        .tm-header { background: white; padding: 25px; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; border-bottom: 5px solid var(--tm-blue); box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .tm-team-info { display: flex; align-items: center; gap: 25px; }
+        .tm-big-logo { width: 100px; height: 100px; object-fit: contain; }
+        .tm-team-name { font-size: 32px; font-weight: 800; color: var(--tm-blue); margin: 0; }
+        
+        .tm-value-card { background: var(--tm-blue); color: white; padding: 20px 40px; border-radius: 6px; text-align: right; }
+        .tm-value-title { font-size: 12px; opacity: 0.8; text-transform: uppercase; }
+        .tm-value-amount { font-size: 30px; font-weight: 800; }
+
+        /* İçerik Alanı */
+        .tm-main-grid { display: grid; grid-template-columns: 2fr 1fr; gap: 20px; margin-top: 20px; }
+        .tm-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 5px rgba(0,0,0,0.05); }
+        .tm-card-title { background: #f8f9fb; padding: 15px 20px; font-weight: 800; color: var(--tm-blue); border-bottom: 1px solid #eee; }
+
+        table { width: 100%; border-collapse: collapse; }
+        th { background: #f8f9fb; color: #888; font-size: 11px; text-transform: uppercase; padding: 10px 15px; text-align: left; }
+        td { padding: 12px 15px; border-bottom: 1px solid #eee; font-size: 13px; }
+        
+        .player-cell { display: flex; align-items: center; gap: 12px; }
+        .player-img { width: 40px; height: 40px; border-radius: 4px; object-fit: cover; background: #eee; }
+        .player-name { font-weight: 700; color: var(--tm-blue); display: block; }
+        
+        .manager-box { text-align: center; padding: 20px; }
+        .manager-img { width: 150px; height: 180px; object-fit: cover; border-radius: 8px; margin-bottom: 15px; border: 1px solid #eee; }
+        
+        /* Stats Box */
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 20px; }
+        .stat-item { background: #f8f9fb; padding: 15px; border-radius: 6px; text-align: center; }
+        .stat-item span { font-size: 10px; color: #888; display: block; }
+        .stat-item b { font-size: 18px; color: var(--tm-blue); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header-nav">
+        <a href="index.html" class="back-btn">← ANA SAYFAYA DÖN</a>
+        <h2 style="color: var(--tm-blue); margin: 0;">TRANSFERMARKT MODE</h2>
+    </div>
+
+    <div class="team-selector" id="team-nav"></div>
+
+    <div id="profile-content" style="display:none;">
+        <div class="tm-header">
+            <div class="tm-team-info">
+                <img id="tm-logo" src="" class="tm-big-logo">
+                <div>
+                    <h1 id="tm-name" class="tm-team-name">-</h1>
+                    <div style="font-size: 13px; color: #666; margin-top: 5px;">
+                        Yaş Ortalaması: <b id="tm-avg-age">-</b>
+                    </div>
+                </div>
+            </div>
+            <div class="tm-value-card">
+                <div class="tm-value-title">KADRO DEĞERİ</div>
+                <div class="tm-value-amount" id="tm-total-val">€ 0.00m</div>
+            </div>
+        </div>
+
+        <div class="tm-main-grid">
+            <div class="tm-card">
+                <div class="tm-card-title">GÜNCEL KADRO</div>
+                <table>
+                    <thead>
+                        <tr><th>OYUNCU</th><th style="text-align:center">YAŞ</th><th style="text-align:right">DEĞER</th></tr>
+                    </thead>
+                    <tbody id="squad-body"></tbody>
+                </table>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 20px;">
+                <div class="tm-card">
+                    <div class="tm-card-title">TEKNİK DİREKTÖR</div>
+                    <div class="manager-box">
+                        <img id="tm-manager-img" src="" class="manager-img" onerror="this.src='https://tmssl.akamaized.net/images/portrait/header/default.jpg'">
+                        <div id="tm-manager-name" style="font-weight: 800; color: var(--tm-blue); font-size: 18px;">-</div>
+                    </div>
+                </div>
+
+                <div class="tm-card">
+                    <div class="tm-card-title">LİG İSTATİSTİKLERİ</div>
+                    <div class="stats-grid">
+                        <div class="stat-item"><span>SIRALAMA</span><b id="tm-rank">-</b></div>
+                        <div class="stat-item"><span>PUAN</span><b id="tm-points">-</b></div>
+                        <div class="stat-item"><span>GOL (+/-)</span><b id="tm-av">-</b></div>
+                        <div class="stat-item"><span>MAÇ</span><b id="tm-match">-</b></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let veriler = {};
+
+    async function baslat() {
+        const res = await fetch('/api/veriler');
+        veriler = await res.json();
+        
+        const teams = Object.entries(veriler.takimlar);
+        const nav = document.getElementById('team-nav');
+        
+        // Takım logolarını diz
+        nav.innerHTML = teams.map(([name, t]) => `
+            <div class="team-opt" onclick="yukleTakim('${name}')" title="${name}">
+                <img src="${t.logo}">
+            </div>
+        `).join('');
+
+        // İlk takımı otomatik yükle
+        if(teams.length > 0) yukleTakim(teams[0][0]);
+    }
+
+    function yukleTakim(name) {
+        const t = veriler.takimlar[name];
+        document.getElementById('profile-content').style.display = 'block';
+        
+        // Üst Bilgiler
+        document.getElementById('tm-logo').src = t.logo;
+        document.getElementById('tm-name').innerText = name;
+        
+        // Puan Durumu Sırası (Basit sıralama)
+        const sirali = Object.entries(veriler.takimlar).sort((a,b) => b[1].puan - a[1].puan);
+        const sira = sirali.findIndex(x => x[0] === name) + 1;
+        document.getElementById('tm-rank').innerText = sira + ".";
+        document.getElementById('tm-points').innerText = t.puan;
+        document.getElementById('tm-match').innerText = t.mac;
+        document.getElementById('tm-av').innerText = (t.ag - t.yg);
+
+        // Kadro ve Hoca
+        const hoca = t.kadro.find(p => p.deger.includes("Hoca") || p.deger.includes("Imparator"));
+        const oyuncular = t.kadro.filter(p => !p.deger.includes("Hoca") && !p.deger.includes("Imparator"));
+
+        document.getElementById('tm-manager-name').innerText = hoca ? hoca.isim : "Bilinmiyor";
+        document.getElementById('tm-manager-img').src = hoca ? hoca.foto : "";
+
+        let toplamVal = 0;
+        let toplamYas = 0;
+        
+        document.getElementById('squad-body').innerHTML = oyuncular.map(p => {
+            const val = parseFloat(p.deger) || 0;
+            toplamVal += val;
+            toplamYas += parseInt(p.yas) || 0;
+            return `
+                <tr>
+                    <td>
+                        <div class="player-cell">
+                            <img src="${p.foto}" class="player-img" onerror="this.src='https://tmssl.akamaized.net/images/portrait/header/default.jpg'">
+                            <div>
+                                <span class="player-name">${p.isim}</span>
+                                <span style="font-size:10px; color:#888;">Oyuncu</span>
+                            </div>
+                        </div>
+                    </td>
+                    <td style="text-align:center; font-weight:600;">${p.yas}</td>
+                    <td style="text-align:right; font-weight:800; color:var(--tm-blue);">€ ${p.deger}</td>
+                </tr>
+            `;
+        }).join('');
+
+        document.getElementById('tm-total-val').innerText = "€ " + toplamVal.toFixed(2) + "m";
+        document.getElementById('tm-avg-age').innerText = oyuncular.length > 0 ? (toplamYas / oyuncular.length).toFixed(1) : "-";
+        
+        // Aktif takımı görselleştir
+        document.querySelectorAll('.team-opt').forEach(opt => {
+            opt.classList.toggle('active', opt.title === name);
+        });
+    }
+
+    baslat();
+</script>
+</body>
+</html>
+
