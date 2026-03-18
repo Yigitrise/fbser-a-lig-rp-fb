@@ -1,13 +1,13 @@
 {
   "takimlar": {
-    "İnter": { "mac": 5, "g": 5, "b": 0, "m": 0, "ag": 20, "yg": 2, "puan": 15, "logo": "https://tmssl.akamaized.net/images/wappen/head/46.png" },
-    "Juventus": { "mac": 5, "g": 5, "b": 0, "m": 0, "ag": 18, "yg": 1, "puan": 15, "logo": "https://tmssl.akamaized.net/images/wappen/head/506.png" },
-    "Lazio": { "mac": 5, "g": 3, "b": 0, "m": 2, "ag": 6, "yg": 7, "puan": 9, "logo": "https://tmssl.akamaized.net/images/wappen/head/398.png" },
-    "Napoli": { "mac": 5, "g": 2, "b": 0, "m": 3, "ag": 5, "yg": 12, "puan": 6, "logo": "https://tmssl.akamaized.net/images/wappen/head/6195.png" },
-    "Atalanta": { "mac": 5, "g": 1, "b": 1, "m": 3, "ag": 6, "yg": 13, "puan": 4, "logo": "https://tmssl.akamaized.net/images/wappen/head/800.png" },
-    "Milan": { "mac": 5, "g": 1, "b": 1, "m": 3, "ag": 4, "yg": 11, "puan": 4, "logo": "https://tmssl.akamaized.net/images/wappen/head/5.png" },
-    "Como": { "mac": 5, "g": 0, "b": 3, "m": 2, "ag": 3, "yg": 6, "puan": 3, "logo": "https://tmssl.akamaized.net/images/wappen/head/1047.png" },
-    "Roma": { "mac": 5, "g": 0, "b": 1, "m": 4, "ag": 2, "yg": 12, "puan": 1, "logo": "https://tmssl.akamaized.net/images/wappen/head/12.png" }
+    "Juventus": { "mac": 6, "g": 6, "b": 0, "m": 0, "ag": 21, "yg": 2, "puan": 18, "form": ["G", "G", "G", "G", "G"], "logo": "https://tmssl.akamaized.net/images/wappen/head/506.png" },
+    "İnter": { "mac": 6, "g": 5, "b": 0, "m": 1, "ag": 21, "yg": 5, "puan": 15, "form": ["G", "G", "G", "G", "M"], "logo": "https://tmssl.akamaized.net/images/wappen/head/46.png" },
+    "Lazio": { "mac": 6, "g": 4, "b": 0, "m": 2, "ag": 7, "yg": 7, "puan": 12, "form": ["G", "G", "M", "M", "G"], "logo": "https://tmssl.akamaized.net/images/wappen/head/398.png" },
+    "Napoli": { "mac": 6, "g": 3, "b": 0, "m": 3, "ag": 10, "yg": 12, "puan": 9, "form": ["M", "M", "G", "G", "G"], "logo": "https://tmssl.akamaized.net/images/wappen/head/6195.png" },
+    "Milan": { "mac": 6, "g": 2, "b": 1, "m": 3, "ag": 6, "yg": 11, "puan": 7, "form": ["B", "M", "M", "G", "G"], "logo": "https://tmssl.akamaized.net/images/wappen/head/5.png" },
+    "Atalanta": { "mac": 6, "g": 1, "b": 1, "m": 4, "ag": 6, "yg": 14, "puan": 4, "form": ["M", "M", "B", "M", "M"], "logo": "https://tmssl.akamaized.net/images/wappen/head/800.png" },
+    "Como": { "mac": 6, "g": 0, "b": 3, "m": 3, "ag": 3, "yg": 11, "puan": 3, "form": ["B", "B", "B", "M", "M"], "logo": "https://tmssl.akamaized.net/images/wappen/head/1047.png" },
+    "Roma": { "mac": 6, "g": 0, "b": 1, "m": 5, "ag": 2, "yg": 14, "puan": 1, "form": ["B", "M", "M", "M", "M"], "logo": "https://tmssl.akamaized.net/images/wappen/head/12.png" }
   },
   "fikstur": [
     { "hafta": 1, "maclar": [ {"ev": "Roma", "dep": "Atalanta", "skor": "1-4"}, {"ev": "Lazio", "dep": "Como", "skor": "1-0"}, {"ev": "Napoli", "dep": "Juventus", "skor": "1-7"}, {"ev": "İnter", "dep": "Milan", "skor": "5-1"} ] },
@@ -15,7 +15,7 @@
     { "hafta": 3, "maclar": [ {"ev": "Roma", "dep": "Juventus", "skor": "0-3"}, {"ev": "Como", "dep": "Milan", "skor": "0-0"}, {"ev": "Atalanta", "dep": "İnter", "skor": "0-3"}, {"ev": "Lazio", "dep": "Napoli", "skor": "1-0"} ] },
     { "hafta": 4, "maclar": [ {"ev": "Roma", "dep": "İnter", "skor": "0-3"}, {"ev": "Milan", "dep": "Napoli", "skor": "0-3"}, {"ev": "Juventus", "dep": "Lazio", "skor": "2-0"}, {"ev": "Como", "dep": "Atalanta", "skor": "2-2"} ] },
     { "hafta": 5, "maclar": [ {"ev": "Napoli", "dep": "Roma", "skor": "1-0"}, {"ev": "Atalanta", "dep": "Milan", "skor": "0-3"}, {"ev": "Como", "dep": "Juventus", "skor": "0-2"}, {"ev": "Lazio", "dep": "İnter", "skor": "1-5"} ] },
-    { "hafta": 6, "maclar": [ {"ev": "Milan", "dep": "Roma", "skor": "-"}, {"ev": "İnter", "dep": "Juventus", "skor": "-"}, {"ev": "Napoli", "dep": "Como", "skor": "-"}, {"ev": "Lazio", "dep": "Atalanta", "skor": "-"} ] },
+    { "hafta": 6, "maclar": [ {"ev": "Milan", "dep": "Roma", "skor": "2-0"}, {"ev": "İnter", "dep": "Juventus", "skor": "1-3"}, {"ev": "Napoli", "dep": "Como", "skor": "5-0"}, {"ev": "Lazio", "dep": "Atalanta", "skor": "1-0"} ] },
     { "hafta": 7, "maclar": [ {"ev": "Roma", "dep": "Lazio", "skor": "-"}, {"ev": "Napoli", "dep": "Atalanta", "skor": "-"}, {"ev": "İnter", "dep": "Como", "skor": "-"}, {"ev": "Milan", "dep": "Juventus", "skor": "-"} ] },
     { "hafta": 8, "maclar": [ {"ev": "Atalanta", "dep": "Roma", "skor": "-"}, {"ev": "Como", "dep": "Lazio", "skor": "-"}, {"ev": "Juventus", "dep": "Napoli", "skor": "-"}, {"ev": "Milan", "dep": "İnter", "skor": "-"} ] },
     { "hafta": 9, "maclar": [ {"ev": "Roma", "dep": "Como", "skor": "-"}, {"ev": "Atalanta", "dep": "Juventus", "skor": "-"}, {"ev": "Lazio", "dep": "Milan", "skor": "-"}, {"ev": "Napoli", "dep": "İnter", "skor": "-"} ] },
@@ -26,34 +26,38 @@
     { "hafta": 14, "maclar": [ {"ev": "Lazio", "dep": "Roma", "skor": "-"}, {"ev": "Atalanta", "dep": "Napoli", "skor": "-"}, {"ev": "Como", "dep": "İnter", "skor": "-"}, {"ev": "Juventus", "dep": "Milan", "skor": "-"} ] }
   ],
   "golKralligi": [
-    {"oyuncu": "Osimhen", "takim": "Napoli", "gol": 7},
-    {"oyuncu": "Gyokeres", "takim": "Juventus", "gol": 7},
-    {"oyuncu": "Haaland", "takim": "İnter", "gol": 6},
+    {"oyuncu": "Osimhen", "takim": "Napoli", "gol": 11},
+    {"oyuncu": "Gyokeres", "takim": "Juventus", "gol": 9},
+    {"oyuncu": "Haaland", "takim": "İnter", "gol": 7},
     {"oyuncu": "Vinicius", "takim": "İnter", "gol": 5},
     {"oyuncu": "Cherki", "takim": "Lazio", "gol": 4},
-    {"oyuncu": "Adeyemi", "takim": "Juventus", "gol": 2},
-    {"oyuncu": "Duran", "takim": "Lazio", "gol": 2},
+    {"oyuncu": "Adeyemi", "takim": "Juventus", "gol": 3},
+    {"oyuncu": "Duran", "takim": "Lazio", "gol": 3},
     {"oyuncu": "Bellingham", "takim": "Napoli", "gol": 2},
+    {"oyuncu": "Palmer", "takim": "Milan", "gol": 1},
+    {"oyuncu": "Lewandowski", "takim": "Milan", "gol": 1},
+    {"oyuncu": "Onauchu", "takim": "Napoli", "gol": 2},
     {"oyuncu": "Neymar", "takim": "Lazio", "gol": 1},
     {"oyuncu": "Talisca", "takim": "Lazio", "gol": 1},
-    {"oyuncu": "Onauchu", "takim": "Napoli", "gol": 1},
     {"oyuncu": "Vitinha", "takim": "İnter", "gol": 1},
     {"oyuncu": "Asensio", "takim": "İnter", "gol": 1}
   ],
   "asistKralligi": [
-    {"oyuncu": "Pedri", "takim": "Juventus", "asist": 9},
+    {"oyuncu": "Pedri", "takim": "Juventus", "asist": 11},
     {"oyuncu": "Haaland", "takim": "İnter", "asist": 5},
+    {"oyuncu": "Vinicius", "takim": "İnter", "asist": 5},
+    {"oyuncu": "Adeyemi", "takim": "Juventus", "asist": 5},
     {"oyuncu": "Gyokeres", "takim": "Juventus", "asist": 4},
-    {"oyuncu": "Vinicius", "takim": "İnter", "asist": 4},
-    {"oyuncu": "Adeyemi", "takim": "Juventus", "asist": 4},
     {"oyuncu": "Cherki", "takim": "Lazio", "asist": 3},
+    {"oyuncu": "Onauchu", "takim": "Napoli", "asist": 3},
     {"oyuncu": "Talisca", "takim": "Lazio", "asist": 2},
-    {"oyuncu": "Neymar", "takim": "Lazio", "asist": 1},
+    {"oyuncu": "Osimhen", "takim": "Napoli", "asist": 1},
+    {"oyuncu": "Bellingham", "takim": "Napoli", "asist": 1},
+    {"oyuncu": "Yunus Akgün", "takim": "Milan", "asist": 1},
+    {"oyuncu": "Neymar", "takim": "Lazio", "asist": 2},
     {"oyuncu": "Caicedo", "takim": "İnter", "asist": 1},
     {"oyuncu": "Lang", "takim": "Lazio", "asist": 1},
     {"oyuncu": "Asensio", "takim": "İnter", "asist": 1},
-    {"oyuncu": "Vitinha", "takim": "İnter", "asist": 1},
-    {"oyuncu": "Martinelli", "takim": "Serbest", "asist": 1},
-    {"oyuncu": "Onauchu", "takim": "Napoli", "asist": 1}
+    {"oyuncu": "Vitinha", "takim": "İnter", "asist": 1}
   ]
 }
