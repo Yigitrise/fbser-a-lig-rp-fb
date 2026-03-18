@@ -7,7 +7,7 @@
       "lig_sirasi": "1.",
       "puan": "18",
       "istatistik": { "mac": 6, "g": 6, "b": 0, "m": 0, "atilan": 21, "yenilen": 2 },
-      "hoca": { "isim": "Sergen Yalçın", "foto": "https://tmssl.akamaized.net/images/portrait/header/1138-1698226992.jpg" },
+      "hoca": { "isim": "Sergen Yalçın", "foto": "fotolar/sergen.jpg" },
       "kadro": [
         {"isim": "Gyokeres", "yas": 26, "deger": "100.00", "foto": ""},
         {"isim": "Dembele", "yas": 27, "deger": "60.00", "foto": ""},
