@@ -10,7 +10,6 @@
         .container { max-width: 900px; margin: auto; }
         h1 { text-align: center; color: #008CFF; font-weight: 800; text-transform: uppercase; margin-bottom: 30px; letter-spacing: 2px; }
         
-        /* Sekme Menüsü */
         .tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; }
         .tab-btn { padding: 12px 20px; background: #1a1a1a; border: 2px solid #333; color: #aaa; cursor: pointer; border-radius: 8px; transition: 0.3s; font-weight: 600; }
         .tab-btn:hover { border-color: #008CFF; }
@@ -19,30 +18,43 @@
         .tab-content { display: none; background: #151515; padding: 20px; border-radius: 15px; border: 1px solid #222; }
         .tab-content.active { display: block; }
         
-        /* Tablo Tasarımı */
         table { width: 100%; border-collapse: collapse; margin-top: 10px; }
         th, td { padding: 15px; text-align: left; border-bottom: 1px solid #222; }
         th { color: #008CFF; font-size: 12px; text-transform: uppercase; }
         
-        .team-logo { width: 28px; height: 28px; object-fit: contain; vertical-align: middle; margin-right: 12px; }
+        .team-logo { width: 28px; height: 28px; object-fit: contain; vertical-align: middle; margin-right: 12px; cursor: pointer; transition: 0.2s; }
+        .team-logo:hover { transform: scale(1.2); filter: drop-shadow(0 0 5px #008CFF); }
         .puan-bold { font-weight: 800; color: #fff; font-size: 16px; }
 
-        /* Fikstür Tasarımı */
         .hafta-baslik { background: #222; padding: 8px 15px; margin-top: 25px; border-radius: 5px; color: #008CFF; font-weight: 800; font-size: 13px; border-left: 4px solid #008CFF; }
         .fixture-item { display: flex; justify-content: space-between; align-items: center; padding: 12px; border-bottom: 1px solid #1a1a1a; }
         .fixture-team { flex: 1; font-weight: 600; font-size: 14px; }
         .score { background: #1a1a1a; padding: 5px 12px; border-radius: 4px; font-weight: 800; color: #fff; min-width: 40px; text-align: center; margin: 0 15px; border: 1px solid #333; }
 
-        @media (max-width: 600px) {
-            th, td { padding: 10px 5px; font-size: 13px; }
-            .score { margin: 0 10px; }
-        }
+        /* MODAL (Pencere) Tasarımı */
+        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); backdrop-filter: blur(5px); }
+        .modal-content { background: #1a1a1a; margin: 15% auto; padding: 25px; border: 2px solid #008CFF; width: 300px; border-radius: 20px; text-align: center; box-shadow: 0 0 30px rgba(0,140,255,0.3); }
+        .modal-header { font-weight: 800; color: #008CFF; font-size: 20px; margin-bottom: 15px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+        .kadro-listesi { list-style: none; padding: 0; text-align: left; }
+        .kadro-listesi li { padding: 8px 15px; border-bottom: 1px solid #222; color: #eee; font-size: 14px; }
+        .kadro-listesi li::before { content: "⚽"; margin-right: 10px; }
+        .close-btn { margin-top: 20px; padding: 8px 20px; background: #008CFF; border: none; color: white; border-radius: 5px; cursor: pointer; font-weight: 600; }
+
+        @media (max-width: 600px) { th, td { padding: 10px 5px; font-size: 13px; } .score { margin: 0 10px; } }
     </style>
 </head>
 <body>
+
+<div id="kadroModal" class="modal">
+    <div class="modal-content">
+        <div id="modalTeamName" class="modal-header">Takım Kadrosu</div>
+        <ul id="kadroListesi" class="kadro-listesi"></ul>
+        <button class="close-btn" onclick="closeModal()">Kapat</button>
+    </div>
+</div>
+
 <div class="container">
     <h1>🇮🇹 SERIE A LEAGUE</h1>
-    
     <div class="tabs">
         <button class="tab-btn active" onclick="openTab('puan-durumu')">Puan Durumu</button>
         <button class="tab-btn" onclick="openTab('fikstur')">Fikstür</button>
@@ -52,39 +64,22 @@
 
     <div id="puan-durumu" class="tab-content active">
         <table>
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Takım</th>
-                    <th>OM</th>
-                    <th>AV</th>
-                    <th>Puan</th>
-                </tr>
-            </thead>
+            <thead><tr><th>#</th><th>Takım (Kadro için tıkla)</th><th>OM</th><th>AV</th><th>Puan</th></tr></thead>
             <tbody id="puan-table"></tbody>
         </table>
     </div>
-
-    <div id="fikstur" class="tab-content">
-        <div id="fixture-list"></div>
-    </div>
-
+    <div id="fikstur" class="tab-content"><div id="fixture-list"></div></div>
     <div id="gol-kralligi" class="tab-content">
-        <table>
-            <thead><tr><th>#</th><th>Oyuncu</th><th>Takım</th><th>Gol</th></tr></thead>
-            <tbody id="gol-table"></tbody>
-        </table>
+        <table><thead><tr><th>#</th><th>Oyuncu</th><th>Takım</th><th>Gol</th></tr></thead><tbody id="gol-table"></tbody></table>
     </div>
-
     <div id="asist-kralligi" class="tab-content">
-        <table>
-            <thead><tr><th>#</th><th>Oyuncu</th><th>Takım</th><th>Asist</th></tr></thead>
-            <tbody id="asist-table"></tbody>
-        </table>
+        <table><thead><tr><th>#</th><th>Oyuncu</th><th>Takım</th><th>Asist</th></tr></thead><tbody id="asist-table"></tbody></table>
     </div>
 </div>
 
 <script>
+    let globalData = {};
+
     function openTab(id) {
         document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -92,25 +87,38 @@
         event.currentTarget.classList.add('active');
     }
 
+    function showKadro(teamName) {
+        const team = globalData.takimlar[teamName];
+        document.getElementById('modalTeamName').innerText = teamName + " Kadrosu";
+        document.getElementById('kadroListesi').innerHTML = team.kadro.map(p => `<li>${p}</li>`).join('');
+        document.getElementById('kadroModal').style.display = "block";
+    }
+
+    function closeModal() { document.getElementById('kadroModal').style.display = "none"; }
+
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('kadroModal')) closeModal();
+    }
+
     async function verileriGetir() {
         try {
             const res = await fetch('/api/veriler');
-            const data = await res.json();
+            globalData = await res.json();
 
-            // Puan Durumu
-            const siraliTakimlar = Object.entries(data.takimlar).sort((a,b) => b[1].puan - a[1].puan || (b[1].ag-b[1].yg) - (a[1].ag-a[1].yg));
+            const siraliTakimlar = Object.entries(globalData.takimlar).sort((a,b) => b[1].puan - a[1].puan || (b[1].ag-b[1].yg) - (a[1].ag-a[1].yg));
             document.getElementById('puan-table').innerHTML = siraliTakimlar.map(([isim, t], i) => `
                 <tr>
                     <td>${i+1}</td>
-                    <td><img src="${t.logo}" class="team-logo">${isim}</td>
+                    <td onclick="showKadro('${isim}')" style="cursor:pointer;">
+                        <img src="${t.logo}" class="team-logo"><strong>${isim}</strong>
+                    </td>
                     <td>${t.mac}</td>
                     <td>${t.ag - t.yg}</td>
                     <td class="puan-bold">${t.puan}</td>
                 </tr>
             `).join('');
 
-            // Fikstür (1'den 14'e Sıralı)
-            document.getElementById('fixture-list').innerHTML = data.fikstur.map(h => `
+            document.getElementById('fixture-list').innerHTML = globalData.fikstur.map(h => `
                 <div class="hafta-baslik">${h.hafta}. HAFTA</div>
                 ${h.maclar.map(m => `
                     <div class="fixture-item">
@@ -119,23 +127,19 @@
                         <div class="fixture-team" style="text-align:left;">${m.dep}</div>
                     </div>
                 `).join('')}
-            `).join(''); // .reverse() kaldırıldı, eski düzene döndü
+            `).join('');
 
-            // Gol Krallığı
-            const siraliGol = [...data.golKralligi].sort((a,b) => b.gol - a.gol);
+            const siraliGol = [...globalData.golKralligi].sort((a,b) => b.gol - a.gol);
             document.getElementById('gol-table').innerHTML = siraliGol.map((o,i)=>`
                 <tr><td>${i+1}</td><td>${o.oyuncu}</td><td>${o.takim}</td><td style="font-weight:bold; color:#008CFF;">${o.gol}</td></tr>
             `).join('');
 
-            // Asist Krallığı
-            const siraliAsist = [...data.asistKralligi].sort((a,b) => b.asist - a.asist);
+            const siraliAsist = [...globalData.asistKralligi].sort((a,b) => b.asist - a.asist);
             document.getElementById('asist-table').innerHTML = siraliAsist.map((o,i)=>`
                 <tr><td>${i+1}</td><td>${o.oyuncu}</td><td>${o.takim}</td><td style="font-weight:bold; color:#008CFF;">${o.asist}</td></tr>
             `).join('');
 
-        } catch (err) {
-            console.error("Hata:", err);
-        }
+        } catch (err) { console.error(err); }
     }
     verileriGetir();
 </script>
