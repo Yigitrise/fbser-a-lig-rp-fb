@@ -30,8 +30,8 @@
       "istatistik": { "mac": 6, "g": 5, "b": 0, "m": 1, "atilan": 18, "yenilen": 5 },
       "hoca": { "isim": "Fatih Terim", "foto": "https://tmssl.akamaized.net/images/portrait/header/1066-1698226992.jpg" },
       "kadro": [
-        {"isim": "Haaland", "yas": 24, "deger": "200.00", "foto": ""},
-        {"isim": "Vinicius Jr.", "yas": 24, "deger": "180.00", "foto": ""},
+        {"isim": "Haaland", "yas": 24, "deger": "150.00", "foto": ""},
+        {"isim": "Vinicius Jr.", "yas": 24, "deger": "120.00", "foto": ""},
         {"isim": "Asensio", "yas": 29, "deger": "20.00", "foto": ""},
         {"isim": "Cherki", "yas": 21, "deger": "25.00", "foto": ""},
         {"isim": "Caicedo", "yas": 23, "deger": "75.00", "foto": ""},
@@ -51,12 +51,12 @@
       "istatistik": { "mac": 6, "g": 4, "b": 0, "m": 2, "atilan": 14, "yenilen": 8 },
       "hoca": { "isim": "Xabi Alonso", "foto": "https://tmssl.akamaized.net/images/portrait/header/3314-1698226992.jpg" },
       "kadro": [
-        {"isim": "Ahmet Can Kaplan", "yas": 22, "deger": "12.00", "foto": ""},
+        {"isim": "Ahmet Can Kaplan", "yas": 22, "deger": "35.00", "foto": ""},
         {"isim": "Cristiano Ronaldo", "yas": 40, "deger": "15.00", "foto": ""},
-        {"isim": "Camavinga", "yas": 22, "deger": "100.00", "foto": ""},
-        {"isim": "Jhon Duran", "yas": 21, "deger": "35.00", "foto": ""},
+        {"isim": "Camavinga", "yas": 22, "deger": "60.00", "foto": ""},
+        {"isim": "Jhon Duran", "yas": 21, "deger": "45.00", "foto": ""},
         {"isim": "Talisca", "yas": 31, "deger": "15.00", "foto": ""},
-        {"isim": "Neymar Jr.", "yas": 33, "deger": "30.00", "foto": ""},
+        {"isim": "Neymar Jr.", "yas": 33, "deger": "50.00", "foto": ""},
         {"isim": "Kyle Walker", "yas": 34, "deger": "13.00", "foto": ""},
         {"isim": "Murillo", "yas": 22, "deger": "22.00", "foto": ""}
       ]
@@ -70,20 +70,20 @@
       "istatistik": { "mac": 6, "g": 3, "b": 1, "m": 2, "atilan": 16, "yenilen": 9 },
       "hoca": { "isim": "Arda Turan", "foto": "https://tmssl.akamaized.net/images/portrait/header/3932-1698226992.jpg" },
       "kadro": [
-        {"isim": "Barcola", "yas": 22, "deger": "65.00", "foto": ""},
-        {"isim": "Alexander-Arnold", "yas": 26, "deger": "70.00", "foto": ""},
+        {"isim": "Barcola", "yas": 22, "deger": "35.00", "foto": ""},
+        {"isim": "Alexander-Arnold", "yas": 26, "deger": "40.00", "foto": ""},
         {"isim": "Hakimi", "yas": 26, "deger": "60.00", "foto": ""},
         {"isim": "Araujo", "yas": 25, "deger": "70.00", "foto": ""},
         {"isim": "Arda Güler", "yas": 20, "deger": "45.00", "foto": ""},
-        {"isim": "Barella", "yas": 28, "deger": "80.00", "foto": ""},
-        {"isim": "Bellingham", "yas": 21, "deger": "180.00", "foto": ""},
-        {"isim": "Mbappe", "yas": 26, "deger": "180.00", "foto": ""},
+        {"isim": "Barella", "yas": 28, "deger": "60.00", "foto": ""},
+        {"isim": "Bellingham", "yas": 21, "deger": "70.00", "foto": ""},
+        {"isim": "Mbappe", "yas": 26, "deger": "30.00", "foto": ""},
         {"isim": "Kimmich", "yas": 30, "deger": "50.00", "foto": ""},
         {"isim": "Neuer", "yas": 39, "deger": "4.00", "foto": ""},
-        {"isim": "Osimhen", "yas": 26, "deger": "100.00", "foto": ""},
+        {"isim": "Osimhen", "yas": 26, "deger": "115.00", "foto": ""},
         {"isim": "Onuachu", "yas": 30, "deger": "13.00", "foto": ""},
         {"isim": "Skriniar", "yas": 30, "deger": "30.00", "foto": ""},
-        {"isim": "Yamal", "yas": 17, "deger": "150.00", "foto": ""}
+        {"isim": "Yamal", "yas": 17, "deger": "50.00", "foto": ""}
       ]
     },
     "Milan": {
@@ -95,10 +95,10 @@
       "istatistik": { "mac": 6, "g": 3, "b": 0, "m": 3, "atilan": 10, "yenilen": 8 },
       "hoca": { "isim": "Carlo Ancelotti", "foto": "https://tmssl.akamaized.net/images/portrait/header/1066-1698226992.jpg" },
       "kadro": [
-        {"isim": "Lautaro Martinez", "yas": 27, "deger": "110.00", "foto": ""},
+        {"isim": "Lautaro Martinez", "yas": 27, "deger": "70.00", "foto": ""},
         {"isim": "Yunus Akgün", "yas": 24, "deger": "10.00", "foto": ""},
         {"isim": "Jonathan Tah", "yas": 29, "deger": "30.00", "foto": ""},
-        {"isim": "Cole Palmer", "yas": 22, "deger": "90.00", "foto": ""}
+        {"isim": "Cole Palmer", "yas": 22, "deger": "60.00", "foto": ""}
       ]
     },
     "Atalanta": { "kadro": [] },
