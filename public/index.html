@@ -4,144 +4,170 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serie A League - Official RP</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
-        :root { --primary: #002d62; --bg: #f0f2f5; --white: #ffffff; }
-        body { font-family: 'Poppins', sans-serif; background: var(--bg); color: #333; margin: 0; padding: 0; }
-        .container { max-width: 900px; margin: 20px auto; padding: 0 15px; }
+        body { font-family: 'Poppins', sans-serif; background: #0a0a0a; color: white; margin: 0; padding: 20px; }
+        .container { max-width: 900px; margin: auto; }
         
-        /* En Üstteki Özel Transfermarkt Butonu */
-        .tm-launcher { width: 100%; padding: 15px; background: linear-gradient(90deg, #002d62, #0056b3); color: white; border: none; border-radius: 8px; font-weight: 800; cursor: pointer; margin-bottom: 20px; font-size: 16px; box-shadow: 0 4px 15px rgba(0,45,98,0.3); transition: 0.3s; }
-        .tm-launcher:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,45,98,0.4); }
+        /* TRANSFERMARKT BUTONU */
+        .tm-launcher { 
+            width: 100%; 
+            padding: 16px; 
+            background: linear-gradient(135deg, #0056b3 0%, #008CFF 100%); 
+            color: white; 
+            border: none; 
+            border-radius: 12px; 
+            font-weight: 800; 
+            cursor: pointer; 
+            margin-bottom: 25px; 
+            font-size: 15px; 
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 15px rgba(0, 140, 255, 0.3); 
+            transition: 0.3s ease;
+        }
+        .tm-launcher:hover { 
+            transform: translateY(-3px); 
+            box-shadow: 0 6px 20px rgba(0, 140, 255, 0.5); 
+        }
 
-        /* Klasik Sekme Menüsü */
-        .main-nav { display: flex; justify-content: center; gap: 5px; margin-bottom: 20px; background: var(--white); padding: 10px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); flex-wrap: wrap; }
-        .tab-btn { padding: 10px 15px; border: none; background: none; color: var(--primary); font-weight: 700; cursor: pointer; border-radius: 5px; font-size: 13px; }
-        .tab-btn.active { background: var(--primary); color: white; }
-
-        .tab-content { display: none; background: var(--white); padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        h1 { text-align: center; color: #008CFF; font-weight: 800; text-transform: uppercase; margin-bottom: 30px; letter-spacing: 2px; }
+        
+        /* Sekme Menüsü */
+        .tabs { display: flex; justify-content: center; gap: 10px; margin-bottom: 25px; flex-wrap: wrap; }
+        .tab-btn { padding: 12px 20px; background: #1a1a1a; border: 2px solid #333; color: #aaa; cursor: pointer; border-radius: 8px; transition: 0.3s; font-weight: 600; }
+        .tab-btn:hover { border-color: #008CFF; }
+        .tab-btn.active { background: #008CFF; color: white; border-color: #008CFF; box-shadow: 0 0 15px rgba(0, 140, 255, 0.4); }
+        
+        .tab-content { display: none; background: #151515; padding: 20px; border-radius: 15px; border: 1px solid #222; }
         .tab-content.active { display: block; }
-
-        /* Tablo Tasarımları */
-        table { width: 100%; border-collapse: collapse; }
-        th, td { padding: 12px; text-align: left; border-bottom: 1px solid #eee; }
-        th { background: #f8f9fb; color: var(--primary); font-size: 11px; text-transform: uppercase; }
-        .team-row:hover { background: #fdfdfd; }
         
-        /* Fikstür Kartları */
-        .week-title { background: #f8f9fb; padding: 10px; font-weight: 800; color: var(--primary); margin: 20px 0 10px 0; border-left: 4px solid var(--primary); }
+        /* Tablo Tasarımı */
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { padding: 15px; text-align: left; border-bottom: 1px solid #222; }
+        th { color: #008CFF; font-size: 12px; text-transform: uppercase; }
+        
+        .team-logo { width: 28px; height: 28px; object-fit: contain; vertical-align: middle; margin-right: 12px; }
+        .puan-bold { font-weight: 800; color: #fff; font-size: 16px; }
 
-        /* Transfermarkt Görünümü (Gizli Mod) */
-        #tm-view { display: none; }
+        /* Fikstür Tasarımı */
+        .hafta-baslik { background: #222; padding: 8px 15px; margin-top: 25px; border-radius: 5px; color: #008CFF; font-weight: 800; font-size: 13px; border-left: 4px solid #008CFF; }
+        .fixture-item { display: flex; justify-content: space-between; align-items: center; padding: 12px; border-bottom: 1px solid #1a1a1a; }
+        .fixture-team { flex: 1; font-weight: 600; font-size: 14px; }
+        .score { background: #1a1a1a; padding: 5px 12px; border-radius: 4px; font-weight: 800; color: #fff; min-width: 40px; text-align: center; margin: 0 15px; border: 1px solid #333; }
+
+        @media (max-width: 600px) {
+            th, td { padding: 10px 5px; font-size: 13px; }
+            .score { margin: 0 10px; }
+        }
     </style>
 </head>
 <body>
+<div class="container">
+    <button class="tm-launcher" onclick="tmYakinda()">📊 TRANSFERMARKT MODUNU AÇ</button>
 
-<div class="container" id="league-view">
-    <button class="tm-launcher" onclick="switchToTM()">⚽ TRANSFERMARKT DETAYLI GÖRÜNÜMÜ AÇ</button>
-
-    <h1 style="text-align:center; color: var(--primary); font-weight:800; margin-bottom:30px;">🇮🇹 SERIE A LEAGUE</h1>
+    <h1>🇮🇹 SERIE A LEAGUE</h1>
     
-    <nav class="main-nav">
-        <button class="tab-btn active" onclick="showTab('puan-durumu')">PUAN DURUMU</button>
-        <button class="tab-btn" onclick="showTab('fikstur')">FİKSTÜR</button>
-        <button class="tab-btn" onclick="showTab('gol-kralligi')">GOL KRALLIĞI</button>
-        <button class="tab-btn" onclick="showTab('asist-kralligi')">ASİST KRALLIĞI</button>
-    </nav>
+    <div class="tabs">
+        <button class="tab-btn active" onclick="openTab('puan-durumu')">Puan Durumu</button>
+        <button class="tab-btn" onclick="openTab('fikstur')">Fikstür</button>
+        <button class="tab-btn" onclick="openTab('gol-kralligi')">Gol Krallığı</button>
+        <button class="tab-btn" onclick="openTab('asist-kralligi')">Asist Krallığı</button>
+    </div>
 
     <div id="puan-durumu" class="tab-content active">
         <table>
-            <thead><tr><th>#</th><th>TAKIM</th><th>OM</th><th>G</th><th>B</th><th>M</th><th>AV</th><th>P</th></tr></thead>
-            <tbody id="puan-body"></tbody>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Takım</th>
+                    <th>OM</th>
+                    <th>AV</th>
+                    <th>Puan</th>
+                </tr>
+            </thead>
+            <tbody id="puan-table"></tbody>
         </table>
     </div>
 
     <div id="fikstur" class="tab-content">
-        <div id="fikstur-list"></div>
+        <div id="fixture-list"></div>
     </div>
 
     <div id="gol-kralligi" class="tab-content">
         <table>
-            <thead><tr><th>#</th><th>OYUNCU</th><th>TAKIM</th><th>GOL</th></tr></thead>
-            <tbody id="gol-body"></tbody>
+            <thead><tr><th>#</th><th>Oyuncu</th><th>Takım</th><th>Gol</th></tr></thead>
+            <tbody id="gol-table"></tbody>
         </table>
     </div>
 
     <div id="asist-kralligi" class="tab-content">
         <table>
-            <thead><tr><th>#</th><th>OYUNCU</th><th>TAKIM</th><th>ASİST</th></tr></thead>
-            <tbody id="asist-body"></tbody>
+            <thead><tr><th>#</th><th>Oyuncu</th><th>Takım</th><th>Asist</th></tr></thead>
+            <tbody id="asist-table"></tbody>
         </table>
     </div>
 </div>
 
 <script>
-    let veriler = {};
-
-    // Sekme Değiştirme Fonksiyonu
-    function showTab(id) {
-        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    function openTab(id) {
+        document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
         document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
         document.getElementById(id).classList.add('active');
-        event.target.classList.add('active');
+        event.currentTarget.classList.add('active');
     }
 
-    // Transfermarkt Butonuna Basınca (Şimdilik sadece alert veriyor veya başka yere yönlendirirsin)
-    function switchToTM() {
-        alert("Transfermarkt Modu Hazırlanıyor! Buraya tıkladığında o detaylı kadro sayfasını açacak şekilde ayarlayabiliriz kanka.");
+    // Transfermarkt Buton Fonksiyonu
+    function tmYakinda() {
+        alert("Yakında!");
     }
 
-    async function yukle() {
-        // Render üzerinden verileri çekiyoruz
-        const res = await fetch('/api/veriler');
-        veriler = await res.json();
-        renderHerSey();
+    async function verileriGetir() {
+        try {
+            const res = await fetch('/api/veriler');
+            const data = await res.json();
+
+            // Puan Durumu
+            const siraliTakimlar = Object.entries(data.takimlar).sort((a,b) => b[1].puan - a[1].puan || (b[1].ag-b[1].yg) - (a[1].ag-a[1].yg));
+            document.getElementById('puan-table').innerHTML = siraliTakimlar.map(([isim, t], i) => `
+                <tr>
+                    <td>${i+1}</td>
+                    <td><img src="${t.logo}" class="team-logo">${isim}</td>
+                    <td>${t.mac}</td>
+                    <td>${t.ag - t.yg}</td>
+                    <td class="puan-bold">${t.puan}</td>
+                </tr>
+            `).join('');
+
+            // Fikstür
+            document.getElementById('fixture-list').innerHTML = data.fikstur.map(h => `
+                <div class="hafta-baslik">${h.hafta}. HAFTA</div>
+                ${h.maclar.map(m => `
+                    <div class="fixture-item">
+                        <div class="fixture-team" style="text-align:right;">${m.ev}</div>
+                        <div class="score">${m.skor}</div>
+                        <div class="fixture-team" style="text-align:left;">${m.dep}</div>
+                    </div>
+                `).join('')}
+            `).join('');
+
+            // Gol Krallığı
+            const siraliGol = [...data.golKralligi].sort((a,b) => b.gol - a.gol);
+            document.getElementById('gol-table').innerHTML = siraliGol.map((o,i)=>`
+                <tr><td>${i+1}</td><td>${o.oyuncu}</td><td>${o.takim}</td><td style="font-weight:bold; color:#008CFF;">${o.gol}</td></tr>
+            `).join('');
+
+            // Asist Krallığı
+            const siraliAsist = [...data.asistKralligi].sort((a,b) => b.asist - a.asist);
+            document.getElementById('asist-table').innerHTML = siraliAsist.map((o,i)=>`
+                <tr><td>${i+1}</td><td>${o.oyuncu}</td><td>${o.takim}</td><td style="font-weight:bold; color:#008CFF;">${o.asist}</td></tr>
+            `).join('');
+
+        } catch (err) {
+            console.error("Hata:", err);
+        }
     }
-
-    function renderHerSey() {
-        // 1. Puan Durumu
-        const teams = Object.entries(veriler.takimlar).sort((a,b) => b[1].puan - a[1].puan || (b[1].ag-b[1].yg) - (a[1].ag-a[1].yg));
-        document.getElementById('puan-body').innerHTML = teams.map(([name, t], i) => `
-            <tr class="team-row">
-                <td>${i+1}</td>
-                <td><img src="${t.logo}" style="width:20px; vertical-align:middle; margin-right:8px;"> <b>${name}</b></td>
-                <td>${t.mac}</td>
-                <td>${t.g}</td>
-                <td>${t.b}</td>
-                <td>${t.m}</td>
-                <td>${t.ag - t.yg}</td>
-                <td style="font-weight:800; color:var(--primary);">${t.puan}</td>
-            </tr>
-        `).join('');
-
-        // 2. Fikstür (Geri Geldi!)
-        document.getElementById('fikstur-list').innerHTML = veriler.fikstur.map(h => `
-            <div>
-                <div class="week-title">${h.hafta}. HAFTA</div>
-                <table style="font-size:13px;">
-                    ${h.maclar.map(m => `
-                        <tr>
-                            <td style="width:40%">${m.ev}</td>
-                            <td style="text-align:center; width:20%; background:#f0f2f5; border-radius:4px;"><b>${m.skor}</b></td>
-                            <td style="text-align:right; width:40%">${m.dep}</td>
-                        </tr>
-                    `).join('')}
-                </table>
-            </div>
-        `).join('');
-
-        // 3. Gol Krallığı (Geri Geldi!)
-        document.getElementById('gol-body').innerHTML = veriler.golKralligi.map((o, i) => `
-            <tr><td>${i+1}</td><td><b>${o.oyuncu}</b></td><td>${o.takim}</td><td style="font-weight:800">${o.gol}</td></tr>
-        `).join('');
-
-        // 4. Asist Krallığı (Geri Geldi!)
-        document.getElementById('asist-body').innerHTML = veriler.asistKralligi.map((o, i) => `
-            <tr><td>${i+1}</td><td><b>${o.oyuncu}</b></td><td>${o.takim}</td><td style="font-weight:800">${o.asist}</td></tr>
-        `).join('');
-    }
-
-    yukle();
+    verileriGetir();
 </script>
 </body>
 </html>
