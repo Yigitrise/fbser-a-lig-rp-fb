@@ -1,110 +1,118 @@
 {
   "takimlar": {
-    "Juventus": {
-      "logo": "https://tmssl.akamaized.net/images/wappen/head/506.png",
-      "stadyum": "Juventus Stadium",
-      "yas_ort": "26.9",
-      "lig_sirasi": "1.",
-      "puan": "18",
-      "istatistik": { "mac": 6, "g": 6, "b": 0, "m": 0, "atilan": 21, "yenilen": 2 },
-      "hoca": { "isim": "Sergen Yalçın", "foto": " fotolar/sergen.jpg" },
+    "Manchester United": {
+      "logo": "https://tmssl.akamaized.net/images/wappen/head/985.png",
+      "hoca": { "isim": "Zinedine Zidane", "foto": "https://ui-avatars.com/api/?name=Zinedine+Zidane&background=da291c&color=fff&size=200" },
       "kadro": [
-        {"isim": "Gyokeres", "yas": 26, "deger": "100.00", "foto": ""},
-        {"isim": "Dembele", "yas": 27, "deger": "60.00", "foto": ""},
-        {"isim": "Adeyemi", "yas": 23, "deger": "35.00", "foto": ""},
-        {"isim": "Pedri", "yas": 22, "deger": "120.00", "foto": ""},
-        {"isim": "Orkun Kökçü", "yas": 24, "deger": "35.00", "foto": ""},
-        {"isim": "Szoboszlai", "yas": 24, "deger": "75.00", "foto": ""},
-        {"isim": "Van Dijk", "yas": 33, "deger": "30.00", "foto": ""},
-        {"isim": "Konate", "yas": 25, "deger": "45.00", "foto": ""},
-        {"isim": "Masuaku", "yas": 31, "deger": "5.00", "foto": ""},
-        {"isim": "Kochalski", "yas": 24, "deger": "1.50", "foto": ""}
+        {"isim": "Alexander Isak", "yas": 25, "deger": "120.00", "foto": "https://ui-avatars.com/api/?name=Alexander+Isak&background=da291c&color=fff&size=200"},
+        {"isim": "Florian Wirtz", "yas": 21, "deger": "77.00", "foto": "https://ui-avatars.com/api/?name=Florian+Wirtz&background=da291c&color=fff&size=200"},
+        {"isim": "Rayan Cherki", "yas": 21, "deger": "70.00", "foto": "https://ui-avatars.com/api/?name=Rayan+Cherki&background=da291c&color=fff&size=200"},
+        {"isim": "Martin Ødegaard", "yas": 25, "deger": "81.00", "foto": "https://ui-avatars.com/api/?name=Martin+Odegaard&background=da291c&color=fff&size=200"},
+        {"isim": "Dominik Szoboszlai", "yas": 24, "deger": "88.00", "foto": "https://ui-avatars.com/api/?name=Dominik+Szoboszlai&background=da291c&color=fff&size=200"},
+        {"isim": "Mattéo Guendouzi", "yas": 25, "deger": "59.00", "foto": "https://ui-avatars.com/api/?name=Matteo+Guendouzi&background=da291c&color=fff&size=200"},
+        {"isim": "Andrew Robertson", "yas": 30, "deger": "81.00", "foto": "https://ui-avatars.com/api/?name=Andrew+Robertson&background=da291c&color=fff&size=200"},
+        {"isim": "Davinson Sánchez", "yas": 28, "deger": "55.00", "foto": "https://ui-avatars.com/api/?name=Davinson+Sanchez&background=da291c&color=fff&size=200"},
+        {"isim": "Micky van de Ven", "yas": 23, "deger": "62.00", "foto": "https://ui-avatars.com/api/?name=Micky+van+de+Ven&background=da291c&color=fff&size=200"},
+        {"isim": "Gianluigi Donnarumma", "yas": 26, "deger": "88.00", "foto": "https://ui-avatars.com/api/?name=Gianluigi+Donnarumma&background=da291c&color=fff&size=200"},
+        {"isim": "Trent Alexander-Arnold", "yas": 26, "deger": "50.00", "foto": "https://ui-avatars.com/api/?name=Trent+Alexander-Arnold&background=da291c&color=fff&size=200"}
       ]
     },
-    "İnter": {
-      "logo": "https://tmssl.akamaized.net/images/wappen/head/46.png",
-      "stadyum": "Giuseppe Meazza",
-      "yas_ort": "26.2",
-      "lig_sirasi": "2.",
-      "puan": "15",
-      "istatistik": { "mac": 6, "g": 5, "b": 0, "m": 1, "atilan": 18, "yenilen": 5 },
-      "hoca": { "isim": "Fatih Terim", "foto": " https://ibb.co/Cpsrj9fQ" },
+    "PSG": {
+      "logo": "https://tmssl.akamaized.net/images/wappen/head/583.png",
+      "hoca": { "isim": "Okan Buruk", "foto": "https://ui-avatars.com/api/?name=Okan+Buruk&background=004170&color=fff&size=200" },
       "kadro": [
-        {"isim": "Haaland", "yas": 24, "deger": "150.00", "foto": " https://ibb.co/Ng8fbB9r"},
-        {"isim": "Vinicius Jr.", "yas": 24, "deger": "120.00", "foto": "https://img.a.transfermarkt.technology/portrait/medium/371998-1664869583.jpg"},
-        {"isim": "Asensio", "yas": 29, "deger": "20.00", "foto": ""},
-        {"isim": "Cherki", "yas": 21, "deger": "25.00", "foto": ""},
-        {"isim": "Caicedo", "yas": 23, "deger": "75.00", "foto": ""},
-        {"isim": "Zeki Yavru", "yas": 33, "deger": "1.50", "foto": ""},
-        {"isim": "Donnarumma", "yas": 26, "deger": "40.00", "foto": ""},
-        {"isim": "Bastoni", "yas": 25, "deger": "70.00", "foto": ""},
-        {"isim": "Marquinhos", "yas": 30, "deger": "50.00", "foto": ""},
-        {"isim": "Ferdi Kadıoğlu", "yas": 25, "deger": "35.00", "foto": ""}
+        {"isim": "Alessandro Bastoni", "yas": 25, "deger": "50.00", "foto": "https://ui-avatars.com/api/?name=Alessandro+Bastoni&background=004170&color=fff&size=200"},
+        {"isim": "Ronald Araujo", "yas": 26, "deger": "61.00", "foto": "https://ui-avatars.com/api/?name=Ronald+Araujo&background=004170&color=fff&size=200"},
+        {"isim": "Ousmane Dembélé", "yas": 27, "deger": "99.00", "foto": "https://ui-avatars.com/api/?name=Ousmane+Dembele&background=004170&color=fff&size=200"},
+        {"isim": "Granit Xhaka", "yas": 32, "deger": "66.00", "foto": "https://ui-avatars.com/api/?name=Granit+Xhaka&background=004170&color=fff&size=200"},
+        {"isim": "Achraf Hakimi", "yas": 26, "deger": "57.00", "foto": "https://ui-avatars.com/api/?name=Achraf+Hakimi&background=004170&color=fff&size=200"},
+        {"isim": "Khvicha Kvaratskhelia", "yas": 24, "deger": "58.00", "foto": "https://ui-avatars.com/api/?name=Khvicha+Kvaratskhelia&background=004170&color=fff&size=200"},
+        {"isim": "Nuno Mendes", "yas": 22, "deger": "54.00", "foto": "https://ui-avatars.com/api/?name=Nuno+Mendes&background=004170&color=fff&size=200"},
+        {"isim": "Oliver Kahn", "yas": 30, "deger": "82.00", "foto": "https://ui-avatars.com/api/?name=Oliver+Kahn&background=004170&color=fff&size=200"},
+        {"isim": "Orkun Kökçü", "yas": 24, "deger": "94.00", "foto": "https://ui-avatars.com/api/?name=Orkun+Kokcu&background=004170&color=fff&size=200"},
+        {"isim": "Paul Onuachu", "yas": 30, "deger": "89.00", "foto": "https://ui-avatars.com/api/?name=Paul+Onuachu&background=004170&color=fff&size=200"},
+        {"isim": "Federico Valverde", "yas": 26, "deger": "59.00", "foto": "https://ui-avatars.com/api/?name=Federico+Valverde&background=004170&color=fff&size=200"}
       ]
     },
-    "Lazio": {
-      "logo": "https://tmssl.akamaized.net/images/wappen/head/398.png",
-      "stadyum": "Stadio Olimpico",
-      "yas_ort": "29.4",
-      "lig_sirasi": "3.",
-      "puan": "12",
-      "istatistik": { "mac": 6, "g": 4, "b": 0, "m": 2, "atilan": 14, "yenilen": 8 },
-      "hoca": { "isim": "Xabi Alonso", "foto": "https://pngdownload.io/png-image/xabi-alonso-next-real-madrid-coach-spanish-football-legend-transparent-png-image/" },
+    "Feyenoord": {
+      "logo": "https://tmssl.akamaized.net/images/wappen/head/234.png",
+      "hoca": { "isim": "Mancini", "foto": "https://ui-avatars.com/api/?name=Mancini&background=e32221&color=fff&size=200" },
       "kadro": [
-        {"isim": "Ahmet Can Kaplan", "yas": 22, "deger": "35.00", "foto": ""},
-        {"isim": "Cristiano Ronaldo", "yas": 40, "deger": "15.00", "foto": "https://img.a.transfermarkt.technology/portrait/medium/8198-1694609670.jpg"},
-        {"isim": "Camavinga", "yas": 22, "deger": "60.00", "foto": ""},
-        {"isim": "Jhon Duran", "yas": 21, "deger": "45.00", "foto": ""},
-        {"isim": "Talisca", "yas": 31, "deger": "15.00", "foto": ""},
-        {"isim": "Neymar Jr.", "yas": 33, "deger": "50.00", "foto": "https://img.a.transfermarkt.technology/portrait/medium/8198-1694609670.jpg"},
-        {"isim": "Kyle Walker", "yas": 34, "deger": "13.00", "foto": ""},
-        {"isim": "Murillo", "yas": 22, "deger": "22.00", "foto": ""}
+        {"isim": "N. Lang", "yas": 25, "deger": "76.00", "foto": "https://ui-avatars.com/api/?name=N+Lang&background=e32221&color=fff&size=200"},
+        {"isim": "Estêvão", "yas": 18, "deger": "63.00", "foto": "https://ui-avatars.com/api/?name=Estevao&background=e32221&color=fff&size=200"},
+        {"isim": "Xavi Simons", "yas": 22, "deger": "56.00", "foto": "https://ui-avatars.com/api/?name=Xavi+Simons&background=e32221&color=fff&size=200"},
+        {"isim": "Pedri", "yas": 22, "deger": "73.00", "foto": "https://ui-avatars.com/api/?name=Pedri&background=e32221&color=fff&size=200"},
+        {"isim": "E. Martinez", "yas": 32, "deger": "55.00", "foto": "https://ui-avatars.com/api/?name=E+Martinez&background=e32221&color=fff&size=200"}
       ]
     },
-    "Napoli": {
-      "logo": "https://tmssl.akamaized.net/images/wappen/head/6195.png",
-      "stadyum": "Diego Maradona",
-      "yas_ort": "25.1",
-      "lig_sirasi": "4.",
-      "puan": "10",
-      "istatistik": { "mac": 6, "g": 3, "b": 1, "m": 2, "atilan": 16, "yenilen": 9 },
-      "hoca": { "isim": "Arda Turan", "foto": "https://tmssl.akamaized.net/images/portrait/header/3932-1698226992.jpg" },
+    "Arsenal": {
+      "logo": "https://tmssl.akamaized.net/images/wappen/head/11.png",
+      "hoca": { "isim": "Aykut Kocaman", "foto": "https://ui-avatars.com/api/?name=Aykut+Kocaman&background=ef0107&color=fff&size=200" },
       "kadro": [
-        {"isim": "Barcola", "yas": 22, "deger": "35.00", "foto": ""},
-        {"isim": "Alexander-Arnold", "yas": 26, "deger": "40.00", "foto": ""},
-        {"isim": "Hakimi", "yas": 26, "deger": "60.00", "foto": ""},
-        {"isim": "Araujo", "yas": 25, "deger": "70.00", "foto": ""},
-        {"isim": "Arda Güler", "yas": 20, "deger": "45.00", "foto": ""},
-        {"isim": "Barella", "yas": 28, "deger": "60.00", "foto": ""},
-        {"isim": "Bellingham", "yas": 21, "deger": "70.00", "foto": "https://img.a.transfermarkt.technology/portrait/medium/581678-1693987944.jpg"},
-        {"isim": "Mbappe", "yas": 26, "deger": "30.00", "foto": "https://img.a.transfermarkt.technology/portrait/medium/342229-1682683695.jpg"},
-        {"isim": "Kimmich", "yas": 30, "deger": "50.00", "foto": ""},
-        {"isim": "Neuer", "yas": 39, "deger": "4.00", "foto": ""},
-        {"isim": "Osimhen", "yas": 26, "deger": "115.00", "foto": ""},
-        {"isim": "Onuachu", "yas": 30, "deger": "13.00", "foto": ""},
-        {"isim": "Skriniar", "yas": 30, "deger": "30.00", "foto": ""},
-        {"isim": "Yamal", "yas": 17, "deger": "50.00", "foto": ""}
+        {"isim": "Uğurcan Çakır", "yas": 28, "deger": "83.00", "foto": "https://ui-avatars.com/api/?name=Ugurcan+Cakir&background=ef0107&color=fff&size=200"},
+        {"isim": "William Saliba", "yas": 23, "deger": "50.00", "foto": "https://ui-avatars.com/api/?name=William+Saliba&background=ef0107&color=fff&size=200"},
+        {"isim": "Theo Hernández", "yas": 27, "deger": "50.00", "foto": "https://ui-avatars.com/api/?name=Theo+Hernandez&background=ef0107&color=fff&size=200"},
+        {"isim": "Marcos Llorente", "yas": 29, "deger": "50.00", "foto": "https://ui-avatars.com/api/?name=Marcos+Llorente&background=ef0107&color=fff&size=200"},
+        {"isim": "Kuryu Matsuki", "yas": 21, "deger": "50.00", "foto": "https://ui-avatars.com/api/?name=Kuryu+Matsuki&background=ef0107&color=fff&size=200"},
+        {"isim": "Soualiho Meïté", "yas": 30, "deger": "50.00", "foto": "https://ui-avatars.com/api/?name=Soualiho+Meite&background=ef0107&color=fff&size=200"},
+        {"isim": "Anderson Talisca", "yas": 31, "deger": "50.00", "foto": "https://ui-avatars.com/api/?name=Anderson+Talisca&background=ef0107&color=fff&size=200"},
+        {"isim": "Lamine Yamal", "yas": 18, "deger": "85.00", "foto": "https://ui-avatars.com/api/?name=Lamine+Yamal&background=ef0107&color=fff&size=200"},
+        {"isim": "Mason Greenwood", "yas": 23, "deger": "55.00", "foto": "https://ui-avatars.com/api/?name=Mason+Greenwood&background=ef0107&color=fff&size=200"}
+      ]
+    },
+    "Barcelona": {
+      "logo": "https://tmssl.akamaized.net/images/wappen/head/131.png",
+      "hoca": { "isim": "Nuri Şahin", "foto": "https://ui-avatars.com/api/?name=Nuri+Sahin&background=004d98&color=fff&size=200" },
+      "kadro": [
+        {"isim": "İrfan Can Eğribayat", "yas": 26, "deger": "50.00", "foto": "https://ui-avatars.com/api/?name=Irfan+Can+Egribayat&background=004d98&color=fff&size=200"},
+        {"isim": "Désiré Doué", "yas": 19, "deger": "85.00", "foto": "https://ui-avatars.com/api/?name=Desire+Doue&background=004d98&color=fff&size=200"},
+        {"isim": "Hugo Ekitiké", "yas": 22, "deger": "51.00", "foto": "https://ui-avatars.com/api/?name=Hugo+Ekitike&background=004d98&color=fff&size=200"},
+        {"isim": "Gabriel Magalhães", "yas": 27, "deger": "64.00", "foto": "https://ui-avatars.com/api/?name=Gabriel+Magalhaes&background=004d98&color=fff&size=200"},
+        {"isim": "N'Golo Kanté", "yas": 34, "deger": "50.00", "foto": "https://ui-avatars.com/api/?name=NGolo+Kante&background=004d98&color=fff&size=200"},
+        {"isim": "Kevin De Bruyne", "yas": 33, "deger": "51.00", "foto": "https://ui-avatars.com/api/?name=Kevin+De+Bruyne&background=004d98&color=fff&size=200"},
+        {"isim": "Pau Cubarsí", "yas": 18, "deger": "62.00", "foto": "https://ui-avatars.com/api/?name=Pau+Cubarsi&background=004d98&color=fff&size=200"},
+        {"isim": "Tomasson", "yas": 28, "deger": "53.00", "foto": "https://ui-avatars.com/api/?name=Tomasson&background=004d98&color=fff&size=200"},
+        {"isim": "Kyle Walker", "yas": 34, "deger": "61.00", "foto": "https://ui-avatars.com/api/?name=Kyle+Walker&background=004d98&color=fff&size=200"},
+        {"isim": "Rodri", "yas": 28, "deger": "50.00", "foto": "https://ui-avatars.com/api/?name=Rodri&background=004d98&color=fff&size=200"},
+        {"isim": "Fernando Muslera", "yas": 38, "deger": "99.00", "foto": "https://ui-avatars.com/api/?name=Fernando+Muslera&background=004d98&color=fff&size=200"}
+      ]
+    },
+    "Dortmund": {
+      "logo": "https://tmssl.akamaized.net/images/wappen/head/16.png",
+      "hoca": { "isim": "Hansi Flick", "foto": "https://ui-avatars.com/api/?name=Hansi+Flick&background=fde100&color=000&size=200" },
+      "kadro": [
+        {"isim": "Thibaut Courtois", "yas": 32, "deger": "50.00", "foto": "https://ui-avatars.com/api/?name=Thibaut+Courtois&background=fde100&color=000&size=200"},
+        {"isim": "Willian Pacho", "yas": 23, "deger": "50.00", "foto": "https://ui-avatars.com/api/?name=Willian+Pacho&background=fde100&color=000&size=200"},
+        {"isim": "Illya Zabarnyi", "yas": 22, "deger": "64.00", "foto": "https://ui-avatars.com/api/?name=Illya+Zabarnyi&background=fde100&color=000&size=200"},
+        {"isim": "Alexis Mac Allister", "yas": 26, "deger": "94.00", "foto": "https://ui-avatars.com/api/?name=Alexis+Mac+Allister&background=fde100&color=000&size=200"},
+        {"isim": "Vitinha", "yas": 25, "deger": "80.00", "foto": "https://ui-avatars.com/api/?name=Vitinha&background=fde100&color=000&size=200"},
+        {"isim": "Bruno Fernandes", "yas": 30, "deger": "78.00", "foto": "https://ui-avatars.com/api/?name=Bruno+Fernandes&background=fde100&color=000&size=200"},
+        {"isim": "Karim Adeyemi", "yas": 23, "deger": "58.00", "foto": "https://ui-avatars.com/api/?name=Karim+Adeyemi&background=fde100&color=000&size=200"},
+        {"isim": "Heung-min Son", "yas": 32, "deger": "50.00", "foto": "https://ui-avatars.com/api/?name=Heung-min+Son&background=fde100&color=000&size=200"},
+        {"isim": "Orri Óskarsson", "yas": 20, "deger": "73.00", "foto": "https://ui-avatars.com/api/?name=Orri+Oskarsson&background=fde100&color=000&size=200"}
       ]
     },
     "Milan": {
       "logo": "https://tmssl.akamaized.net/images/wappen/head/5.png",
-      "stadyum": "San Siro",
-      "yas_ort": "24.5",
-      "lig_sirasi": "5.",
-      "puan": "9",
-      "istatistik": { "mac": 6, "g": 3, "b": 0, "m": 3, "atilan": 10, "yenilen": 8 },
-      "hoca": { "isim": "Carlo Ancelotti", "foto": "https://tmssl.akamaized.net/images/portrait/header/1066-1698226992.jpg" },
+      "hoca": { "isim": "Fatih Tekke", "foto": "https://ui-avatars.com/api/?name=Fatih+Tekke&background=fb090b&color=fff&size=200" },
       "kadro": [
-        {"isim": "Lautaro Martinez", "yas": 27, "deger": "70.00", "foto": ""},
-        {"isim": "Yunus Akgün", "yas": 24, "deger": "10.00", "foto": ""},
-        {"isim": "Jonathan Tah", "yas": 29, "deger": "30.00", "foto": ""},
-        {"isim": "Cole Palmer", "yas": 22, "deger": "60.00", "foto": ""}
+        {"isim": "Vinicius Jr.", "yas": 24, "deger": "70.00", "foto": "https://ui-avatars.com/api/?name=Vinicius+Jr&background=fb090b&color=fff&size=200"},
+        {"isim": "Rodrygo", "yas": 24, "deger": "50.00", "foto": "https://ui-avatars.com/api/?name=Rodrygo&background=fb090b&color=fff&size=200"},
+        {"isim": "Nicolò Barella", "yas": 28, "deger": "50.00", "foto": "https://ui-avatars.com/api/?name=Nicolo+Barella&background=fb090b&color=fff&size=200"},
+        {"isim": "Joan García", "yas": 23, "deger": "99.00", "foto": "https://ui-avatars.com/api/?name=Joan+Garcia&background=fb090b&color=fff&size=200"},
+        {"isim": "Jonathan David", "yas": 25, "deger": "76.00", "foto": "https://ui-avatars.com/api/?name=Jonathan+David&background=fb090b&color=fff&size=200"}
       ]
     },
-    "Atalanta": { "kadro": [] },
-    "Roma": { "kadro": [] },
-    "Como": { "kadro": [] }
+    "Atletico Madrid": {
+      "logo": "https://tmssl.akamaized.net/images/wappen/head/13.png",
+      "hoca": { "isim": "Vitor Pereira", "foto": "https://ui-avatars.com/api/?name=Vitor+Pereira&background=cb3524&color=fff&size=200" },
+      "kadro": [
+        {"isim": "Alisson", "yas": 32, "deger": "95.00", "foto": "https://ui-avatars.com/api/?name=Alisson&background=cb3524&color=fff&size=200"},
+        {"isim": "Thierry Henry", "yas": 28, "deger": "97.00", "foto": "https://ui-avatars.com/api/?name=Thierry+Henry&background=cb3524&color=fff&size=200"},
+        {"isim": "Rafael Leão", "yas": 25, "deger": "62.00", "foto": "https://ui-avatars.com/api/?name=Rafael+Leao&background=cb3524&color=fff&size=200"},
+        {"isim": "Barış Alper Yılmaz", "yas": 24, "deger": "99.00", "foto": "https://ui-avatars.com/api/?name=Baris+Alper+Yilmaz&background=cb3524&color=fff&size=200"},
+        {"isim": "Scott McTominay", "yas": 28, "deger": "59.00", "foto": "https://ui-avatars.com/api/?name=Scott+McTominay&background=cb3524&color=fff&size=200"}
+      ]
+    }
   }
 }
-
-
