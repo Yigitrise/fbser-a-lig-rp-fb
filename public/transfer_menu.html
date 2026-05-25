@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Transfermarkt | Serie A Menü</title>
+    <title>Transfermarkt | Zeyrox League Menü</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root { --tm-dark: #1a3151; --tm-blue: #002d62; --bg: #f0f2f5; --white: #ffffff; --grey-box: #eef2f7; }
@@ -29,33 +29,32 @@
 <div class="navbar"><a href="index.html" class="logo">Transfermarkt</a></div>
 <div class="page-header">
     <img src="https://tmssl.akamaized.net/images/logo/normal/it1.png" class="league-logo">
-    <div class="league-info"><h1>Serie A</h1></div>
+    <div class="league-info"><h1>Zeyrox League</h1></div>
     <div class="season-text">Sezon 2025/2026</div>
 </div>
 
 <div class="container">
     <div class="card-container">
-        <div class="card-header">SERIE A KULÜPLERİ</div>
+        <div class="card-header">ZEYROX LEAGUE KULÜPLERİ</div>
         <div class="clubs-grid" id="clubList"></div>
     </div>
 </div>
 
 <script>
     const myClubs = [
-        { name: "Juventus", id: "506" },
-        { name: "İnter", id: "46" },
-        { name: "Napoli", id: "6195" },
-        { name: "Lazio", id: "398" },
-        { name: "Atalanta", id: "800" },
+        { name: "Manchester United", id: "985" },
+        { name: "PSG", id: "583" },
+        { name: "Feyenoord", id: "234" },
+        { name: "Arsenal", id: "11" },
+        { name: "Barcelona", id: "131" },
+        { name: "Dortmund", id: "16" },
         { name: "Milan", id: "5" },
-        { name: "Roma", id: "12" },
-        { name: "Como", id: "1047" }
+        { name: "Atletico Madrid", id: "13" }
     ];
 
     const list = document.getElementById('clubList');
     myClubs.forEach(c => {
         const card = document.createElement('a');
-        // KANKA DİKKAT: Linki dinamik yaptım, URL'ye takımı ekliyor
         card.href = `transfermarkt.html?team=${c.name}`; 
         card.className = "club-card";
         card.innerHTML = `
