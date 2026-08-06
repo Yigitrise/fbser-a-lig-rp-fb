@@ -1,19 +1,19 @@
 {
   "takimlar": {
-    "Manchester United": { "mac": 4, "g": 2, "b": 2, "m": 0, "ag": 9, "yg": 2, "puan": 8, "logo": "https://tmssl.akamaized.net/images/wappen/head/985.png" },
-    "Feyenoord": { "mac": 4, "g": 1, "b": 1, "m": 2, "ag": 2, "yg": 9, "puan": 4, "logo": "https://tmssl.akamaized.net/images/wappen/head/234.png" },
-    "Arsenal": { "mac": 4, "g": 1, "b": 1, "m": 2, "ag": 4, "yg": 7, "puan": 4, "logo": "https://tmssl.akamaized.net/images/wappen/head/11.png" },
-    "Milan": { "mac": 4, "g": 0, "b": 2, "m": 2, "ag": 1, "yg": 9, "puan": 2, "logo": "https://tmssl.akamaized.net/images/wappen/head/5.png" },
-    "Atletico Madrid": { "mac": 4, "g": 2, "b": 1, "m": 1, "ag": 9, "yg": 3, "puan": 7, "logo": "https://tmssl.akamaized.net/images/wappen/head/13.png" },
-    "Dortmund": { "mac": 4, "g": 2, "b": 1, "m": 1, "ag": 4, "yg": 6, "puan": 7, "logo": "https://tmssl.akamaized.net/images/wappen/head/16.png" },
-    "Barcelona": { "mac": 4, "g": 0, "b": 3, "m": 1, "ag": 2, "yg": 3, "puan": 3, "logo": "https://tmssl.akamaized.net/images/wappen/head/131.png" },
-    "PSG": { "mac": 4, "g": 2, "b": 1, "m": 1, "ag": 12, "yg": 4, "puan": 7, "logo": "https://tmssl.akamaized.net/images/wappen/head/583.png" }
+    "Manchester United": { "mac": 0, "g": 0, "b": 0, "m": 0, "ag": 0, "yg": 0, "puan": 0, "logo": "https://tmssl.akamaized.net/images/wappen/head/985.png" },
+    "Feyenoord": { "mac": 0, "g": 0, "b": 0, "m": 0, "ag": 0, "yg": 0, "puan": 0, "logo": "https://tmssl.akamaized.net/images/wappen/head/234.png" },
+    "Arsenal": { "mac": 0, "g": 0, "b": 0, "m": 0, "ag": 0, "yg": 0, "puan": 0, "logo": "https://tmssl.akamaized.net/images/wappen/head/11.png" },
+    "Milan": { "mac": 0, "g": 0, "b": 0, "m": 0, "ag": 0, "yg": 0, "puan": 0, "logo": "https://tmssl.akamaized.net/images/wappen/head/5.png" },
+    "Atletico Madrid": { "mac": 0, "g": 0, "b": 0, "m": 0, "ag": 0, "yg": 0, "puan": 0, "logo": "https://tmssl.akamaized.net/images/wappen/head/13.png" },
+    "Dortmund": { "mac": 0, "g": 0, "b": 0, "m": 0, "ag": 0, "yg": 0, "puan": 0, "logo": "https://tmssl.akamaized.net/images/wappen/head/16.png" },
+    "Barcelona": { "mac": 0, "g": 0, "b": 0, "m": 0, "ag": 0, "yg": 0, "puan": 0, "logo": "https://tmssl.akamaized.net/images/wappen/head/131.png" },
+    "PSG": { "mac": 0, "g": 0, "b": 0, "m": 0, "ag": 0, "yg": 0, "puan": 0, "logo": "https://tmssl.akamaized.net/images/wappen/head/583.png" }
   },
   "fikstur": [
-    { "hafta": 1, "maclar": [ {"ev": "Manchester United", "dep": "PSG", "skor": "1-1"}, {"ev": "Feyenoord", "dep": "Barcelona", "skor": "1-0"}, {"ev": "Arsenal", "dep": "Dortmund", "skor": "0-2"}, {"ev": "Milan", "dep": "Atletico Madrid", "skor": "0-5"} ] },
-    { "hafta": 2, "maclar": [ {"ev": "PSG", "dep": "Atletico Madrid", "skor": "1-3"}, {"ev": "Dortmund", "dep": "Milan", "skor": "0-0"}, {"ev": "Barcelona", "dep": "Arsenal", "skor": "1-1"}, {"ev": "Manchester United", "dep": "Feyenoord", "skor": "1-1"} ] },
-    { "hafta": 3, "maclar": [ {"ev": "Feyenoord", "dep": "PSG", "skor": "0-5"}, {"ev": "Arsenal", "dep": "Manchester United", "skor": "0-4"}, {"ev": "Milan", "dep": "Barcelona", "skor": "1-1"}, {"ev": "Atletico Madrid", "dep": "Dortmund", "skor": "1-2"} ] },
-    { "hafta": 4, "maclar": [ {"ev": "PSG", "dep": "Dortmund", "skor": "5-0"}, {"ev": "Barcelona", "dep": "Atletico Madrid", "skor": "0-0"}, {"ev": "Manchester United", "dep": "Milan", "skor": "3-0"}, {"ev": "Feyenoord", "dep": "Arsenal", "skor": "0-3"} ] },
+    { "hafta": 1, "maclar": [ {"ev": "Manchester United", "dep": "PSG", "skor": "-"}, {"ev": "Feyenoord", "dep": "Barcelona", "skor": "-"}, {"ev": "Arsenal", "dep": "Dortmund", "skor": "-"}, {"ev": "Milan", "dep": "Atletico Madrid", "skor": "-"} ] },
+    { "hafta": 2, "maclar": [ {"ev": "PSG", "dep": "Atletico Madrid", "skor": "-"}, {"ev": "Dortmund", "dep": "Milan", "skor": "-"}, {"ev": "Barcelona", "dep": "Arsenal", "skor": "-"}, {"ev": "Manchester United", "dep": "Feyenoord", "skor": "-"} ] },
+    { "hafta": 3, "maclar": [ {"ev": "Feyenoord", "dep": "PSG", "skor": "-"}, {"ev": "Arsenal", "dep": "Manchester United", "skor": "-"}, {"ev": "Milan", "dep": "Barcelona", "skor": "-"}, {"ev": "Atletico Madrid", "dep": "Dortmund", "skor": "-"} ] },
+    { "hafta": 4, "maclar": [ {"ev": "PSG", "dep": "Dortmund", "skor": "-"}, {"ev": "Barcelona", "dep": "Atletico Madrid", "skor": "-"}, {"ev": "Manchester United", "dep": "Milan", "skor": "-"}, {"ev": "Feyenoord", "dep": "Arsenal", "skor": "-"} ] },
     { "hafta": 5, "maclar": [ {"ev": "Arsenal", "dep": "PSG", "skor": "-"}, {"ev": "Milan", "dep": "Feyenoord", "skor": "-"}, {"ev": "Atletico Madrid", "dep": "Manchester United", "skor": "-"}, {"ev": "Dortmund", "dep": "Barcelona", "skor": "-"} ] },
     { "hafta": 6, "maclar": [ {"ev": "PSG", "dep": "Barcelona", "skor": "-"}, {"ev": "Manchester United", "dep": "Dortmund", "skor": "-"}, {"ev": "Feyenoord", "dep": "Atletico Madrid", "skor": "-"}, {"ev": "Arsenal", "dep": "Milan", "skor": "-"} ] },
     { "hafta": 7, "maclar": [ {"ev": "Milan", "dep": "PSG", "skor": "-"}, {"ev": "Atletico Madrid", "dep": "Arsenal", "skor": "-"}, {"ev": "Dortmund", "dep": "Feyenoord", "skor": "-"}, {"ev": "Barcelona", "dep": "Manchester United", "skor": "-"} ] },
@@ -25,42 +25,6 @@
     { "hafta": 13, "maclar": [ {"ev": "Barcelona", "dep": "PSG", "skor": "-"}, {"ev": "Dortmund", "dep": "Manchester United", "skor": "-"}, {"ev": "Atletico Madrid", "dep": "Feyenoord", "skor": "-"}, {"ev": "Milan", "dep": "Arsenal", "skor": "-"} ] },
     { "hafta": 14, "maclar": [ {"ev": "PSG", "dep": "Milan", "skor": "-"}, {"ev": "Arsenal", "dep": "Atletico Madrid", "skor": "-"}, {"ev": "Feyenoord", "dep": "Dortmund", "skor": "-"}, {"ev": "Manchester United", "dep": "Barcelona", "skor": "-"} ] }
   ],
-  "golKralligi": [
-    {"oyuncu": "Isak", "takim": "Manchester United", "gol": 6},
-    {"oyuncu": "Onuachu", "takim": "PSG", "gol": 5},
-    {"oyuncu": "Henry", "takim": "Atletico Madrid", "gol": 4},
-    {"oyuncu": "Orkun Kökçü", "takim": "PSG", "gol": 3},
-    {"oyuncu": "Antony", "takim": "Atletico Madrid", "gol": 3},
-    {"oyuncu": "Óskarsson", "takim": "Dortmund", "gol": 2},
-    {"oyuncu": "Pedri", "takim": "Feyenoord", "gol": 2},
-    {"oyuncu": "Dembele", "takim": "PSG", "gol": 2},
-    {"oyuncu": "Kvara", "takim": "PSG", "gol": 2},
-    {"oyuncu": "Leao", "takim": "Atletico Madrid", "gol": 1},
-    {"oyuncu": "Wirtz", "takim": "Manchester United", "gol": 1},
-    {"oyuncu": "Doku", "takim": "Manchester United", "gol": 1},
-    {"oyuncu": "Cherki", "takim": "Manchester United", "gol": 1},
-    {"oyuncu": "J.David", "takim": "Arsenal", "gol": 1},
-    {"oyuncu": "Greenwood", "takim": "Arsenal", "gol": 1},
-    {"oyuncu": "Yamal", "takim": "Arsenal", "gol": 1},
-    {"oyuncu": "Bruno", "takim": "Dortmund", "gol": 1}
-  ],
-  "asistKralligi": [
-    {"oyuncu": "Dembele", "takim": "PSG", "asist": 3},
-    {"oyuncu": "Orkun Kökçü", "takim": "PSG", "asist": 3},
-    {"oyuncu": "Henry", "takim": "Atletico Madrid", "asist": 3},
-    {"oyuncu": "Cherki", "takim": "Manchester United", "asist": 2},
-    {"oyuncu": "Doku", "takim": "Manchester United", "asist": 2},
-    {"oyuncu": "Isak", "takim": "Manchester United", "asist": 2},
-    {"oyuncu": "Kvara", "takim": "PSG", "asist": 2},
-    {"oyuncu": "Leao", "takim": "Atletico Madrid", "asist": 2},
-    {"oyuncu": "Griezmann", "takim": "Dortmund", "asist": 2},
-    {"oyuncu": "Wirtz", "takim": "Manchester United", "asist": 1},
-    {"oyuncu": "Onuachu", "takim": "PSG", "asist": 1},
-    {"oyuncu": "Xhaka", "takim": "PSG", "asist": 1},
-    {"oyuncu": "McTominay", "takim": "Atletico Madrid", "asist": 1},
-    {"oyuncu": "Ekitike", "takim": "Barcelona", "asist": 1},
-    {"oyuncu": "Llorente", "takim": "Arsenal", "asist": 1},
-    {"oyuncu": "Bruno", "takim": "Dortmund", "asist": 1},
-    {"oyuncu": "Mac Allister", "takim": "Dortmund", "asist": 1}
-  ]
+  "golKralligi": [],
+  "asistKralligi": []
 }
